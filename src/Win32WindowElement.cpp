@@ -13,7 +13,7 @@ namespace spider {
     }
     void Win32WindowElement::invalidateRegion(rectangle rect) {
 
-        Win32GraphicsContext *gc = new Win32GraphicsContext(this->hWnd, NULL);
+        Win32GraphicsContext *gc = new Win32GraphicsContext(this->hWnd, NULL, this);
         gc->invalidateRegion(rect);
         SendMessage(this->hWnd, WM_PAINT, NULL, NULL);
         delete gc;
@@ -25,7 +25,7 @@ namespace spider {
         this->memHDC = hdc;
     }
     GraphicsContext *Win32WindowElement::createGraphics() {
-        return new Win32GraphicsContext(this->hWnd, NULL);
+        return new Win32GraphicsContext(this->hWnd, NULL, this);
     }
     void Win32WindowElement::pack() {
 

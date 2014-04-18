@@ -1,0 +1,34 @@
+#ifndef PNGUTILS_H_INCLUDED
+#define PNGUTILS_H_INCLUDED
+#include <png.h>
+namespace spider {
+    image *png_get_image_data(png_image pimage);
+    png_image png_read_file(char *file_name);
+    typedef struct {
+        short r;
+        short g;
+        short b;
+        short a;
+    } pixel;
+    typedef struct {
+        pixel *pixels;
+        int width;
+        int height;
+        int flags;
+    } image;
+    typedef struct {
+        png_byte color_type;
+        png_byte bit_depth;
+        png_bytep * row_pointers;
+        png_structp png_ptr;
+        png_infop info_ptr;
+        int number_of_passes;
+        int width;
+        int height;
+    } png_image;
+    image *png_get_image_data(png_structp png_image);
+    png_image png_read_file(char* file_name);
+}
+
+
+#endif // PNGUTILS_H_INCLUDED

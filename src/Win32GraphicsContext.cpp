@@ -13,7 +13,8 @@ void Win32GraphicsContext::setClip(rectangle rect) {
 
     SelectClipRgn(this->hDC, region);
 }
-Win32GraphicsContext::Win32GraphicsContext(HWND hWnd, HDC hDC) {
+Win32GraphicsContext::Win32GraphicsContext(HWND hWnd, HDC hDC, WindowElement *window)
+ : GraphicsContext(window) {
 	this->hDC = hDC;
 	this->controls = new map<string, HWND>();
 	this->hWnd = hWnd;
@@ -61,7 +62,22 @@ void Win32GraphicsContext::fillRectangle(int x1, int y1, int x2, int y2, Color *
 	SelectObject(this->hDC, old);
 	DeleteObject(hpen);
 }
-void Win32GraphicsContext::drawImage(char *buffer, int x1, int y1, int x2, int y2) {
+void Win32GraphicsContext::drawImage(void *image, int x1, int y1, int x2, int y2) {
+    /*HDC *memDC = CreateCompatibleDC(this->hDC);
+    HBITMAP bitmap = CreateCompatibleBitmap(memDC, image->width, image->height);
+    SelectObject(memDC, bitmap);
+
+    for (int x = 0; x < image->width; x++) {
+        for (int y = 0; y < image->height; y++) {
+            pixel *pixel = image->pixels[x * y];
+            COLORREF color = RGB(pixel->r, pixel->g, pixel->b);
+            SetPixel(memDC, x, y, color);
+        }
+    }
+    BitBlt(this->hDC, x1, y1, x2, y2, memDC, 0, 0, SRCCOPY);
+    DeleteObject(bitmap);
+    DeleteDC(memDC);*/
+    this->fillRectangle(x1, y1, x2, y2, new Color(255, 255, 255, 255));
 }
 rectangle Win32GraphicsContext::measureString(char *text, FontStyle *font) {
     SIZE sizeText;

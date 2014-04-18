@@ -46,7 +46,22 @@ void Element::mousedown(int mouseButton, int x, int y) {
 		}
 	}
 }
+void Element::mouseup(int mouseButton, int x, int y) {
+	int xx = this->getAbsoluteBounds() != NULL ? x - this->getAbsoluteBounds()->y : x;
+    int yy = this->getAbsoluteBounds() != NULL ? y - this->getAbsoluteBounds()->y : y;
+	MouseEventArgs *me = new MouseEventArgs(mouseButton, xx, yy);
 
+	this->notify(string("mouseup"), this, me);
+	for(vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
+		Element *elm = static_cast<Element *>(*it);
+        if (elm->getAbsoluteBounds() != NULL)
+		if(x > elm->getAbsoluteBounds()->x && x < elm->getAbsoluteBounds()->x + elm->getAbsoluteBounds()->width &&
+			y > elm->getAbsoluteBounds()->y && y < elm->getAbsoluteBounds()->y + elm->getAbsoluteBounds()->height) {
+
+			elm->mouseup(mouseButton, x, y);
+		}
+	}
+}
 Element::Element() :
     Node() {
     this->absoluteBounds = NULL;
@@ -59,6 +74,7 @@ Element::Element() :
 	this->observers = new vector<Observer *>();
     this->set("fgcolor", new string("#ffffff"));
     this->set("bgcolor", new string("#000000"));
+    this->set("highlight", "#a9d9fe");
     this->set("font", new string("Tahoma"));
     this->set("size", new string("11"));
 	this->font = new FontStyle("MS Sans Serif", 11, 1, false, false);
@@ -87,6 +103,9 @@ FontStyle *Element::getFont() {
     }
     return new FontStyle((char *)fontFamily->c_str(), fontSize, false, false, false);
 }
+void Element::applyStylesheet(Stylesheet *style) {
+
+}
 Element::Element(Element *parent) :
     Node() {
     this->absoluteBounds = NULL;
@@ -101,11 +120,13 @@ Element::Element(Element *parent) :
     this->set("fgcolor", new string("#ffffff"));
     this->set("bgcolor", new string("#000000"));
     this->set("font", new string("MS Sans Serif"));
+    this->set("highlight", "#a9d9fe");
     this->set("size", new string("11"));
 	if (this->getParent() != NULL) {
         this->set("bgcolor", new string(this->getParent()->get("bgcolor")));
         this->set("fgcolor", new string(this->getParent()->get("fgcolor")));
         this->set("font", new string(this->getParent()->get("font")));
+        this->set("highlight", new string(this->getParent()->get("highlight")));
         this->set("size", new string(this->getParent()->get("size")));
         this->font = parent->font;
         this->mainWindowElement = parent->getMainWindowElement();

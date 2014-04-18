@@ -10,6 +10,7 @@
 #include "GraphicsContext.h"
 using namespace std;
 namespace spider {
+    class WindowElement;
 	COLORREF toWin32Color(spider::Color color);
 
 	class Win32GraphicsContext : public GraphicsContext {
@@ -18,11 +19,11 @@ namespace spider {
 		HWND hWnd;
 		map<string, HWND> *controls;
 	public:
-		Win32GraphicsContext(HWND hWnd, HDC hDC);
+		Win32GraphicsContext(HWND hWnd, HDC hDC, WindowElement *window);
 		~Win32GraphicsContext();
 		void setClip(rectangle rect);
 		void drawLine(int x1, int y1, int w, int h, spider::Color *color);
-		void drawImage(spider::Image *image, int x1, int y1, int w, int h);
+		void drawImage(void *image, int x1, int y1, int w, int h);
 		void drawRectangle(int x1, int y1, int w, int h, spider::Color *color);
 		void fillRectangle(int x1, int y1, int w, int h, spider::Color *color);
 		void invalidateRegion(rectangle region);

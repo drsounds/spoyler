@@ -106,6 +106,7 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
     case WM_LBUTTONUP:
 
 		window->click(0, iPosX, iPosY);
+		window->mouseup(0, iPosX, iPosY);
 		break;
 	case WM_LBUTTONDOWN:
 		window->mousedown(0, iPosX, iPosY);
@@ -129,7 +130,7 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
 		memDC = CreateCompatibleDC(hdc);
 		btp = CreateCompatibleBitmap(hdc, clientRect.right, clientRect.bottom);
 		t = SelectObject(memDC, btp);
-		gc2 = new Win32GraphicsContext(hWnd, memDC);
+		gc2 = new Win32GraphicsContext(hWnd, memDC, window);
 
 
 		window->Draw(gc2);

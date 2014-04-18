@@ -11,8 +11,8 @@ namespace spider {
     {
         public:
             Observable();
-            void notify(string event, EventArgs *data);
-            void addEventLister(string event, s_event e);
+            void notify(string event, SPType *sender, EventArgs *data);
+            void addEventListener(string event, s_event e);
             virtual ~Observable();
         protected:
             list<Observer *> *observers;

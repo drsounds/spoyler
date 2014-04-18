@@ -6,10 +6,13 @@
 #include <map>
 #include <string>
 #include <vector>
+#include "libspider.h"
+#include "EventArgs.h"
 using namespace std;
 namespace spider {
 
 class Node : public SPType {
+protected:
     map<string, void *> *properties;
     map<string, string *> *attributes;
     Node *pparent;

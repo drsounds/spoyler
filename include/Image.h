@@ -3,13 +3,13 @@
 #include <string>
 #include <Observable.h>
 #include <boost/thread.hpp>
+#include <png.h>
 using namespace std;
-namespace spider {
+namespace spider {/*
 class Image : public Observable
 {
      protected:
-        char *imageData;
-        char *type;
+        image *mImage;
         string *uri;
         boost::thread *worker;
     public:
@@ -19,7 +19,7 @@ class Image : public Observable
         void downloadImageAsync();
 
     private:
-};
+};*/
 }
 
 #endif // IMAGE_H

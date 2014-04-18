@@ -3,6 +3,7 @@ namespace spider {
 Observable::Observable()
 {
     //ctor
+    this->observers = new list<Observer *>;
 }
 
 Observable::~Observable()
@@ -10,7 +11,7 @@ Observable::~Observable()
     //dtor
 }
 void Observable::notify(string evt, SPType *sender, EventArgs *data) {
-	for(vector<Observer *>::iterator it = this->observers->begin(); it != this->observers->end(); ++it) {
+	for(list<Observer *>::iterator it = this->observers->begin(); it != this->observers->end(); ++it) {
 		Observer *observer = static_cast<Observer *>(*it);
 		string t = observer->getEvent();
 		if(t == (evt)) {

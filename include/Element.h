@@ -5,11 +5,13 @@
 #include "FontStyle.h"
 #include "MouseEventArgs.h"
 #include "GraphicsContext.h"
+#include "Stylesheet.h"
 namespace spider {
     class Element : public Node, public Observable {
 
     public:
         rectangle *absoluteBounds;
+        void applyStylesheet(Stylesheet *style);
         int width;
         int height;
         int x;
@@ -83,7 +85,6 @@ namespace spider {
         void setScrollY(int y) {
             this->scrollY = y;
         }
-        void notify(string evt, SPType *sender, EventArgs *data);
         FontStyle *getFont();
         void setFont(FontStyle *font)  {
             this->font = font;
@@ -96,12 +97,12 @@ namespace spider {
         margin *getPadding();
         char *getInnerText();
         void setInnerText(char *data);
-        void addEventListener(string evt, s_event callback);
         virtual void mouseMove(int& x, int& y) {}
         virtual void mouseClick(int& mouseButton, int& x, int& y);
         virtual void mouseDown(int& mouseButton, int& x, int& y);
         virtual void click(int mouseButton, int x, int y);
         virtual void mousedown(int mouseButton, int x, int y);
+        virtual void mouseup(int mouseButton, int x, int y);
         int getY();
         int getWidth();
         int getHeight();

@@ -4,11 +4,19 @@
 #include "SPType.h"
 namespace spider {
     class TreeItem : SPType {
+    protected:
+        bool highlighted;
 		char *title;
 		char *subtitle;
 		Uri *uri;
 		bool selected;
 	public:
+	    bool isHighlighted() {
+            return this->highlighted;
+	    }
+	    void setHighlighted(bool value) {
+            this->highlighted = value;
+	    }
 	    bool isSelected() {
             return this->selected;
 	    }

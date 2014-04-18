@@ -7,7 +7,8 @@
 #include "TreeItem.h"
 namespace spider {
     class TreeViewEventArgs : public EventArgs {
-    private:
+    protected:
+
         TreeItem *item;
     public:
         TreeItem *getItem() {
@@ -18,7 +19,7 @@ namespace spider {
         }
     };
     class TreeViewElement : public Element {
-	private:
+	protected:
 		vector<TreeItem *> *mItems;
 		int itemHeight;
 	public:

@@ -65,7 +65,7 @@ TabBarElement::TabBarElement(Element *parent)
     this->tabs = new std::vector<Tab *>;
     this->set("active_tab_fgcolor", "#ffffff");
     this->set("active_tab_bgcolor", "#474747");
-    this->set("bgcolor", "#565656");
+    this->set("bgcolor", "#333333");
     this->addEventListener(string("mousedown"), (s_event)&tabbar_mousedown);
     std::vector<Observer *> *observers = this->observers;
     int count = observers->size();
@@ -123,9 +123,14 @@ void TabBarElement::Draw(int x, int y, GraphicsContext *g) {
         rectangle strSize = g->measureString((char *)title->c_str(), font);
         int width = 20 + 100 + 20;
         if (this->activeTab == tab) {
+            #if SPOTIFY2009
             fgColor = (Color *)this->getAttributeObj("active_tab_fgcolor");
             Color *bgColor = (Color *)this->getAttributeObj("active_tab_bgcolor");
             g->fillRectangle(x + left, y, width, this->getHeight(), bgColor);
+            #else
+            Color *bgColor = (Color *)this->getAttributeObj("highlight");
+            g->fillRectangle(x + left, y + this->getHeight() - 5, width, 5, bgColor);
+            #endif
         }
         g->drawString((char *)title->c_str(), font, fgColor, left + x + 20, y + (this->getHeight() / 2) - (strSize.height / 2), strSize.width, strSize.height);
         left += width;

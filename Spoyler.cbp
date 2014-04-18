@@ -12,12 +12,12 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-Wfatal-errors" />
 					<Add option="-g" />
-					<Add option="-std=c++11" />
 					<Add directory="C:/Users/Alecca/Downloads/boost_1_55_0/boost_1_55_0" />
-					<Add directory="C:/Program Files (x86)/Expat 2.1.0/Source/lib" />
 					<Add directory="include" />
+					<Add directory="C:/Program Files (x86)/Expat 2.1.0/Source/lib" />
 				</Compiler>
 				<Linker>
 					<Add library="C:\Program Files (x86)\Expat 2.1.0\Bin\libexpat.lib" />
@@ -39,6 +39,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="C:/Program Files (x86)/GnuWin32/include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />
@@ -46,6 +47,8 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
+		<Unit filename="include/ArtistOverviewView.h" />
+		<Unit filename="include/ArtistView.h" />
 		<Unit filename="include/BoxElement.h" />
 		<Unit filename="include/ButtonElement.h" />
 		<Unit filename="include/Color.h" />
@@ -58,7 +61,7 @@
 		<Unit filename="include/GraphicsContext.h" />
 		<Unit filename="include/HBoxElement.h" />
 		<Unit filename="include/HTML.h" />
-		<Unit filename="include/Image.h" />
+		<Unit filename="include/ImageElement.h" />
 		<Unit filename="include/InfoElement.h" />
 		<Unit filename="include/InputElement.h" />
 		<Unit filename="include/LinkElement.h" />
@@ -68,9 +71,12 @@
 		<Unit filename="include/Observable.h" />
 		<Unit filename="include/Observer.h" />
 		<Unit filename="include/PlayQueueView.h" />
+		<Unit filename="include/Resource.h" />
+		<Unit filename="include/ResourceElement.h" />
 		<Unit filename="include/SPType.h" />
 		<Unit filename="include/SplitterElement.h" />
 		<Unit filename="include/StartView.h" />
+		<Unit filename="include/Stylesheet.h" />
 		<Unit filename="include/TabBarElement.h" />
 		<Unit filename="include/TabbarViewElement.h" />
 		<Unit filename="include/TextElement.h" />
@@ -88,6 +94,8 @@
 		<Unit filename="include/elements.h" />
 		<Unit filename="include/libspider.h" />
 		<Unit filename="include/luahtml.h" />
+		<Unit filename="src/ArtistOverviewView.cpp" />
+		<Unit filename="src/ArtistView.cpp" />
 		<Unit filename="src/BoxElement.cpp" />
 		<Unit filename="src/ButtonElement.cpp" />
 		<Unit filename="src/Color.cpp" />
@@ -100,7 +108,7 @@
 		<Unit filename="src/GraphicsContext.cpp" />
 		<Unit filename="src/HBoxElement.cpp" />
 		<Unit filename="src/HTML.cpp" />
-		<Unit filename="src/Image.cpp" />
+		<Unit filename="src/ImageElement.cpp" />
 		<Unit filename="src/InfoElement.cpp" />
 		<Unit filename="src/InputElement.cpp" />
 		<Unit filename="src/LinkElement.cpp" />
@@ -110,9 +118,12 @@
 		<Unit filename="src/Observable.cpp" />
 		<Unit filename="src/Observer.cpp" />
 		<Unit filename="src/PlayQueueView.cpp" />
+		<Unit filename="src/Resource.cpp" />
+		<Unit filename="src/ResourceElement.cpp" />
 		<Unit filename="src/SPType.cpp" />
 		<Unit filename="src/SplitterElement.cpp" />
 		<Unit filename="src/StartView.cpp" />
+		<Unit filename="src/Stylesheet.cpp" />
 		<Unit filename="src/TabBarElement.cpp" />
 		<Unit filename="src/TabbarViewElement.cpp" />
 		<Unit filename="src/TextElement.cpp" />

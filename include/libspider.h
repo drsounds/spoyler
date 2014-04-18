@@ -16,6 +16,8 @@
 using namespace std;
 
 namespace spider {
+
+
     typedef struct margin {
         int left;
         int top;
