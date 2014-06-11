@@ -8,9 +8,7 @@ namespace spider {
         DOMViewElement () {
 
         }
-        DOMViewElement(Element *parent) : Element(parent) {
-
-        }
+        DOMViewElement(Element *parent);
 
         void loadXML(char *buffer);
     };

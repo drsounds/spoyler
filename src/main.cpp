@@ -81,17 +81,37 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
     return messages.wParam;
 }
 
-LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
-{
+void draw(HWND hWnd) {
     Win32GraphicsContext *gc2;
-	int wmId, wmEvent;
-	PAINTSTRUCT ps;
-	HDC hdc;
-	RECT clientRect;
+    RECT clientRect;
+    PAINTSTRUCT ps;
 	HDC memDC ;
 	HBITMAP btp ;
 	HGDIOBJ t ;
 	HGDIOBJ f;
+	HDC hdc;
+    GetClientRect(hWnd,&clientRect);
+    hdc = BeginPaint(hWnd, &ps);
+    memDC = CreateCompatibleDC(hdc);
+    btp = CreateCompatibleBitmap(hdc, clientRect.right, clientRect.bottom);
+    t = SelectObject(memDC, btp);
+    gc2 = new Win32GraphicsContext(hWnd, memDC, window);
+
+
+    window->Draw(gc2);
+    f = SelectObject(hdc, btp);
+
+    BitBlt(hdc, 0, 0, clientRect.right, clientRect.bottom, memDC, 0, 0, SRCCOPY);
+    // TODO: Add any drawing code here...
+    ReleaseDC(hWnd, memDC);
+    EndPaint(hWnd, &ps);
+}
+
+LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	int wmId, wmEvent;
+
+    RECT clientRect;
 	int iPosX, iPosY;
 	GetClientRect(hWnd,&clientRect);
     window->setHandle(hWnd);
@@ -100,8 +120,9 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
 	switch (message)
 	{
 	case WM_SIZE:
-	    InvalidateRect(hWnd, &clientRect, TRUE);
-		window->pack();
+	    InvalidateRect(hWnd,&clientRect, TRUE);
+	    window->pack();
+	    draw(hWnd);
 		break;
     case WM_LBUTTONUP:
 
@@ -125,22 +146,7 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
 		}
 		break;
 	case WM_PAINT:
-		GetClientRect(hWnd,&clientRect);
-		hdc = BeginPaint(hWnd, &ps);
-		memDC = CreateCompatibleDC(hdc);
-		btp = CreateCompatibleBitmap(hdc, clientRect.right, clientRect.bottom);
-		t = SelectObject(memDC, btp);
-		gc2 = new Win32GraphicsContext(hWnd, memDC, window);
-
-
-		window->Draw(gc2);
-		f = SelectObject(hdc, btp);
-
-		BitBlt(hdc, 0, 0, clientRect.right, clientRect.bottom, memDC, 0, 0, SRCCOPY);
-		// TODO: Add any drawing code here...
-		ReleaseDC(hWnd, memDC);
-		EndPaint(hWnd, &ps);
-
+        draw(hWnd);
 		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);

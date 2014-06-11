@@ -2,6 +2,11 @@
 #define STYLESHEET_H
 #include "Node.h"
 namespace spider {
+class Selector : Node {
+public:
+    Selector();
+    virtual ~Selector();
+};
 class Stylesheet
 {
     public:
@@ -10,9 +15,6 @@ class Stylesheet
     protected:
         map<string, Selector *> *selectors;
     private:
-};
-class Selector : Node {
-
 };
 }
 

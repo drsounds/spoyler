@@ -80,7 +80,7 @@ void TabBarElement::mousedown(int mouseButton, int x, int y) {
     TabBarElement *tabBar = this;
     x = tabBar->getAbsoluteBounds() != NULL ? x - tabBar->getAbsoluteBounds()->x : x;
     y = tabBar->getAbsoluteBounds() != NULL ? y - tabBar->getAbsoluteBounds()->y : y;
-    FontStyle *font = (FontStyle *)tabBar->getAttributeObj("font");
+    FontStyle *font = (FontStyle *)tabBar->getFont();
     int left = 0;
     for(std::vector<Tab *>::iterator it = tabBar->getTabs()->begin(); it != tabBar->getTabs()->end(); ++it) {
         Tab *tab = (Tab *)static_cast<Tab *>(*it);
@@ -89,7 +89,7 @@ void TabBarElement::mousedown(int mouseButton, int x, int y) {
         string *uri = tab->getUri();
         GraphicsContext *g = tabBar->createGraphics();
         rectangle strSize = g->measureString((char *)title->c_str(), font);
-        int width = 20 + 100 + 20;
+        int width = 100;//20 + strSize.width + 20;
         if (x > left  && x < left + width) {
             tabBar->activeTab = tab;
             TabBarEventArgs *args = new TabBarEventArgs(tab);
@@ -121,7 +121,7 @@ void TabBarElement::Draw(int x, int y, GraphicsContext *g) {
         string *title = tab->getName();
         string *id = tab->getId();
         rectangle strSize = g->measureString((char *)title->c_str(), font);
-        int width = 20 + 100 + 20;
+        int width = 100;// 20 + strSize.width + 20;
         if (this->activeTab == tab) {
             #if SPOTIFY2009
             fgColor = (Color *)this->getAttributeObj("active_tab_fgcolor");
@@ -132,7 +132,7 @@ void TabBarElement::Draw(int x, int y, GraphicsContext *g) {
             g->fillRectangle(x + left, y + this->getHeight() - 5, width, 5, bgColor);
             #endif
         }
-        g->drawString((char *)title->c_str(), font, fgColor, left + x + 20, y + (this->getHeight() / 2) - (strSize.height / 2), strSize.width, strSize.height);
+        g->drawString((char *)title->c_str(), font, fgColor, left + x + 20, y + (this->getHeight() / 3) - (strSize.height / 2), strSize.width, strSize.height);
         left += width;
         ++it;
     } while (it != this->getTabs()->end());

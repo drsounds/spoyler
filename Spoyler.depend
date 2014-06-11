@@ -3469,7 +3469,7 @@
 1397833803 source:c:\users\alecca\spoyler\src\libspider.cpp
 	"libspider.h"
 
-1397836017 source:c:\users\alecca\spoyler\src\main.cpp
+1402523460 source:c:\users\alecca\spoyler\src\main.cpp
 	<tchar.h>
 	<windows.h>
 	"libspider.h"
@@ -3527,7 +3527,7 @@
 1397425931 c:\users\alecca\spoyler\include\sptype.h
 	<string>
 
-1397835472 c:\users\alecca\spoyler\include\node.h
+1397838228 c:\users\alecca\spoyler\include\node.h
 	"SPType.h"
 	"Color.h"
 	<boost/lexical_cast.hpp>
@@ -3537,12 +3537,13 @@
 	"libspider.h"
 	"EventArgs.h"
 
-1397835638 c:\users\alecca\spoyler\include\element.h
+1397838181 c:\users\alecca\spoyler\include\element.h
 	"Node.h"
 	"Observable.h"
 	"FontStyle.h"
 	"MouseEventArgs.h"
 	"GraphicsContext.h"
+	"Stylesheet.h"
 
 1397425798 c:\users\alecca\spoyler\include\hboxelement.h
 	"Element.h"
@@ -3612,17 +3613,18 @@
 	"libspider.h"
 	"Color.h"
 
-1397677218 source:c:\users\alecca\spoyler\src\domviewelement.cpp
+1402524870 source:c:\users\alecca\spoyler\src\domviewelement.cpp
 	"DOMViewElement.h"
 	"VBoxElement.h"
 	"HBoxElement.h"
 	"ButtonElement.h"
+	"TextElement.h"
 
-1397426200 c:\users\alecca\spoyler\include\domviewelement.h
+1402066632 c:\users\alecca\spoyler\include\domviewelement.h
 	"Element.h"
 	"expat.h"
 
-1397837872 source:c:\users\alecca\spoyler\src\element.cpp
+1397838203 source:c:\users\alecca\spoyler\src\element.cpp
 	"Element.h"
 	"WindowElement.h"
 	"Observable.h"
@@ -3639,7 +3641,7 @@
 1397832198 source:c:\users\alecca\spoyler\src\image.cpp
 	"Image.h"
 
-1397429093 source:c:\users\alecca\spoyler\src\inputelement.cpp
+1402066247 source:c:\users\alecca\spoyler\src\inputelement.cpp
 	"InputElement.h"
 
 1397429087 c:\users\alecca\spoyler\include\inputelement.h
@@ -3697,7 +3699,7 @@
 	"Color.h"
 	"GraphicsContext.h"
 
-1397834001 source:c:\users\alecca\spoyler\src\win32graphicscontext.cpp
+1402066288 source:c:\users\alecca\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
 1397834416 source:c:\users\alecca\spoyler\src\win32windowelement.cpp
@@ -3737,10 +3739,11 @@
 1397663486 c:\users\alecca\spoyler\include\flowelement.h
 	"Element.h"
 
-1397680760 c:\users\alecca\spoyler\include\whatsnewview.h
+1402066410 c:\users\alecca\spoyler\include\whatsnewview.h
 	"ViewElement.h"
+	"DOMViewElement.h"
 
-1397681836 source:c:\users\alecca\spoyler\src\whatsnewview.cpp
+1402524805 source:c:\users\alecca\spoyler\src\whatsnewview.cpp
 	"WhatsNewView.h"
 	"ButtonElement.h"
 	"HBoxElement.h"
@@ -3772,7 +3775,7 @@
 	<regex>
 	"WhatsNewView.h"
 
-1397837647 source:c:\users\alecca\spoyler\src\tabbarelement.cpp
+1399917709 source:c:\users\alecca\spoyler\src\tabbarelement.cpp
 	"TabBarElement.h"
 
 1397749485 source:c:\users\alecca\spoyler\src\tabbarviewelement.cpp
@@ -7457,4 +7460,10 @@
 1397837304 c:\users\alecca\spoyler\include\resourceelement.h
 	"Element.h"
 	"Resource.h"
+
+1397851934 c:\users\alecca\spoyler\include\stylesheet.h
+	"Node.h"
+
+1397852348 source:c:\users\alecca\spoyler\src\stylesheet.cpp
+	"Stylesheet.h"
 

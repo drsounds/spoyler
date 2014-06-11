@@ -79,13 +79,21 @@ void Win32GraphicsContext::drawImage(void *image, int x1, int y1, int x2, int y2
     DeleteDC(memDC);*/
     this->fillRectangle(x1, y1, x2, y2, new Color(255, 255, 255, 255));
 }
-rectangle Win32GraphicsContext::measureString(char *text, FontStyle *font) {
+
+rectangle Win32GraphicsContext::measureString(char *text, FontStyle *fs) {
+#define CLEARTYPE_QUALITY 0x05
+#define ANTIALIASED_QUALITY 0x04
     SIZE sizeText;
-    GetTextExtentPoint32(this->hDC, (char *)text, lstrlen(text), &sizeText);
+    int len = lstrlen(text);
+    HFONT font = CreateFont(fs->getHeight(), fs->getHeight() / 2, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE, DEFAULT_CHARSET, OUT_CHARACTER_PRECIS,  CLIP_MASK, CLEARTYPE_QUALITY , FF_MODERN | VARIABLE_PITCH, TEXT(fs->getFamily()));
+    SelectObject(this->hDC, font);
+    GetTextExtentPoint32(this->hDC, (char *)text, len, &sizeText);
+    DeleteObject(font);
     spider::rectangle rect;
     rect.width = sizeText.cx;
     rect.height = sizeText.cy;
-
+    rect.x = 0;
+    rect.y = 0;
     return rect;
 }
 void Win32GraphicsContext::drawString(char *text, FontStyle *fs, spider::Color *color, int x, int y, int w, int h) {
@@ -103,7 +111,7 @@ void Win32GraphicsContext::drawString(char *text, FontStyle *fs, spider::Color *
     SelectObject(this->hDC, font);
     //TextOut(this->hDC, x, y, (LPCSTR)text, sizeof(text) * sizeof(char));
 
-    DrawText(this->hDC, (LPCSTR)text, sizeof(text) * 3, &rect, 0);
+    DrawText(this->hDC, (LPCSTR)text, lstrlen(text), &rect, 0);
     DeleteObject(font);
 }
 void Win32GraphicsContext::drawControl(int x, int y, int w, int h, char *name) {
