@@ -203,7 +203,7 @@ void Element::set(const std::string& title, std::string *val) {
     int n = 0;
         (*this->getAttributes())[title] = val;
     try {
-        int n = boost::lexical_cast<int>(*val);
+        n = atoi(val->c_str());
         if(title == "width")
             this->setWidth(n);
         if(title == "height")
@@ -214,7 +214,7 @@ void Element::set(const std::string& title, std::string *val) {
             this->setY(n);
 
         (*this->getProperties())[title] = (void *)n;
-    } catch (exception e) {
+    } catch (const boost::bad_lexical_cast e) {
         (*this->getProperties())[title] = (void *)val;
     }
 

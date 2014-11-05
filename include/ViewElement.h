@@ -6,6 +6,8 @@ namespace spider {
     class ViewElement : public VBoxElement
     {
         public:
+            string loadView(string view);
+            void request(string uri);
             ViewElement();
             ViewElement(Element *parent);
             virtual ~ViewElement();

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+	<hbox>
+		<hbox width="10"></hbox>
+		<vbox bgcolor="#333333" flex="1">
+			<text height="30">Test</text>
+		</vbox>
+		<hbox width="30"></hbox>
+	</hbox>
+</document>

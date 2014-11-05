@@ -43,7 +43,8 @@ namespace spider {
         int n = 0;
         (*this->getAttributes())[title] = val;
         try {
-            int n = boost::lexical_cast<int>(*val);
+            n = atoi(val->c_str());
+
 
 
             (*this->attributes)[title] = val;

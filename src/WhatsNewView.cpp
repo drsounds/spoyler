@@ -17,15 +17,7 @@ namespace spider {
         {
             DOMViewElement *domView = new DOMViewElement(this);
 
-            FILE *fil = fopen("C:\\Users\\Alecca\\Spoyler\\bin\\Debug\\resources\\views\\start.xml", "rb");
-            fseek(fil, 0, SEEK_END);
-            size_t fsize = ftell(fil);
-            rewind(fil);
-            char *buffer = (char *)malloc(sizeof(char) * fsize);
-            fread(buffer, sizeof(char), fsize, fil);
-            fclose(fil);
-            domView->loadXML(buffer);
-            this->appendChild(domView);
+
             domView->set("height", "200");
             domView->set("width", "140");
             domView->set("fgcolor", "#eeeeee");
