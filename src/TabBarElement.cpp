@@ -65,7 +65,7 @@ TabBarElement::TabBarElement(Element *parent)
     this->tabs = new std::vector<Tab *>;
     this->set("active_tab_fgcolor", "#ffffff");
     this->set("active_tab_bgcolor", "#474747");
-    this->set("bgcolor", "#333333");
+    this->set("bgcolor", "#666666");
     this->addEventListener(string("mousedown"), (s_event)&tabbar_mousedown);
     std::vector<Observer *> *observers = this->observers;
     int count = observers->size();
@@ -102,6 +102,7 @@ void TabBarElement::mousedown(int mouseButton, int x, int y) {
     }
     tabBar->invalidate();
 }
+#define SPOTIFY2009 true
 void TabBarElement::draw(int x, int y, GraphicsContext *g) {
     if (this->absoluteBounds == NULL)
         this->absoluteBounds = new rectangle;

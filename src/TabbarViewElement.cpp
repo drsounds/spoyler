@@ -21,8 +21,8 @@ namespace spider {
         this->tabBar = new TabBarElement(parent);
         this->viewStack = new ViewStackElement(parent);
         this->appendChild(this->tabBar);
-        this->tabBar->setHeight(28);
-        this->tabBar->set("height", "28");
+        this->tabBar->setHeight(20);
+        this->tabBar->set("height", "20");
         this->tabBar->addEventListener(string("tabselected"), &tabbar_tabselected);
         this->viewStack->set("flex", "1");
         this->appendChild(this->viewStack);

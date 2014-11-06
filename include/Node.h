@@ -21,7 +21,8 @@ public:
     Node *parent;
     std::vector<Node *> *children;
     Node();
-    void appendChild(Node *child);
+    void removeChild(Node *child);
+    virtual void appendChild(Node *child);
     void setChildren(std::vector<Node *> *children) {
         this->children = children;
     }

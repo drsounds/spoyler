@@ -3,6 +3,7 @@
 #define H_SPIDER
 #include <Windows.h>
 #include "MainWindowElement.h"
+#include <string>
 #include "WindowElement.h"
 #define MAX_LOADSTRING 100
 namespace spider {
@@ -22,6 +23,7 @@ namespace spider {
 	    void setHandle(HWND hWnd) {
             this->hWnd = hWnd;
 	    }
+	    void navigate(string uri);
 		HBITMAP bufferBitmap;
 		void draw(spider::GraphicsContext *graphics);
 		void Show();

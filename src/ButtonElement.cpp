@@ -3,7 +3,8 @@
 spider::ButtonElement::ButtonElement()
 : spider::Element() {
 
-	this->set("bgcolor", new string("#eeeeee"));
+	this->set("bgcolor", new string("#111111"));
+	this->set("fgcolor", new string("#ffffff"));
 }
 void spider::ButtonElement::draw(int x, int y, spider::GraphicsContext *c)
 {

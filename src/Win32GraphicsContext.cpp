@@ -121,9 +121,10 @@ LRESULT CALLBACK subEditProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
    switch (msg)
    {
-    case WM_KEYDOWN:
+    case WM_CHAR :
          switch (wParam)
          {
+
           case VK_RETURN:
 
             Element *sender = (*Win32GraphicsContext::hwnds)[hwnd];

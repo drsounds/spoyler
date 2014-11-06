@@ -18,6 +18,9 @@ namespace spider {
         SendMessage(this->hWnd, WM_PAINT, NULL, NULL);
         delete gc;
     }
+    void Win32WindowElement::navigate(string uri) {
+        this->mainWindow->navigate(uri);
+    }
     Win32WindowElement::Win32WindowElement() {
 
     }

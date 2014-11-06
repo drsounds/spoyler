@@ -10,7 +10,7 @@ namespace spider {
             //ctor
         }
         bool WhatsNewView::acceptsUri(string uri) {
-            return std::regex_match(uri.c_str(), std::regex("^spoyler:internal:start"));
+            return std::regex_match(uri.c_str(), std::regex("spoyler:internal:(.*)"));
         }
         WhatsNewView::WhatsNewView(Element *parent)
          : ViewElement::ViewElement(parent)

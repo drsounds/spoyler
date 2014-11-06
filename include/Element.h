@@ -8,7 +8,9 @@
 #include "Stylesheet.h"
 namespace spider {
     class GraphicsContext;
+
     class Element : public Node, public Observable {
+
 
     public:
         rectangle *absoluteBounds;
@@ -70,14 +72,10 @@ namespace spider {
         virtual void setVisible(bool visible) {
             this->visible = visible;
 
-            ((Element *)this->getParent())->pack();
+           // ((Element *)this->getParent())->pack();
         }
-        void show() {
-            this->setVisible(true);
-        }
-        void hide() {
-            this->setVisible(false);
-        }
+        void show();
+        void hide();
         bool isScrollable() {
             return this->scrollable;
         }

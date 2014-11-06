@@ -9,6 +9,9 @@
 #include "libspider.h"
 #include "Win32WindowElement.h"
 #include "Win32GraphicsContext.h"
+#include "main.h"
+
+
 
 /*  Declare Windows procedure  */
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
@@ -16,12 +19,40 @@ using namespace spider;
 Win32WindowElement *window  = new Win32WindowElement();
 /*  Make the class name into a global variable  */
 TCHAR szClassName[ ] = _T("CodeBlocksWindowsApp");
+/*!
+ * \source http://stackoverflow.com/questions/12689142/win32-api-command-line-arguments-parsing
+ */
+void process_arguments(char** argv, process_option_cb process_option, process_value_cb process_value) {
+    int i;
+    char *key, *value;
+
+    for( i = 0; i < sizeof(argv); i++ ) {
+        if( *argv[i] == '/' ) {
+            key = argv[i] + 1;
+            value = strchr(key, ' ');
+            if( value != NULL ) *value++ = 0;
+            process_option( key, value );
+        } else {
+           // if(&process_value != NULL)
+           // process_value( argv[i] );
+        }
+    }
+}
+
+void process_option(char *key, char *val) {
+    if (strcmp(key, "uri") == 0) {
+        window->navigate(string(val));
+    }
+}
+
 
 int WINAPI WinMain (HINSTANCE hThisInstance,
                      HINSTANCE hPrevInstance,
                      LPSTR lpszArgument,
                      int nCmdShow)
 {
+
+
 
     HWND hwnd;               /* This is the handle for our window */
     MSG messages;            /* Here messages to the application are saved */
@@ -67,6 +98,10 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
 
     /* Make the window visible on the screen */
     ShowWindow (hwnd, nCmdShow);
+
+    /* Pass window arguments **/
+    // int len_args = 0;
+    // process_arguments((char **)CommandLineToArgvW(GetCommandLineW(), &len_args), &process_option, NULL);
 
     /* Run the message loop. It will run until GetMessage() returns 0 */
     while (GetMessage (&messages, NULL, 0, 0))

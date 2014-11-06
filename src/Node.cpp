@@ -13,7 +13,8 @@ namespace spider {
     Node* Node::getParent() {
         return this->parent;
     }
-
+    void Node::removeChild(Node *child) {
+    }
     void *Node::getAttributeObj(string prop) {
 
         void *t = (void *)(*this->properties)[prop];

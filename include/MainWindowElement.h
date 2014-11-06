@@ -9,16 +9,19 @@
 namespace spider {
 class MainWindowElement : public VBoxElement
 {
-    private:
+    protected:
         ViewStackElement *viewStack;
         TreeViewElement *treeView;
         InfoElement *infoElement;
+        Stylesheet *stylesheet;
     public:
+        void navigate(string uri);
+        void hideMessage();
         MainWindowElement();
+
         MainWindowElement(Element *parent);
         void layout();
         virtual ~MainWindowElement();
-        void navigate(string uri);
         ViewStackElement *getViewStack();
         void showMessage(MessageType msgType, char *msg);
 };

@@ -9,6 +9,9 @@ namespace spider {
     {
 
     }
+    void MainWindowElement::hideMessage() {
+        this->infoElement->hide();
+    }
     int treeview_itemselected(SPType *sender, EventArgs *e) {
         TreeViewElement *treeView = (TreeViewElement *)sender;
         MainWindowElement *mainWindow = (MainWindowElement *)treeView->getMainWindowElement();
@@ -17,7 +20,7 @@ namespace spider {
         Uri *uri = selectedItem->getUri();
         char *uri2 = uri->getUri();
         string uri3 (uri2);
-        mainWindow->getViewStack()->navigate(uri3);
+        mainWindow->navigate(uri3);
 
         return 0;
     }
@@ -42,6 +45,9 @@ namespace spider {
         viewStack->navigate(ie->getText());
 
         return 0;
+    }
+    void MainWindowElement::navigate(string uri) {
+        this->viewStack->navigate(uri);
     }
     void MainWindowElement::layout() {
         this->setMainWindowElement(this);
@@ -129,6 +135,7 @@ namespace spider {
 
 
         this->pack();
+        this->navigate("spoyler:internal:start");
     }
     ViewStackElement *MainWindowElement::getViewStack() {
         return this->viewStack;

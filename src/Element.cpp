@@ -6,7 +6,12 @@ namespace spider {
 void Element::mouseDown(int& mouseButton, int& x, int& y) {
 
 }
-
+void Element::show() {
+    this->setVisible(true);
+}
+void Element::hide() {
+    this->setVisible(false);
+}
 void Element::mouseClick(int& mouseButton, int& x, int& y) {
 
 }

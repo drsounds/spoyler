@@ -15,6 +15,7 @@ namespace spider {
         ViewStackElement(Element *parent);
         void registerView(ViewElement *view);
         void navigate(string uri);
+        virtual void appendChild(Node *child);
     };
 }
 #endif // VIEWSTACKELEMENT_H

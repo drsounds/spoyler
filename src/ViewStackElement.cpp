@@ -5,6 +5,10 @@
 #include "MainWindowElement.h"
 #include <vector>
 namespace spider {
+    void ViewStackElement::appendChild(Node *child) {
+        Node::appendChild(child);
+        ((Element *)child)->setVisible(false);
+    }
     ViewStackElement::ViewStackElement()
     : BoxElement::BoxElement() {
          this->history = new std::stack<string *>;
@@ -43,14 +47,18 @@ namespace spider {
                 view->navigate(uri);
                 activeView = view;
                 foundView = true;
+
             } else {
                 view->hide();
             }
             this->invalidate();
         }
         if (foundView) {
+                ((MainWindowElement *)this->mainWindowElement)->hideMessage();
+                ((MainWindowElement *)this->mainWindowElement)->invalidate();
         } else {
             ((MainWindowElement *)this->mainWindowElement)->showMessage(Warning, "The uri could not be found");
+                ((MainWindowElement *)this->mainWindowElement)->invalidate();
         }
        /* if (std::regex_match(uri.c_str(), std::regex("spoyler:internal:start"))) {
 

@@ -20,6 +20,7 @@ class InfoElement : public HBoxElement
         MessageType getMessageType() {
             return this->type;
         }
+        void hide();
         void show(MessageType type, char *text);
         void setMessageType(MessageType type);
         InfoElement(Element *parent);
