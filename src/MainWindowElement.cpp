@@ -17,6 +17,7 @@ namespace spider {
         char *uri2 = uri->getUri();
         string uri3 (uri2);
         mainWindow->getViewStack()->navigate(uri3);
+
         return 0;
     }
     MainWindowElement::MainWindowElement(Element *parent) : VBoxElement(parent)
@@ -26,6 +27,7 @@ namespace spider {
     }
     void MainWindowElement::showMessage(MessageType msgType, char *msg) {
         this->infoElement->show(msgType, msg);
+        this->invalidate();
     }
     int search_entered(SPType *sender, EventArgs *e) {
         InputEventArgs *ie = (InputEventArgs *)e;
