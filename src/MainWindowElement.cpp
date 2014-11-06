@@ -24,14 +24,19 @@ namespace spider {
         this->setWindowElement(parent);
 
     }
+    void MainWindowElement::showMessage(MessageType msgType, char *msg) {
+        this->infoElement->show(msgType, msg);
+    }
     int search_entered(SPType *sender, EventArgs *e) {
         InputEventArgs *ie = (InputEventArgs *)e;
-        MainWindowElement * mainWindow = (MainWindowElement *)sender;
+        Element * elm = (Element *)sender;
+        MainWindowElement *mainWindow = (MainWindowElement *)elm->getMainWindowElement();
         string query = ie->getText();
         if (query.find("spoyler:") < 1) {
             query = "spoyler:search:" + query;
         }
-        mainWindow->getViewStack()->navigate(ie->getText());
+        ViewStackElement * viewStack = mainWindow->getViewStack();
+        viewStack->navigate(ie->getText());
 
         return 0;
     }
@@ -58,7 +63,7 @@ namespace spider {
         this->infoElement = new spider::InfoElement(this);
         this->infoElement->set("height", "28");
         this->appendChild(this->infoElement);
-        this->infoElement->show(Warning, "Test");
+        this->infoElement->hide();
 
 
         // Add header children

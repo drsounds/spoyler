@@ -20,6 +20,7 @@ class MainWindowElement : public VBoxElement
         virtual ~MainWindowElement();
         void navigate(string uri);
         ViewStackElement *getViewStack();
+        void showMessage(MessageType msgType, char *msg);
 };
 }
 #include "libspider.h"

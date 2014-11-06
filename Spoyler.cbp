@@ -65,6 +65,7 @@
 		<Unit filename="include/ImageElement.h" />
 		<Unit filename="include/InfoElement.h" />
 		<Unit filename="include/InputElement.h" />
+		<Unit filename="include/InputEventArgs.h" />
 		<Unit filename="include/LinkElement.h" />
 		<Unit filename="include/MainWindowElement.h" />
 		<Unit filename="include/MouseEventArgs.h" />
@@ -99,6 +100,7 @@
 		<Unit filename="include/elements.h" />
 		<Unit filename="include/libspider.h" />
 		<Unit filename="include/luahtml.h" />
+		<Unit filename="include/main.h" />
 		<Unit filename="src/ArtistOverviewView.cpp" />
 		<Unit filename="src/ArtistView.cpp" />
 		<Unit filename="src/BoxElement.cpp" />
@@ -116,6 +118,7 @@
 		<Unit filename="src/ImageElement.cpp" />
 		<Unit filename="src/InfoElement.cpp" />
 		<Unit filename="src/InputElement.cpp" />
+		<Unit filename="src/InputEventArgs.cpp" />
 		<Unit filename="src/LinkElement.cpp" />
 		<Unit filename="src/MainWindowElement.cpp" />
 		<Unit filename="src/MouseEventArgs.cpp" />

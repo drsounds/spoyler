@@ -2,6 +2,7 @@
 #include "WhatsNewView.h"
 #include <regex>
 #include "PlayQueueView.h"
+#include "MainWindowElement.h"
 #include <vector>
 namespace spider {
     ViewStackElement::ViewStackElement()
@@ -31,16 +32,24 @@ namespace spider {
         // Hide all views
         this->pack();
         this->invalidate();
+        bool foundView = false;
+        ViewElement *currentView = view;
         for (std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
             Node *node = static_cast<Node *>(*it);
             ViewElement *view = (ViewElement *)node;
             if (view->acceptsUri(uri)) {
                 view->setVisible(true);
                 view->navigate(uri);
+                foundView = true;
             } else {
-                view->setVisible(false);
             }
             this->invalidate();
+        }
+        if (foundView) {
+
+            currentView->setVisible(false);
+        } else {
+            ((MainWindowElement *)this->mainWindowElement)->showMessage(Warning, "The uri could not be found");
         }
        /* if (std::regex_match(uri.c_str(), std::regex("spoyler:internal:start"))) {
 

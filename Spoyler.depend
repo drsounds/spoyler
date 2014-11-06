@@ -11117,14 +11117,14 @@
 1415172742 c:\users\alecca\documents\spoyler\include\linkelement.h
 	"TextElement.h"
 
-1415297596 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
+1415298731 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
 	"MainWindowElement.h"
 	"StartView.h"
 	"InputElement.h"
 	"InputEventArgs.h"
 	"SplitterElement.h"
 
-1415172742 c:\users\alecca\documents\spoyler\include\mainwindowelement.h
+1415298524 c:\users\alecca\documents\spoyler\include\mainwindowelement.h
 	"VBoxElement.h"
 	"HBoxElement.h"
 	"ViewStackElement.h"
@@ -11258,11 +11258,12 @@
 	"ViewElement.h"
 	<string>
 
-1415296084 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
+1415298764 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
 	"ViewStackElement.h"
 	"WhatsNewView.h"
 	<regex>
 	"PlayQueueView.h"
+	"MainWindowElement.h"
 	<vector>
 
 1415176467 source:c:\users\alecca\documents\spoyler\src\whatsnewview.cpp
