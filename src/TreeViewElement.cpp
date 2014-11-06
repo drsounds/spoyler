@@ -87,8 +87,8 @@ int TreeViewElement::getItemHeight() {
 
 }
 
-void TreeViewElement::Draw(int x, int y, GraphicsContext *g) {
-    spider::Element::Draw(x, y, g);
+void TreeViewElement::draw(int x, int y, GraphicsContext *g) {
+    spider::Element::draw(x, y, g);
 	int itemHeight = this->getItemHeight();
 
 	int top = 0;

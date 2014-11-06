@@ -6,7 +6,7 @@ class TextElement : public Element
 {
     public:
         TextElement(Element *parent);
-        void Draw(int x, int y, GraphicsContext *g);
+        void draw(int x, int y, GraphicsContext *g);
         virtual ~TextElement();
     protected:
     private:

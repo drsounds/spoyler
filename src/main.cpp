@@ -98,7 +98,7 @@ void draw(HWND hWnd) {
     gc2 = new Win32GraphicsContext(hWnd, memDC, window);
 
 
-    window->Draw(gc2);
+    window->draw(gc2);
     f = SelectObject(hdc, btp);
 
     BitBlt(hdc, 0, 0, clientRect.right, clientRect.bottom, memDC, 0, 0, SRCCOPY);

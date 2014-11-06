@@ -11,7 +11,7 @@ public:
   /*      ImageLibrary *images() {
             return this->mImages;
         }*/
-		void Draw(spider::GraphicsContext *gs);
+		void draw(spider::GraphicsContext *gs);
 		WindowElement();
 		virtual spider::GraphicsContext *createGraphics();
 		virtual void invalidateRegion(rectangle rect) {}

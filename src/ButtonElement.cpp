@@ -5,7 +5,7 @@ spider::ButtonElement::ButtonElement()
 
 	this->set("bgcolor", new string("#eeeeee"));
 }
-void spider::ButtonElement::Draw(int x, int y, spider::GraphicsContext *c)
+void spider::ButtonElement::draw(int x, int y, spider::GraphicsContext *c)
 {
     if (this->absoluteBounds == NULL)
     this->absoluteBounds = new rectangle;

@@ -3,7 +3,9 @@
 #include "FontStyle.h"
 #include "libspider.h"
 #include "Color.h"
+#include "Element.h"
 namespace spider {
+    class Element;
     class WindowElement;
     class GraphicsContext {
 	protected:
@@ -27,7 +29,8 @@ namespace spider {
 		FontStyle *getFontStyle() {
 			return this->fontStyle;
 		}
-
+        virtual void drawControl(char *control, Element *srcElement, int x, int y, int w, int h) {}
+        virtual void drawInputElement(Element *srcElement, int x, int y, int w, int h) {}
 		virtual void setOrigo(const int& x, const int& y);
 	};
 }

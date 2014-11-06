@@ -7,6 +7,7 @@
 #include "GraphicsContext.h"
 #include "Stylesheet.h"
 namespace spider {
+    class GraphicsContext;
     class Element : public Node, public Observable {
 
     public:
@@ -19,6 +20,16 @@ namespace spider {
         int z;
         int scrollX;
         int scrollY;
+        string name;
+
+
+        void setName(string name) {
+            this->name = name;
+         }
+        string getName() {
+            return name;
+        }
+
         bool scrollable;
         bool visible;
         margin *margins;
@@ -29,7 +40,7 @@ namespace spider {
         char *data;
         Element *windowElement;
         Element *mainWindowElement;
-        virtual void Draw(int x, int y, GraphicsContext *c);
+        virtual void draw(int x, int y, GraphicsContext *c);
         string getType() {
             return "Element";
         }

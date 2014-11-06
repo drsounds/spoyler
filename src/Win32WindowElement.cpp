@@ -2,13 +2,13 @@
 #include "Win32WindowElement.h"
 #include "Win32GraphicsContext.h"
 namespace spider {
-    void Win32WindowElement::Draw(GraphicsContext *graphics) {
+    void Win32WindowElement::draw(GraphicsContext *graphics) {
         std::vector<Node *> *elements = this->getChildNodes();
         for (std::vector<Node *>::iterator it = elements->begin(); it != elements->end(); ++it) {
             Node *node = (Node *)*it;
             Element *elm = static_cast<Element *>(node);
             if (elm->isVisible())
-                elm->Draw(0, 0, graphics);
+                elm->draw(0, 0, graphics);
         }
     }
     void Win32WindowElement::invalidateRegion(rectangle rect) {

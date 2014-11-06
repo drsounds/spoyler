@@ -25,6 +25,9 @@ namespace spider {
         ViewElement *view = NULL;
         std::stack<string *> *history = this->history;
         ViewStackElement *th = this;
+
+
+
         // Hide all views
         this->pack();
         this->invalidate();

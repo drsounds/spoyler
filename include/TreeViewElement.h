@@ -26,7 +26,7 @@ namespace spider {
 		TreeViewElement(Element *parent)
             ;
 
-		void Draw(int x, int y, GraphicsContext *g);
+		void draw(int x, int y, GraphicsContext *g);
         vector<TreeItem *> *items() {
             return this->mItems;
         }

@@ -10,7 +10,7 @@ private:
         InputElement();
         InputElement(Element *parent);
         virtual ~InputElement();
-        void draw(GraphicsContext *gc);
+        virtual void draw(int x, int y, GraphicsContext *g);
     protected:
     private:
 };

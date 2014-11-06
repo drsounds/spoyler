@@ -5,7 +5,7 @@ TextElement::TextElement(Element *parent)
 {
     //ctor
 }
-void TextElement::Draw(int x, int y, GraphicsContext *g) {
+void TextElement::draw(int x, int y, GraphicsContext *g) {
     Color *bgcolor = (Color *)this->getAttributeObj("bgcolor");
     Color *fgcolor = (Color *)this->getAttributeObj("fgcolor");
     FontStyle *font = this->getFont();

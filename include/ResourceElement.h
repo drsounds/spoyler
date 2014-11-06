@@ -9,7 +9,7 @@ class ResourceElement : public Element
     public:
         ResourceElement(Resource *resource, Element *parent);
         virtual ~ResourceElement();
-        void Draw(int x, int y, GraphicsContext *g);
+        void draw(int x, int y, GraphicsContext *g);
     protected:
         Resource *resource;
     private:

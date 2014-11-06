@@ -1,5 +1,7 @@
 #include "MainWindowElement.h"
 #include "StartView.h"
+#include "InputElement.h"
+#include "InputEventArgs.h"
 #include "SplitterElement.h"
 namespace spider {
     MainWindowElement::MainWindowElement()
@@ -22,6 +24,17 @@ namespace spider {
         this->setWindowElement(parent);
 
     }
+    int search_entered(SPType *sender, EventArgs *e) {
+        InputEventArgs *ie = (InputEventArgs *)e;
+        MainWindowElement * mainWindow = (MainWindowElement *)sender;
+        string query = ie->getText();
+        if (query.find("spoyler:") < 1) {
+            query = "spoyler:search:" + query;
+        }
+        mainWindow->getViewStack()->navigate(ie->getText());
+
+        return 0;
+    }
     void MainWindowElement::layout() {
         this->setMainWindowElement(this);
         this->set("bgcolor", "#373737");
@@ -34,6 +47,13 @@ namespace spider {
         header->getPadding()->right =  3;
         this->appendChild(header);
 
+        // add search element
+        InputElement *searchElement = new InputElement(header);
+        header->appendChild(searchElement);
+        searchElement->set("width", "120");
+        searchElement->setName("searchBox");
+        searchElement->set("bgcolor", "#777777");
+        searchElement->addEventListener("enter", &search_entered);
         // Add the info element
         this->infoElement = new spider::InfoElement(this);
         this->infoElement->set("height", "28");

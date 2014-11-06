@@ -14,7 +14,8 @@ InputElement::InputElement(Element *parent)
 
 }
 
-void InputElement::draw(GraphicsContext *gc) {
-
+void InputElement::draw(int x, int y, GraphicsContext *g) {
+    Element::draw(x, y, g);
+    g->drawInputElement(this, x, y, this->getWidth(), this->getHeight());
 }
 }

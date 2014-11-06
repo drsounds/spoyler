@@ -23,10 +23,9 @@ namespace spider {
             this->hWnd = hWnd;
 	    }
 		HBITMAP bufferBitmap;
-		void Draw(spider::GraphicsContext *graphics);
+		void draw(spider::GraphicsContext *graphics);
 		void Show();
 		void Hide();
-
 		Win32WindowElement();
 		Win32WindowElement(HDC hdc);
 		void SampleLayout();

@@ -102,7 +102,7 @@ void TabBarElement::mousedown(int mouseButton, int x, int y) {
     }
     tabBar->invalidate();
 }
-void TabBarElement::Draw(int x, int y, GraphicsContext *g) {
+void TabBarElement::draw(int x, int y, GraphicsContext *g) {
     if (this->absoluteBounds == NULL)
         this->absoluteBounds = new rectangle;
 

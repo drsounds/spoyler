@@ -1,6 +1,9 @@
 #pragma once
 #include "Win32GraphicsContext.h"
 namespace spider {
+WNDPROC oldEditProc;
+map<Element *, HWND> *Win32GraphicsContext::controls = new map<Element *, HWND>;
+map<HWND, Element *> *Win32GraphicsContext::hwnds = new map<HWND, Element *>;
 COLORREF toWin32Color(Color color) {
 	return NULL;
 }
@@ -16,7 +19,6 @@ void Win32GraphicsContext::setClip(rectangle rect) {
 Win32GraphicsContext::Win32GraphicsContext(HWND hWnd, HDC hDC, WindowElement *window)
  : GraphicsContext(window) {
 	this->hDC = hDC;
-	this->controls = new map<string, HWND>();
 	this->hWnd = hWnd;
 }
 Win32GraphicsContext::~Win32GraphicsContext() {
@@ -114,14 +116,59 @@ void Win32GraphicsContext::drawString(char *text, FontStyle *fs, spider::Color *
     DrawText(this->hDC, (LPCSTR)text, lstrlen(text), &rect, 0);
     DeleteObject(font);
 }
-void Win32GraphicsContext::drawControl(int x, int y, int w, int h, char *name) {
-    if (this->controls->find(name) != this->controls->end()) {
 
+LRESULT CALLBACK subEditProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+   switch (msg)
+   {
+    case WM_KEYDOWN:
+         switch (wParam)
+         {
+          case VK_RETURN:
+
+            Element *sender = (*Win32GraphicsContext::hwnds)[hwnd];
+
+            // Get text
+            int textLength = GetWindowTextLength(hwnd);
+            char *text = (char *)malloc(sizeof(char) * textLength);
+            memset(text, 0, sizeof(text));
+
+            GetWindowText(hwnd, text, sizeof(text));
+
+            sender->notify("enter", sender, new InputEventArgs(string(text)));
+            return 0;
+
+         WNDPROC oldEditProc; //Do your stuff
+              break;  //or return 0; if you don't want to pass it further to def proc
+          //If not your key, skip to default:
+         }
+    default:
+         return CallWindowProc(oldEditProc, hwnd, msg, wParam, lParam);
+   }
+   return 0;
+}
+
+
+void Win32GraphicsContext::drawControl(char *control, Element *elm, int x, int y, int w, int h) {
+    HWND hwnd;
+    int count_controls = this->controls->count(elm);
+    if (count_controls > 0) {
+        hwnd = (*Win32GraphicsContext::controls)[elm];
+        //SetWindowPos(hwnd, 0, x, y, w, h, 0);
     } else {
-        // Create control
-//        HWND hwnd = CreateWindow(L"EDIT", L"", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL | ES_WANTRETURN, 350, 470, 100, 50, NULL, 0, hInst, 0);
-  //      (*this->controls)[string(name)] = hwnd;
+        hwnd = CreateWindow(control, 0, WS_CHILD|WS_VISIBLE, x, y / 4, w, h / 4, this->hWnd, 0, NULL, 0);
+        controls->insert(std::pair<Element *, HWND>(elm, hwnd));
+        HFONT font = CreateFont(8, 4, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE, DEFAULT_CHARSET, OUT_CHARACTER_PRECIS,  CLIP_MASK, CLEARTYPE_QUALITY , FF_MODERN | VARIABLE_PITCH, "MS Sans Serif");
+
+        SendMessage(hwnd, WM_SETFONT, WPARAM(font), TRUE);
+        (*Win32GraphicsContext::hwnds)[hwnd] = elm;
+        oldEditProc = (WNDPROC)SetWindowLongPtr(hwnd, GWLP_WNDPROC, (LONG_PTR)subEditProc);
     }
 }
+
+void Win32GraphicsContext::drawInputElement(Element *elm, int x, int y, int w, int h) {
+    this->drawControl("EDIT", elm, x, y, w, h);
+}
+
 }
 

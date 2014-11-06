@@ -30,6 +30,8 @@ void Element::click(int mouseButton, int x, int y) {
 		}
 	}
 }
+
+
 void Element::mousedown(int mouseButton, int x, int y) {
 	int xx = this->getAbsoluteBounds() != NULL ? x - this->getAbsoluteBounds()->y : x;
     int yy = this->getAbsoluteBounds() != NULL ? y - this->getAbsoluteBounds()->y : y;
@@ -240,7 +242,7 @@ char *Element::getId() {
 
 
 
-void Element::Draw(int x, int y, GraphicsContext *c) {
+void Element::draw(int x, int y, GraphicsContext *c) {
     if (!this->isVisible()) {
         return;
     }
@@ -276,7 +278,7 @@ void Element::Draw(int x, int y, GraphicsContext *c) {
 	//Color color(255, 0, 0, 255);
     //	c->drawRectangle(0, 0, this->getWidth(), this->getHeight() , &color);
     char *text = this->getInnerText();
-    // Draw text
+    // draw text
     if (text != NULL)
         c->drawString(this->getInnerText(), new FontStyle((char *)fontFamily->c_str(), fontSize, fontSize / 2, false, false), fgColor, x, y, this->getWidth(), this->getHeight());
 
@@ -286,7 +288,7 @@ void Element::Draw(int x, int y, GraphicsContext *c) {
 	for(std::vector<Node *>::iterator it = children->begin(); it != children->end(); ++it) {
 		Element *elm = static_cast<Element *>(*it);
 		if(elm != NULL) {
-			elm->Draw(x, y, c);
+			elm->draw(x, y, c);
 		}
 	}
 	rectangle rect;
