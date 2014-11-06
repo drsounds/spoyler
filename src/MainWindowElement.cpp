@@ -3,6 +3,7 @@
 #include "InputElement.h"
 #include "InputEventArgs.h"
 #include "SplitterElement.h"
+#include "DoctrineView.h"
 namespace spider {
     MainWindowElement::MainWindowElement()
     {
@@ -34,7 +35,7 @@ namespace spider {
         Element * elm = (Element *)sender;
         MainWindowElement *mainWindow = (MainWindowElement *)elm->getMainWindowElement();
         string query = ie->getText();
-        if (query.find("spoyler:") < 1) {
+        if (query.find("spoyler:") < 0) {
             query = "spoyler:search:" + query;
         }
         ViewStackElement * viewStack = mainWindow->getViewStack();
@@ -119,6 +120,7 @@ namespace spider {
         viewStack->set("flex", "1");
         viewStack->setWindowElement(this->getWindowElement());
         viewStack->appendChild(new spider::views::StartView(this));
+        viewStack->appendChild(new spider::views::DoctrineView(this));
         spider::HBoxElement *footer = new spider::HBoxElement(this);
         footer->set("bgcolor", "#444444");
         footer->set("height", "86");

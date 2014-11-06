@@ -8,6 +8,7 @@ namespace spider {
     private:
         std::stack<string *> *history;
         std::stack<string *> *future;
+        ViewElement *activeView;
 
     public:
         ViewStackElement();

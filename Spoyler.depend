@@ -11009,7 +11009,7 @@
 	"Element.h"
 	<vector>
 
-1415172742 c:\users\alecca\documents\spoyler\include\viewstackelement.h
+1415300449 c:\users\alecca\documents\spoyler\include\viewstackelement.h
 	"BoxElement.h"
 	"ViewElement.h"
 	<stack>
@@ -11117,12 +11117,13 @@
 1415172742 c:\users\alecca\documents\spoyler\include\linkelement.h
 	"TextElement.h"
 
-1415298731 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
+1415300077 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
 	"MainWindowElement.h"
 	"StartView.h"
 	"InputElement.h"
 	"InputEventArgs.h"
 	"SplitterElement.h"
+	"DoctrineView.h"
 
 1415298524 c:\users\alecca\documents\spoyler\include\mainwindowelement.h
 	"VBoxElement.h"
@@ -11258,7 +11259,7 @@
 	"ViewElement.h"
 	<string>
 
-1415298764 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
+1415301181 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
 	"ViewStackElement.h"
 	"WhatsNewView.h"
 	<regex>
@@ -11266,13 +11267,13 @@
 	"MainWindowElement.h"
 	<vector>
 
-1415176467 source:c:\users\alecca\documents\spoyler\src\whatsnewview.cpp
+1415299115 source:c:\users\alecca\documents\spoyler\src\whatsnewview.cpp
 	"WhatsNewView.h"
 	"ButtonElement.h"
 	"HBoxElement.h"
 	<regex>
 
-1415297333 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
+1415300353 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
 1415291932 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
@@ -11312,4 +11313,12 @@
 
 1415297117 source:c:\users\alecca\documents\spoyler\src\inputeventargs.cpp
 	"InputEventArgs.h"
+
+1415301218 source:c:\users\alecca\documents\spoyler\src\doctrineview.cpp
+	"DoctrineView.h"
+	"TextElement.h"
+	<regex>
+
+1415299676 c:\users\alecca\documents\spoyler\include\doctrineview.h
+	"ViewElement.h"
 

@@ -129,11 +129,11 @@ LRESULT CALLBACK subEditProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
             Element *sender = (*Win32GraphicsContext::hwnds)[hwnd];
 
             // Get text
-            int textLength = GetWindowTextLength(hwnd);
+            int textLength = GetWindowTextLength(hwnd) + 1;
             char *text = (char *)malloc(sizeof(char) * textLength);
-            memset(text, 0, sizeof(text));
+            memset(text, 0, textLength);
 
-            GetWindowText(hwnd, text, sizeof(text));
+            GetWindowText(hwnd, text, textLength);
 
             sender->notify("enter", sender, new InputEventArgs(string(text)));
             return 0;

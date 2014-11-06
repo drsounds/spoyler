@@ -10,19 +10,13 @@ namespace spider {
             //ctor
         }
         bool WhatsNewView::acceptsUri(string uri) {
-            return std::regex_match(uri.c_str(), std::regex("spoyler:internal:start"));
+            return std::regex_match(uri.c_str(), std::regex("^spoyler:internal:start"));
         }
         WhatsNewView::WhatsNewView(Element *parent)
          : ViewElement::ViewElement(parent)
         {
-            DOMViewElement *domView = new DOMViewElement(this);
 
 
-            domView->set("height", "200");
-            domView->set("width", "140");
-            domView->set("fgcolor", "#eeeeee");
-            domView->set("size", "11");
-/*
             // Build the view
             HBoxElement *hbox = new HBoxElement(this);
             hbox->getPadding()->top = 12;
@@ -83,7 +77,7 @@ namespace spider {
             title2->set("width", "620");
             title2->set("size", "16");
             hbox2->appendChild(title2);
-*/
+
         }
         void WhatsNewView::navigate(string uri) {
 

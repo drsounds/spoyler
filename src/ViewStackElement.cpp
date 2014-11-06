@@ -16,6 +16,7 @@ namespace spider {
          this->setParent(this);
          this->history = new std::stack<string *>;
          this->future = new std::stack<string *>;
+         this->activeView = NULL;
         vector<Node *> *children = this->getChildNodes();
     }
     /**
@@ -23,7 +24,7 @@ namespace spider {
      **/
     void ViewStackElement::navigate(string uri) {
         // TODO add navigation handler
-        ViewElement *view = NULL;
+
         std::stack<string *> *history = this->history;
         ViewStackElement *th = this;
 
@@ -32,22 +33,22 @@ namespace spider {
         // Hide all views
         this->pack();
         this->invalidate();
+        ViewElement *newView = NULL;
         bool foundView = false;
-        ViewElement *currentView = view;
         for (std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
             Node *node = static_cast<Node *>(*it);
             ViewElement *view = (ViewElement *)node;
             if (view->acceptsUri(uri)) {
                 view->setVisible(true);
                 view->navigate(uri);
+                activeView = view;
                 foundView = true;
             } else {
+                view->hide();
             }
             this->invalidate();
         }
         if (foundView) {
-
-            currentView->setVisible(false);
         } else {
             ((MainWindowElement *)this->mainWindowElement)->showMessage(Warning, "The uri could not be found");
         }

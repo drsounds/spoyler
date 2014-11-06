@@ -54,6 +54,7 @@
 		<Unit filename="include/ButtonElement.h" />
 		<Unit filename="include/Color.h" />
 		<Unit filename="include/DOMViewElement.h" />
+		<Unit filename="include/DoctrineView.h" />
 		<Unit filename="include/Element.h" />
 		<Unit filename="include/Entity.h" />
 		<Unit filename="include/EventArgs.h" />
@@ -107,6 +108,7 @@
 		<Unit filename="src/ButtonElement.cpp" />
 		<Unit filename="src/Color.cpp" />
 		<Unit filename="src/DOMViewElement.cpp" />
+		<Unit filename="src/DoctrineView.cpp" />
 		<Unit filename="src/Element.cpp" />
 		<Unit filename="src/Entity.cpp" />
 		<Unit filename="src/EventArgs.cpp" />
