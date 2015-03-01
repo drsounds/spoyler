@@ -4,6 +4,7 @@
 #include "InputEventArgs.h"
 #include "SplitterElement.h"
 #include "DoctrineView.h"
+#include "UserView.h"
 namespace spider {
     MainWindowElement::MainWindowElement()
     {
@@ -38,8 +39,8 @@ namespace spider {
         Element * elm = (Element *)sender;
         MainWindowElement *mainWindow = (MainWindowElement *)elm->getMainWindowElement();
         string query = ie->getText();
-        if (query.find("spoyler:") < 0) {
-            query = "spoyler:search:" + query;
+        if (query.find("spotify:") < 0) {
+            query = "spotify:search:" + query;
         }
         ViewStackElement * viewStack = mainWindow->getViewStack();
         viewStack->navigate(ie->getText());
@@ -55,10 +56,10 @@ namespace spider {
         spider::HBoxElement *header = new spider::HBoxElement(this);
         header->set("bgcolor", "#767676");
         header->set("height", "55");
-        header->getPadding()->top = 3;
-        header->getPadding()->left = 3;
-        header->getPadding()->bottom = 3;
-        header->getPadding()->right =  3;
+        header->getPadding()->top = 53;
+        header->getPadding()->left = 13;
+        header->getPadding()->bottom = 13;
+        header->getPadding()->right =  13;
         this->appendChild(header);
 
         // add search element
@@ -105,10 +106,10 @@ namespace spider {
         treeView->setWindowElement(this->getWindowElement());
         treeView->setMainWindowElement(this);
         // Add sample elements
-        TreeItem *item = new TreeItem(new Uri("spoyler:internal:start"));
+        TreeItem *item = new TreeItem(new Uri("spotify:internal:start"));
 
         item->setSelected(false);
-        TreeItem *item2 = new TreeItem(new Uri("spoyler:internal:history"));
+        TreeItem *item2 = new TreeItem(new Uri("spotify:doctrine:bungalow"));
 
         item2->setSelected(false);
         treeView->addEventListener("itemselected", treeview_itemselected);
@@ -128,6 +129,7 @@ namespace spider {
         viewStack->setWindowElement(this->getWindowElement());
         viewStack->appendChild(new spider::views::StartView(this));
         viewStack->appendChild(new spider::views::DoctrineView(this));
+        viewStack->appendChild(new spider::views::UserView(this));
         spider::HBoxElement *footer = new spider::HBoxElement(this);
         footer->set("bgcolor", "#444444");
         footer->set("height", "86");
@@ -136,7 +138,7 @@ namespace spider {
 
 
         this->pack();
-        this->navigate("spoyler:internal:start");
+        this->navigate("spotify:internal:start");
     }
     ViewStackElement *MainWindowElement::getViewStack() {
         return this->viewStack;

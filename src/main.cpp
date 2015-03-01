@@ -124,11 +124,13 @@ HBITMAP btp ;
 HGDIOBJ t ;
 HGDIOBJ f;
 HDC hdc;
-
+BOOL CALLBACK cw (HWND hWnd, LPARAM lParam) {
+    SendMessage(hWnd, WM_PAINT, 0, 0);
+}
 LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	int wmId, wmEvent;
-
+    // Fixed flicker from http://snipd.net/double-buffering-with-a-back-buffer-in-vc
     RECT clientRect;
 	int iPosX, iPosY;
 	GetClientRect(hWnd,&clientRect);
@@ -143,7 +145,7 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
         GetClientRect(hWnd,&clientRect);
         memDC = CreateCompatibleDC(NULL);
         hdc = GetDC(hWnd);
-        btp = CreateCompatibleBitmap(hdc, 1000, 1000);
+        btp = CreateCompatibleBitmap(hdc, 10000, 10000);
         SelectObject(memDC, btp);
         gc2 = new Win32GraphicsContext(hWnd, memDC, window);
         ReleaseDC(hWnd, hdc);
@@ -181,6 +183,7 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
 
         window->draw(gc2);
         BitBlt(hdc, 0, 0, clientRect.right, clientRect.bottom, memDC, 0, 0, SRCCOPY);
+        EnumChildWindows(hWnd, &cw, 0);
         InvalidateRect(hWnd,NULL,false);
         EndPaint(hWnd, &ps);
 		break;

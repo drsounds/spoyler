@@ -16,7 +16,7 @@ namespace spider {
 
         }
         bool PlayQueueView::acceptsUri(string uri) {
-            return std::regex_match(uri.c_str(), std::regex("spoyler:internal:(history|playqueue)"));
+            return std::regex_match(uri.c_str(), std::regex("spotify:internal:(history|playqueue)"));
         }
         PlayQueueView::~PlayQueueView()
         {

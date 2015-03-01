@@ -11053,7 +11053,7 @@
 	"Element.h"
 	"expat.h"
 
-1422718654 source:c:\users\alecca\documents\spoyler\src\element.cpp
+1425221636 source:c:\users\alecca\documents\spoyler\src\element.cpp
 	"Element.h"
 	"WindowElement.h"
 	"Observable.h"
@@ -11126,13 +11126,14 @@
 1422718653 c:\users\alecca\documents\spoyler\include\linkelement.h
 	"TextElement.h"
 
-1425155021 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
+1425222353 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
 	"MainWindowElement.h"
 	"StartView.h"
 	"InputElement.h"
 	"InputEventArgs.h"
 	"SplitterElement.h"
 	"DoctrineView.h"
+	"UserView.h"
 
 1422718653 c:\users\alecca\documents\spoyler\include\mainwindowelement.h
 	"VBoxElement.h"
@@ -11166,7 +11167,7 @@
 1422718654 source:c:\users\alecca\documents\spoyler\src\node.cpp
 	"Node.h"
 
-1425219497 source:c:\users\alecca\documents\spoyler\src\main.cpp
+1425220818 source:c:\users\alecca\documents\spoyler\src\main.cpp
 	<tchar.h>
 	<windows.h>
 	"libspider.h"
@@ -11197,7 +11198,7 @@
 1422718654 source:c:\users\alecca\documents\spoyler\src\observer.cpp
 	"Observer.h"
 
-1422718654 source:c:\users\alecca\documents\spoyler\src\playqueueview.cpp
+1425221359 source:c:\users\alecca\documents\spoyler\src\playqueueview.cpp
 	"PlayQueueView.h"
 	<regex>
 
@@ -11224,7 +11225,7 @@
 1422718654 source:c:\users\alecca\documents\spoyler\src\sptype.cpp
 	"SPType.h"
 
-1425155501 source:c:\users\alecca\documents\spoyler\src\startview.cpp
+1425221359 source:c:\users\alecca\documents\spoyler\src\startview.cpp
 	"StartView.h"
 	<regex>
 	"WhatsNewView.h"
@@ -11236,7 +11237,7 @@
 1422718654 source:c:\users\alecca\documents\spoyler\src\stylesheet.cpp
 	"Stylesheet.h"
 
-1422718654 source:c:\users\alecca\documents\spoyler\src\tabbarelement.cpp
+1425220606 source:c:\users\alecca\documents\spoyler\src\tabbarelement.cpp
 	"TabBarElement.h"
 
 1422718654 source:c:\users\alecca\documents\spoyler\src\tabbarviewelement.cpp
@@ -11251,7 +11252,7 @@
 1422718653 c:\users\alecca\documents\spoyler\include\treeadapter.h
 	"libspider.h"
 
-1422718654 source:c:\users\alecca\documents\spoyler\src\treeitem.cpp
+1425221359 source:c:\users\alecca\documents\spoyler\src\treeitem.cpp
 	"TreeItem.h"
 	<regex>
 
@@ -11270,7 +11271,7 @@
 	"ViewElement.h"
 	<string>
 
-1425155820 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
+1425221359 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
 	"ViewStackElement.h"
 	"WhatsNewView.h"
 	<regex>
@@ -11278,7 +11279,7 @@
 	"MainWindowElement.h"
 	<vector>
 
-1422718654 source:c:\users\alecca\documents\spoyler\src\whatsnewview.cpp
+1425221359 source:c:\users\alecca\documents\spoyler\src\whatsnewview.cpp
 	"WhatsNewView.h"
 	"ButtonElement.h"
 	"HBoxElement.h"
@@ -11287,7 +11288,7 @@
 1422718654 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
-1422718654 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
+1425219648 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
 	<Windows.h>
 	"Win32WindowElement.h"
 	"Win32GraphicsContext.h"
@@ -11325,7 +11326,7 @@
 1422718654 source:c:\users\alecca\documents\spoyler\src\inputeventargs.cpp
 	"InputEventArgs.h"
 
-1422718654 source:c:\users\alecca\documents\spoyler\src\doctrineview.cpp
+1425221359 source:c:\users\alecca\documents\spoyler\src\doctrineview.cpp
 	"DoctrineView.h"
 	"TextElement.h"
 	<regex>
@@ -27395,4 +27396,16 @@
 
 1425155989 c:\users\alecca\documents\spoyler\include\tableelement.h
 	"Element.h"
+
+1425222164 c:\users\alecca\documents\spoyler\include\userview.h
+	"TabbarViewElement.h"
+	"DOMViewElement.h"
+	"TextElement.h"
+
+1425222571 source:c:\users\alecca\documents\spoyler\src\userview.cpp
+	"UserView.h"
+	<boost/algorithm/string.hpp>
+	<string>
+	<vector>
+	<regex>
 

@@ -72,7 +72,7 @@ namespace spider {
             ((MainWindowElement *)this->mainWindowElement)->showMessage(Warning, "The uri could not be found");
                 ((MainWindowElement *)this->mainWindowElement)->invalidate();
         }
-       /* if (std::regex_match(uri.c_str(), std::regex("spoyler:internal:start"))) {
+       /* if (std::regex_match(uri.c_str(), std::regex("spotify:internal:start"))) {
 
             // Show What's new view
             view = new views::WhatsNewView((Element *)this);

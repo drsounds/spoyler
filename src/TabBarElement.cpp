@@ -132,8 +132,13 @@ void TabBarElement::draw(int x, int y, GraphicsContext *g) {
             Color *bgColor = (Color *)this->getAttributeObj("highlight");
             g->fillRectangle(x + left, y + this->getHeight() - 5, width, 5, bgColor);
             #endif
+        } else {
+            #if SPOTIFY2009
+            // Draw line
+            g->drawLine(left + width, y, left + width, this->getHeight() + y, new Color(0, 0, 0, 1));
+            #endif
         }
-        g->drawString((char *)title->c_str(), font, fgColor, left + x + 20, y + (this->getHeight() / 3) - (strSize.height / 2), strSize.width, strSize.height);
+        g->drawString((char *)title->c_str(), font, fgColor, left + x + 20, y + (this->getHeight() / 2) - (strSize.height / 2), strSize.width, strSize.height);
         left += width;
         ++it;
     } while (it != this->getTabs()->end());

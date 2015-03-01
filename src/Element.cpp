@@ -254,15 +254,15 @@ void Element::draw(int x, int y, GraphicsContext *c) {
 
 	spider_position pos;
 	std::vector<Node *> *children = this->getChildNodes();
-	x += this->getX();
+	x += this->getX() ;
 	y += this->getY();
 	if (this->absoluteBounds == NULL)
     this->absoluteBounds = new rectangle;
 
-    this->absoluteBounds->x = x;
-    this->absoluteBounds->y = y;
-    this->absoluteBounds->width = this->getWidth();
-    this->absoluteBounds->height = this->getHeight();
+    this->absoluteBounds->x = x + this->getMargins()->left;
+    this->absoluteBounds->y = y + this->getMargins()->bottom;
+    this->absoluteBounds->width = this->getWidth() - this->getMargins()->left + this->getMargins()->right;
+    this->absoluteBounds->height = this->getHeight() - this->getMargins()->top + this->getMargins()->bottom;
 	int width =  this->getWidth();
 	int height = this->getHeight();
 
@@ -293,7 +293,7 @@ void Element::draw(int x, int y, GraphicsContext *c) {
 	for(std::vector<Node *>::iterator it = children->begin(); it != children->end(); ++it) {
 		Element *elm = static_cast<Element *>(*it);
 		if(elm != NULL) {
-			elm->draw(x, y, c);
+			elm->draw(x + this->getPadding()->left, y  + this->getPadding()->top, c);
 		}
 	}
 	rectangle rect;

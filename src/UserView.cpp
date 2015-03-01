@@ -1,12 +1,13 @@
-#include "DoctrineView.h"
-#include "TextElement.h"
-#include <regex>
+#include "UserView.h"
+#include <boost/algorithm/string.hpp>
 #include <string>
 #include <vector>
-#include <boost/algorithm/string.hpp>
+#include <regex>
+using namespace std;
 namespace spider {
     namespace views {
-        DoctrineView::DoctrineView(Element *parent)
+
+        UserView::UserView(Element *parent)
         {
             this->getPadding()->top = 20;
             this->getPadding()->left = 20;
@@ -20,14 +21,16 @@ namespace spider {
             this->appendChild(text);
         }
 
-        bool DoctrineView::acceptsUri(string uri) {
-            char *uri2 = (char *)uri.c_str();
-            bool a = std::regex_match(uri2, std::regex("spotify:doctrine:(.*)"));
-            return a;
+        UserView::UserView()
+        {
+            //ctor
         }
 
-        void DoctrineView::navigate(string uri) {
-
+        UserView::~UserView()
+        {
+            //dtor
+        }
+        void UserView::navigate(string uri) {
             std::vector<std::string> strs;
             boost::split(strs, uri, boost::is_any_of(":"));
             string id = strs.at(2);
@@ -36,10 +39,10 @@ namespace spider {
             buffer[length] = '\0';
             this->text->setInnerText((char *)buffer);
         }
-
-        DoctrineView::~DoctrineView()
-        {
-            //dtor
+        bool UserView::acceptsUri(string uri) {
+            char *uri2 = (char *)uri.c_str();
+            bool a = std::regex_match(uri2, std::regex("spotify:user:(.*)"));
+            return a;
         }
     }
 }
