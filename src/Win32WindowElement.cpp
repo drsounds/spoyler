@@ -13,10 +13,9 @@ namespace spider {
     }
     void Win32WindowElement::invalidateRegion(rectangle rect) {
 
-        Win32GraphicsContext *gc = new Win32GraphicsContext(this->hWnd, NULL, this);
-        gc->invalidateRegion(rect);
+
         SendMessage(this->hWnd, WM_PAINT, NULL, NULL);
-        delete gc;
+
     }
     void Win32WindowElement::navigate(string uri) {
         this->mainWindow->navigate(uri);

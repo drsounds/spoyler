@@ -86,6 +86,7 @@ int TreeViewElement::getItemHeight() {
 	return this->itemHeight;
 
 }
+#define SPOTIFY2009 true
 
 void TreeViewElement::draw(int x, int y, GraphicsContext *g) {
     spider::Element::draw(x, y, g);
@@ -95,8 +96,8 @@ void TreeViewElement::draw(int x, int y, GraphicsContext *g) {
 	for (vector<TreeItem *>::iterator it = this->mItems->begin(); it != this->mItems->end(); ++it) {
 		TreeItem *item = static_cast<TreeItem *>(*it);
 		if (item->isSelected()) {
-            #if SPOTIFY09
-            g->fillRectangle(x, y + top , this->getWidth(), itemHeight, new Color(244, 255, 255, 255));
+            #if SPOTIFY2009
+            g->fillRectangle(x, y + top , this->getWidth(), itemHeight, (Color *)this->getAttributeObj("highlight"));
             #else
             g->fillRectangle(x, y + top, 5, itemHeight, (Color *)this->getAttributeObj("highlight"));
             #endif

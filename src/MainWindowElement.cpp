@@ -81,6 +81,7 @@ namespace spider {
         body->set("bgcolor", "#474747");
         body->set("flex", "1");
         body->set("height", "100");
+
         this->appendChild(body);
 
 

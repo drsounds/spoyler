@@ -15,13 +15,15 @@
 					<Add option="-std=c++11" />
 					<Add option="-Wfatal-errors" />
 					<Add option="-g" />
-					<Add directory="C:/Users/Alecca/Downloads/Compressed/boost_1_55_0/boost_1_55_0" />
 					<Add directory="include" />
 					<Add directory="C:/Program Files (x86)/Expat 2.1.0/Source/lib" />
+					<Add directory="C:/MinGW/include" />
+					<Add directory="C:/Users/Alecca/Downloads/boost_1_55_0/boost_1_55_0/DIR/include/boost-1_55" />
 				</Compiler>
 				<Linker>
 					<Add library="C:\MinGW\lib\libexpat.dll.a" />
 					<Add library="C:\MinGW\lib\liblua.a" />
+					<Add directory="C:/Users/Alecca/Downloads/boost_1_55_0/boost_1_55_0/DIR/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -82,6 +84,7 @@
 		<Unit filename="include/Stylesheet.h" />
 		<Unit filename="include/TabBarElement.h" />
 		<Unit filename="include/TabbarViewElement.h" />
+		<Unit filename="include/TableElement.h" />
 		<Unit filename="include/TableViewCell.h" />
 		<Unit filename="include/TableViewColumn.h" />
 		<Unit filename="include/TableViewDataSource.h" />
@@ -136,6 +139,7 @@
 		<Unit filename="src/Stylesheet.cpp" />
 		<Unit filename="src/TabBarElement.cpp" />
 		<Unit filename="src/TabbarViewElement.cpp" />
+		<Unit filename="src/TableElement.cpp" />
 		<Unit filename="src/TableViewCell.cpp" />
 		<Unit filename="src/TableViewColumn.cpp" />
 		<Unit filename="src/TableViewDataSource.cpp" />

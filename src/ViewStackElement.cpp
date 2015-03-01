@@ -49,11 +49,23 @@ namespace spider {
                 foundView = true;
 
             } else {
-                view->hide();
             }
             this->invalidate();
         }
+
         if (foundView) {
+             for (std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
+                Node *node = static_cast<Node *>(*it);
+                ViewElement *view = (ViewElement *)node;
+                if (view->acceptsUri(uri)) {
+                    view->setVisible(true);
+
+
+                } else {
+                    view->hide();
+                }
+             }
+
                 ((MainWindowElement *)this->mainWindowElement)->hideMessage();
                 ((MainWindowElement *)this->mainWindowElement)->invalidate();
         } else {
