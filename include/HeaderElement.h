@@ -1,7 +1,8 @@
 #ifndef HEADERELEMENT_H
 #define HEADERELEMENT_H
 #include "HBoxElement.h"
-#include "TextElement.h"
+#include "ImageElement.h"
+#include "TitleElement.h"
 namespace spider {
     class HeaderElement : public HBoxElement
     {
@@ -9,9 +10,9 @@ namespace spider {
             HeaderElement();
             HeaderElement(Element *parent);
             virtual ~HeaderElement();
-
+            TitleElement *title;
+            ImageElement *image;
         protected:
-            TextElement *parent;
         private:
     };
 }

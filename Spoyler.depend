@@ -27397,15 +27397,30 @@
 1425155989 c:\users\alecca\documents\spoyler\include\tableelement.h
 	"Element.h"
 
-1425222164 c:\users\alecca\documents\spoyler\include\userview.h
+1425223637 c:\users\alecca\documents\spoyler\include\userview.h
 	"TabbarViewElement.h"
 	"DOMViewElement.h"
-	"TextElement.h"
+	"HeaderElement.h"
 
-1425222571 source:c:\users\alecca\documents\spoyler\src\userview.cpp
+1425224774 source:c:\users\alecca\documents\spoyler\src\userview.cpp
 	"UserView.h"
 	<boost/algorithm/string.hpp>
 	<string>
 	<vector>
 	<regex>
+
+1425224740 source:c:\users\alecca\documents\spoyler\src\headerelement.cpp
+	"HeaderElement.h"
+
+1425224328 c:\users\alecca\documents\spoyler\include\headerelement.h
+	"HBoxElement.h"
+	"ImageElement.h"
+	"TitleElement.h"
+
+1425223525 c:\users\alecca\documents\spoyler\include\titleelement.h
+	"VBoxElement.h"
+	"TextElement.h"
+
+1425224210 source:c:\users\alecca\documents\spoyler\src\titleelement.cpp
+	"TitleElement.h"
 

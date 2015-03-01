@@ -2,7 +2,7 @@
 #define USERVIEW_H
 #include "TabbarViewElement.h"
 #include "DOMViewElement.h"
-#include "TextElement.h"
+#include "HeaderElement.h"
 namespace spider {
     namespace views {
         class UserView : public ViewElement
@@ -14,7 +14,7 @@ namespace spider {
                 bool acceptsUri(string uri);
                 void navigate(string uri);
             protected:
-                TextElement *text;
+                HeaderElement *header;
             private:
         };
     }

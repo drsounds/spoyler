@@ -9,16 +9,16 @@ namespace spider {
 
         UserView::UserView(Element *parent)
         {
-            this->getPadding()->top = 20;
-            this->getPadding()->left = 20;
+            this->getPadding()->top = 0;
+            this->getPadding()->left = 0;
             //ctor
-            text = new TextElement(this);
-            text->setInnerText("Doctrine");
-            text->set("height", "160");
-            text->set("fgcolor", "#99CC00");
-            text->set("size", "25");
-            text->set("width", "100%");
-            this->appendChild(text);
+            header = new spider::HeaderElement(this);
+            header->title->setTitle("Title");
+            header->title->setEntity("User");
+            header->set("width", "100%");
+            header->set("height", "180");
+            this->appendChild(header);
+
         }
 
         UserView::UserView()
@@ -37,7 +37,7 @@ namespace spider {
             char *buffer = new char[50];
             int length = id.copy(buffer, id.size(), 0);
             buffer[length] = '\0';
-            this->text->setInnerText((char *)buffer);
+            this->header->title->setTitle(string(buffer));
         }
         bool UserView::acceptsUri(string uri) {
             char *uri2 = (char *)uri.c_str();
