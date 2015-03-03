@@ -44,6 +44,42 @@ void Win32GraphicsContext::invalidateRegion(spider::rectangle rect) {
     rgn->top = rect.y;
     InvalidateRect(this->hWnd, rgn, TRUE);
 }
+
+Image *Win32GraphicsContext::loadImage(const string& bitmap) {
+    HBITMAP *bitmap = LoadBitmap(NULL, bitmap.c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+
+    BITMAP bm = {0};
+    GetObject(bitmap, sizeof(bm), &bm );
+    HDC dcBitmap = CreateCompatibleDC ( NULL );
+    LPSIZE siz
+    Image *image = new Image(bm.width, bm.height);
+    BITMAPINFO bmpInfo;
+
+    bmpInfo.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
+    bmpInfo.bmiHeader.biWidth = bm.bmWidth;
+    bmpInfo.bmiHeader.biHeight = -bm.bmHeight;
+    bmpInfo.bmiHeader.biPlanes = 1;
+    bmpInfo.bmiHeader.biBitCount = 24;
+    bmpInfo.bmiHeader.biCompression = BI_RGB;
+    bmpInfo.bmiHeader.biSizeImage = 0;
+    COLORREF* pixels = new COLORREF [ bm.bmWidth * bm.bmHeight ];
+    GetDIBits( dcBitmap , hBitmap , 0 , bm.bmHeight , pixel , &bmpInfo , DIB_RGB_COLORS );
+
+    for (int i = 0; i < sizeof(pixels); i++) {
+        pixel *pixel = image->pixels[i];
+        pixel->a = 255;
+        pixel->r = GetRValue(pixel);
+        pixel->g = GetGValue(pixel);
+        pixel->b = GetBValue(pixel);
+    }
+    // Clean memory
+    delete bmpInfo;
+    delete pixels;
+
+    return image;
+
+}
+
 void Win32GraphicsContext::drawRectangle(int x1, int y1, int x2, int y2, Color *color) {
 	HPEN hpen = CreatePen(PS_SOLID, 3, (RGB(255, 0, 0)));
 	HGDIOBJ old = SelectObject(this->hDC, hpen);
@@ -64,22 +100,35 @@ void Win32GraphicsContext::fillRectangle(int x1, int y1, int x2, int y2, Color *
 	SelectObject(this->hDC, old);
 	DeleteObject(hpen);
 }
-void Win32GraphicsContext::drawImage(void *image, int x1, int y1, int x2, int y2) {
-    /*HDC *memDC = CreateCompatibleDC(this->hDC);
-    HBITMAP bitmap = CreateCompatibleBitmap(memDC, image->width, image->height);
-    SelectObject(memDC, bitmap);
+void Win32GraphicsContext::drawImage(Image *image, int x1, int y1, int x2, int y2) {
 
-    for (int x = 0; x < image->width; x++) {
-        for (int y = 0; y < image->height; y++) {
-            pixel *pixel = image->pixels[x * y];
-            COLORREF color = RGB(pixel->r, pixel->g, pixel->b);
-            SetPixel(memDC, x, y, color);
+    // We use a handle so we only have to recreate the operating system specific bitmap once,
+    // and then reuse it.
+    BITMAP bm;
+    if (image->handle == NULL) {
+        HDC *memDC = CreateCompatibleDC(this->hDC);
+        HBITMAP bitmap = CreateCompatibleBitmap(memDC, image->width, image->height);
+
+        SelectObject(memDC, bitmap);
+
+        for (int x = 0; x < image->width; x++) {
+            for (int y = 0; y < image->height; y++) {
+                pixel *pixel = image->pixels[x * y];
+                COLORREF color = RGB(pixel->r, pixel->g, pixel->b);
+                SetPixel(memDC, x, y, color);
+            }
         }
+
+
+        DeleteObject(memDC);
+        image->handle = (void *)bitmap;
     }
-    BitBlt(this->hDC, x1, y1, x2, y2, memDC, 0, 0, SRCCOPY);
-    DeleteObject(bitmap);
-    DeleteDC(memDC);*/
-    this->fillRectangle(x1, y1, x2, y2, new Color(255, 255, 255, 255));
+    HDC *memDC = CreateCompatibleDC(this->hDC);
+    HBITMAP bmp = SelectObject(memDC, (HBITMAP)image->handle);
+    GetObject(g_hbmBall, sizeof(bm), &bm);
+    BitBlt(this->hDC, x1, y1, bm.bmWidth, bm.bmHeight, memDC, y1, y2, SRCCOPY);
+    DeleteObject(memDC);
+
 }
 
 rectangle Win32GraphicsContext::measureString(char *text, FontStyle *fs) {

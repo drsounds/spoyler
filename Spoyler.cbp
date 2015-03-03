@@ -65,6 +65,7 @@
 		<Unit filename="include/GraphicsContext.h" />
 		<Unit filename="include/HBoxElement.h" />
 		<Unit filename="include/HTML.h" />
+		<Unit filename="include/HeaderElement.h" />
 		<Unit filename="include/ImageElement.h" />
 		<Unit filename="include/InfoElement.h" />
 		<Unit filename="include/InputElement.h" />
@@ -90,10 +91,12 @@
 		<Unit filename="include/TableViewDataSource.h" />
 		<Unit filename="include/TableViewElement.h" />
 		<Unit filename="include/TextElement.h" />
+		<Unit filename="include/TitleElement.h" />
 		<Unit filename="include/TreeAdapter.h" />
 		<Unit filename="include/TreeItem.h" />
 		<Unit filename="include/TreeViewElement.h" />
 		<Unit filename="include/Uri.h" />
+		<Unit filename="include/UserView.h" />
 		<Unit filename="include/VBoxElement.h" />
 		<Unit filename="include/ViewElement.h" />
 		<Unit filename="include/ViewStackElement.h" />
@@ -120,6 +123,7 @@
 		<Unit filename="src/GraphicsContext.cpp" />
 		<Unit filename="src/HBoxElement.cpp" />
 		<Unit filename="src/HTML.cpp" />
+		<Unit filename="src/HeaderElement.cpp" />
 		<Unit filename="src/ImageElement.cpp" />
 		<Unit filename="src/InfoElement.cpp" />
 		<Unit filename="src/InputElement.cpp" />
@@ -145,10 +149,12 @@
 		<Unit filename="src/TableViewDataSource.cpp" />
 		<Unit filename="src/TableViewElement.cpp" />
 		<Unit filename="src/TextElement.cpp" />
+		<Unit filename="src/TitleElement.cpp" />
 		<Unit filename="src/TreeAdapter.cpp" />
 		<Unit filename="src/TreeItem.cpp" />
 		<Unit filename="src/TreeViewElement.cpp" />
 		<Unit filename="src/Uri.cpp" />
+		<Unit filename="src/UserView.cpp" />
 		<Unit filename="src/VBoxElement.cpp" />
 		<Unit filename="src/ViewElement.cpp" />
 		<Unit filename="src/ViewStackElement.cpp" />

@@ -118,10 +118,6 @@ namespace spider {
 
         // Add viewstack
 
-
-
-
-
         this->viewStack = new spider::ViewStackElement(body);
         viewStack->set("bgcolor", "#373737");
         body->appendChild(viewStack);

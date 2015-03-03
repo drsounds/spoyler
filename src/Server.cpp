@@ -7,7 +7,7 @@ Server::Server()
 
 void Server::request(char *method, char *uri, void *data, spider_server_reply *reply) {
     if (strcmp(method, "GET") == 0) {
-        if (strcmp(uri, "spoyler:internal:home") == 0) {
+        if (strcmp(uri, "spotify:internal:home") == 0) {
 
         }
     }

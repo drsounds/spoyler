@@ -4,6 +4,7 @@
 #include "libspider.h"
 #include "Color.h"
 #include "Element.h"
+#include "GraphicsContext.h"
 namespace spider {
     class Element;
     class WindowElement;
@@ -22,6 +23,7 @@ namespace spider {
 		virtual void drawString(char *text, FontStyle *fs, Color *color, int x, int y, int w, int h) {}
 		virtual void invalidateRegion(rectangle region) {}
 		virtual void drawHTMLText(char *html, FontStyle *fs, Color *color, int x, int y, int w, int h) {}
+		virtual Image *loadImage(const string& bitmap) {}
 		virtual rectangle measureString(char *text, spider::FontStyle *font) {}
 		void setFontStyle(spider::FontStyle *fs) {
 			this->fontStyle = fs;
