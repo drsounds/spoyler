@@ -45,14 +45,14 @@ void Win32GraphicsContext::invalidateRegion(spider::rectangle rect) {
     InvalidateRect(this->hWnd, rgn, TRUE);
 }
 
-Image *Win32GraphicsContext::loadImage(const string& bitmap) {
-    HBITMAP *bitmap = LoadBitmap(NULL, bitmap.c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+Image *Win32GraphicsContext::loadImage(const string& _bitmap) {
+    HBITMAP bitmap = (HBITMAP)LoadImage(NULL, _bitmap.c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 
     BITMAP bm = {0};
     GetObject(bitmap, sizeof(bm), &bm );
     HDC dcBitmap = CreateCompatibleDC ( NULL );
-    LPSIZE siz
-    Image *image = new Image(bm.width, bm.height);
+    LPSIZE siz;
+    Image *image = new Image(bm.bmWidth, bm.bmHeight);
     BITMAPINFO bmpInfo;
 
     bmpInfo.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
@@ -63,18 +63,16 @@ Image *Win32GraphicsContext::loadImage(const string& bitmap) {
     bmpInfo.bmiHeader.biCompression = BI_RGB;
     bmpInfo.bmiHeader.biSizeImage = 0;
     COLORREF* pixels = new COLORREF [ bm.bmWidth * bm.bmHeight ];
-    GetDIBits( dcBitmap , hBitmap , 0 , bm.bmHeight , pixel , &bmpInfo , DIB_RGB_COLORS );
+    GetDIBits(dcBitmap, bitmap, 0, bm.bmHeight, pixels, &bmpInfo, DIB_RGB_COLORS );
 
     for (int i = 0; i < sizeof(pixels); i++) {
-        pixel *pixel = image->pixels[i];
+        pixel *pixel = &image->pixels[i];
         pixel->a = 255;
-        pixel->r = GetRValue(pixel);
-        pixel->g = GetGValue(pixel);
-        pixel->b = GetBValue(pixel);
+        pixel->r = GetRValue(pixels[i]);
+        pixel->g = GetGValue(pixels[i]);
+        pixel->b = GetBValue(pixels[i]);
     }
     // Clean memory
-    delete bmpInfo;
-    delete pixels;
 
     return image;
 
@@ -106,14 +104,14 @@ void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int 
     // and then reuse it.
     BITMAP bm;
     if (image->handle == NULL) {
-        HDC *memDC = CreateCompatibleDC(this->hDC);
+        HDC memDC = CreateCompatibleDC(this->hDC);
         HBITMAP bitmap = CreateCompatibleBitmap(memDC, image->width, image->height);
 
         SelectObject(memDC, bitmap);
 
         for (int x = 0; x < image->width; x++) {
             for (int y = 0; y < image->height; y++) {
-                pixel *pixel = image->pixels[x * y];
+                pixel *pixel = &image->pixels[x * y];
                 COLORREF color = RGB(pixel->r, pixel->g, pixel->b);
                 SetPixel(memDC, x, y, color);
             }
@@ -123,9 +121,9 @@ void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int 
         DeleteObject(memDC);
         image->handle = (void *)bitmap;
     }
-    HDC *memDC = CreateCompatibleDC(this->hDC);
-    HBITMAP bmp = SelectObject(memDC, (HBITMAP)image->handle);
-    GetObject(g_hbmBall, sizeof(bm), &bm);
+    HDC memDC = CreateCompatibleDC(this->hDC);
+    HBITMAP bmp = (HBITMAP)SelectObject(memDC, (HBITMAP)image->handle);
+    GetObject(bmp, sizeof(bm), &bm);
 
     // BitBlt fill
     StretchBlt(this->hDC, x + image->leftBorder, y + image->topBorder, bm.bmWidth - image->leftBorder - image->rightBorder, bm.bmHeight - image->topBorder - image->bottomBorder, memDC, image->leftBorder, image->topBorder, width - image->rightBorder - image->leftBorder, height - image->topBorder - image->bottomBorder, SRCCOPY);
@@ -143,10 +141,10 @@ void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int 
     StretchBlt(this->hDC, x + width - image->rightBorder - image->leftBorder, y + height - image->bottomBorder, width - image->leftBorder - image->rightBorder, height - image->bottomBorder - image->topBorder, memDC, image->leftBorder, image->height - image->bottomBorder, image->width - image->leftBorder - image->rightBorder, image->bottomBorder, SRCCOPY);
 
     // StretchBlt Left bottom
-    StretchBlt(this->hdc, x, y + height - image->bottomBorder, image->leftBorder, image->bottomBorder, memDC, 0, image->height - image->bottomBorder, image->leftBorder, image->bottomBorder, SRCCOPY);
+    StretchBlt(this->hDC, x, y + height - image->bottomBorder, image->leftBorder, image->bottomBorder, memDC, 0, image->height - image->bottomBorder, image->leftBorder, image->bottomBorder, SRCCOPY);
 
     // StretchBlt Left
-    StretchBlt(this->hdc, x, y + image->topBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, memDC, 0, image->height - image->topBorder - image->bottomBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, SRCCOPY);
+    StretchBlt(this->hDC, x, y + image->topBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, memDC, 0, image->height - image->topBorder - image->bottomBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, SRCCOPY);
 
     DeleteObject(memDC);
 

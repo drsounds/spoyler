@@ -51,7 +51,7 @@ namespace spider {
     void Win32WindowElement::SampleLayout() {
         this->set("bgcolor", "#474747");
         this->setWindowElement(this);
-        this->mainWindow = new MainWindowElement(this);
+        this->mainWindow = new MainWindowElement(this, new Skin("skin.bmp", this->createGraphics()));
         this->mainWindow->setWindowElement((WindowElement *)this);
         this->mainWindow->setVisible(true);
         this->mainWindow->layout();

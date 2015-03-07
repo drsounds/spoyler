@@ -1,4 +1,6 @@
 #include "Element.h"
+#include <iostream>
+#include <cstdio>
 #include "WindowElement.h"
 #include "Observable.h"
 namespace spider {
@@ -129,9 +131,13 @@ void Element::applyStylesheet(Stylesheet *style) {
 }
 
 void Element::applyColorAttributeFromSkin (string attr, string skin) {
+    cout << attr << "";
+    cout << skin << "";
+    cout << this->skin->colors << "";
     if (this->skin->colors->find(attr) != this->skin->colors->end()) {
-        Color *color = this->skin->colors[attr];
-        this->set(attr, color->toHTMLColor());
+        pixel *color = (*this->skin->colors)[attr];
+
+        this->set(attr, spider_pixel_to_hex(color));
     }
 }
 
@@ -148,6 +154,7 @@ Element::Element(Element *parent) :
 	this->observers = new vector<Observer *>();
 	this->setParent(parent);
 	this->skin = parent->skin;
+
     #if false
     this->set("fgcolor", new string("#ffffff"));
     this->set("bgcolor", new string("#000000"));
@@ -156,7 +163,7 @@ Element::Element(Element *parent) :
     this->set("size", new string("11"));
     #endif
 
-    this->applyColorAttributeFromSkin("bgcolor", "body.background.color");
+    this->applyColorAttributeFromSkin(string("bgcolor"), string("body.background.color"));
 
 	if (this->getParent() != NULL) {
         #if false

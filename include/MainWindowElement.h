@@ -17,9 +17,11 @@ class MainWindowElement : public VBoxElement
         InfoElement *infoElement;
         Stylesheet *stylesheet;
     public:
+        GraphicsContext *graphicsContext;
         void navigate(string uri);
         void hideMessage();
         MainWindowElement();
+        MainWindowElement(Element *parent, Skin *skin);
         virtual string getType() {
             return "window";
         }

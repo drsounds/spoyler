@@ -9,6 +9,7 @@
 #include "Skin.h"
 #include <vector>
 namespace spider {
+    class Skin;
     class GraphicsContext;
 
     class Element : public Node, public Observable {
@@ -17,11 +18,10 @@ namespace spider {
     public:
         Skin *skin;
         vector<string> *classList;
-/*
+        void applyColorAttributeFromSkin (string attr, string skin);
         bool hasClass(string _class);
         void addClass(string _class);
         void removeClass(string _class);
-*/
 
         rectangle *absoluteBounds;
         void applyStylesheet(Stylesheet *style);

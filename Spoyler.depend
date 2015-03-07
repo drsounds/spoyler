@@ -7486,7 +7486,7 @@
 1425739993 c:\users\alecca\documents\spoyler\include\boxelement.h
 	"Element.h"
 
-1425743443 c:\users\alecca\documents\spoyler\include\element.h
+1425759946 c:\users\alecca\documents\spoyler\include\element.h
 	"Node.h"
 	"Observable.h"
 	"FontStyle.h"
@@ -10975,13 +10975,12 @@
 	"libspider.h"
 	"EventArgs.h"
 
-1425743414 c:\users\alecca\documents\spoyler\include\graphicscontext.h
+1425759483 c:\users\alecca\documents\spoyler\include\graphicscontext.h
 	"FontStyle.h"
 	"libspider.h"
 	"Color.h"
 	"Element.h"
 	"Image.h"
-	"GraphicsContext.h"
 
 1422718653 c:\users\alecca\documents\spoyler\include\stylesheet.h
 	"Node.h"
@@ -11043,9 +11042,10 @@
 1425740676 c:\users\alecca\documents\spoyler\include\buttonelement.h
 	"Element.h"
 
-1422718653 source:c:\users\alecca\documents\spoyler\src\color.cpp
+1425760796 source:c:\users\alecca\documents\spoyler\src\color.cpp
 	"libspider.h"
 	"Color.h"
+	<stdio.h>
 
 1422718653 source:c:\users\alecca\documents\spoyler\src\domviewelement.cpp
 	"DOMViewElement.h"
@@ -11058,8 +11058,10 @@
 	"Element.h"
 	"expat.h"
 
-1425221636 source:c:\users\alecca\documents\spoyler\src\element.cpp
+1425763763 source:c:\users\alecca\documents\spoyler\src\element.cpp
 	"Element.h"
+	<iostream>
+	<cstdio>
 	"WindowElement.h"
 	"Observable.h"
 
@@ -11131,16 +11133,17 @@
 1425739932 c:\users\alecca\documents\spoyler\include\linkelement.h
 	"TextElement.h"
 
-1425222353 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
+1425764501 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
 	"MainWindowElement.h"
 	"StartView.h"
 	"InputElement.h"
 	"InputEventArgs.h"
 	"SplitterElement.h"
 	"DoctrineView.h"
+	"Win32GraphicsContext.h"
 	"UserView.h"
 
-1425739813 c:\users\alecca\documents\spoyler\include\mainwindowelement.h
+1425764809 c:\users\alecca\documents\spoyler\include\mainwindowelement.h
 	"VBoxElement.h"
 	"HBoxElement.h"
 	"ViewStackElement.h"
@@ -11173,7 +11176,7 @@
 1422718654 source:c:\users\alecca\documents\spoyler\src\node.cpp
 	"Node.h"
 
-1425220818 source:c:\users\alecca\documents\spoyler\src\main.cpp
+1425764523 source:c:\users\alecca\documents\spoyler\src\main.cpp
 	<tchar.h>
 	<windows.h>
 	"libspider.h"
@@ -11188,7 +11191,7 @@
 	"WindowElement.h"
 	"libspider.h"
 
-1425376441 c:\users\alecca\documents\spoyler\include\win32graphicscontext.h
+1425762408 c:\users\alecca\documents\spoyler\include\win32graphicscontext.h
 	<Windows.h>
 	<wingdi.h>
 	<map>
@@ -11291,16 +11294,17 @@
 	"HBoxElement.h"
 	<regex>
 
-1422718654 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
+1425764649 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
-1425219648 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
+1425764598 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
 	<Windows.h>
 	"Win32WindowElement.h"
 	"Win32GraphicsContext.h"
 
-1422718654 source:c:\users\alecca\documents\spoyler\src\windowelement.cpp
+1425764176 source:c:\users\alecca\documents\spoyler\src\windowelement.cpp
 	"WindowElement.h"
+	"Win32GraphicsContext.h"
 
 1422718654 source:c:\users\alecca\documents\spoyler\src\tableviewcell.cpp
 	"TableViewCell.h"
@@ -27430,10 +27434,20 @@
 1425224863 source:c:\users\alecca\documents\spoyler\src\titleelement.cpp
 	"TitleElement.h"
 
-1425743380 c:\users\alecca\documents\spoyler\include\skin.h
+1425763601 c:\users\alecca\documents\spoyler\include\skin.h
 	<map>
 	"Image.h"
 	"Color.h"
+	"GraphicsContext.h"
 
-1425742756 c:\users\alecca\documents\spoyler\include\image.h
+1425760812 c:\users\alecca\documents\spoyler\include\image.h
+	<string>
+	"Color.h"
+
+1425761218 source:c:\users\alecca\documents\spoyler\src\image.cpp
+	"Image.h"
+	<stdio.h>
+
+1425763751 source:c:\users\alecca\documents\spoyler\src\skin.cpp
+	"Skin.h"
 

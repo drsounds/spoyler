@@ -5,7 +5,6 @@
 #include "Color.h"
 #include "Element.h"
 #include "Image.h"
-#include "GraphicsContext.h"
 namespace spider {
     class Element;
     class WindowElement;

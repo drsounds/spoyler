@@ -4,10 +4,16 @@
 #include "InputEventArgs.h"
 #include "SplitterElement.h"
 #include "DoctrineView.h"
+#include "Win32GraphicsContext.h"
 #include "UserView.h"
 namespace spider {
     MainWindowElement::MainWindowElement()
     {
+
+    }
+    MainWindowElement::MainWindowElement(Element *parent, Skin *skin) {
+         this->setWindowElement(parent);
+        this->skin = skin;
 
     }
     void MainWindowElement::hideMessage() {

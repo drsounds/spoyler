@@ -142,14 +142,20 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
 	switch (message)
 	{
     case WM_CREATE:
+        {
+
+
         GetClientRect(hWnd,&clientRect);
         memDC = CreateCompatibleDC(NULL);
         hdc = GetDC(hWnd);
         btp = CreateCompatibleBitmap(hdc, 10000, 10000);
         SelectObject(memDC, btp);
         gc2 = new Win32GraphicsContext(hWnd, memDC, window);
+        window->skin = new Skin("skin.bmp", gc2);
+
         ReleaseDC(hWnd, hdc);
         break;
+        }
 	case WM_SIZE:
         GetClientRect(hWnd,&clientRect);
 	    InvalidateRect(hWnd,&clientRect, TRUE);

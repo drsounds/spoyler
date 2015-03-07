@@ -29,7 +29,7 @@ namespace spider {
         Image *loadImage(const string& bitmap);
 		void setClip(rectangle rect);
 		void drawLine(int x1, int y1, int w, int h, spider::Color *color);
-		void drawImage(void *image, int x1, int y1, int w, int h);
+		void drawImage(Image *image, int x1, int y1, int w, int h);
 		void drawRectangle(int x1, int y1, int w, int h, spider::Color *color);
 		void fillRectangle(int x1, int y1, int w, int h, spider::Color *color);
         void drawControl(char *control, Element *elm, int x, int y, int w, int h);
