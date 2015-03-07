@@ -14,6 +14,11 @@ class Skin
         Skin();
         Skin(const string& bitmap, GraphicsContext *g);
         virtual ~Skin();
+        bool hasColor(string selector);
+        bool hasImage(string selector);
+        pixel *getColor(string selector, string def);
+        Image *getImage(string selector, string def);
+
     protected:
     private:
 };

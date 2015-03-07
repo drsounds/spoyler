@@ -6,10 +6,12 @@
 #include "ButtonElement.h"
 #include "InfoElement.h"
 #include "TreeViewElement.h"
+#include "Skin.h"
 namespace spider {
 class MainWindowElement : public VBoxElement
 {
     protected:
+
         ViewStackElement *viewStack;
         TreeViewElement *treeView;
         InfoElement *infoElement;
@@ -18,7 +20,9 @@ class MainWindowElement : public VBoxElement
         void navigate(string uri);
         void hideMessage();
         MainWindowElement();
-
+        virtual string getType() {
+            return "window";
+        }
         MainWindowElement(Element *parent);
         void layout();
         virtual ~MainWindowElement();

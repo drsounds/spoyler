@@ -8,6 +8,9 @@ class LinkElement : public TextElement
     public:
         LinkElement(Element *parent);
         virtual ~LinkElement();
+        virtual string getType() {
+            return "link";
+        }
     protected:
     private:
 };

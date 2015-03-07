@@ -36,6 +36,9 @@ public:
 class TabBarElement : public Element
 {
     public:
+        virtual string getType() {
+            return "tabbar";
+        }
         TabBarElement();
         TabBarElement(Element *parent);
         void addTab(string *id, string *name, string *uri);

@@ -7,6 +7,9 @@ namespace spider {
         public:
             ArtistView(Element *parent);
             virtual ~ArtistView();
+            virtual string getType() {
+                return "artistview";
+            }
         protected:
         private:
     };

@@ -8,7 +8,9 @@ namespace spider {
 	    VBoxElement(Element *parent) : BoxElement(parent) {
 		}
 		VBoxElement();
-
+        virtual string getType() {
+            return "vbox";
+        }
 		void pack();
 	};
 }

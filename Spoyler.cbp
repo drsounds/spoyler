@@ -66,6 +66,7 @@
 		<Unit filename="include/HBoxElement.h" />
 		<Unit filename="include/HTML.h" />
 		<Unit filename="include/HeaderElement.h" />
+		<Unit filename="include/Image.h" />
 		<Unit filename="include/ImageElement.h" />
 		<Unit filename="include/InfoElement.h" />
 		<Unit filename="include/InputElement.h" />
@@ -80,6 +81,7 @@
 		<Unit filename="include/Resource.h" />
 		<Unit filename="include/ResourceElement.h" />
 		<Unit filename="include/SPType.h" />
+		<Unit filename="include/Skin.h" />
 		<Unit filename="include/SplitterElement.h" />
 		<Unit filename="include/StartView.h" />
 		<Unit filename="include/Stylesheet.h" />
@@ -124,6 +126,7 @@
 		<Unit filename="src/HBoxElement.cpp" />
 		<Unit filename="src/HTML.cpp" />
 		<Unit filename="src/HeaderElement.cpp" />
+		<Unit filename="src/Image.cpp" />
 		<Unit filename="src/ImageElement.cpp" />
 		<Unit filename="src/InfoElement.cpp" />
 		<Unit filename="src/InputElement.cpp" />
@@ -138,6 +141,7 @@
 		<Unit filename="src/Resource.cpp" />
 		<Unit filename="src/ResourceElement.cpp" />
 		<Unit filename="src/SPType.cpp" />
+		<Unit filename="src/Skin.cpp" />
 		<Unit filename="src/SplitterElement.cpp" />
 		<Unit filename="src/StartView.cpp" />
 		<Unit filename="src/Stylesheet.cpp" />

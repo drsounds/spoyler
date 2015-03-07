@@ -6,6 +6,8 @@
 #include "MouseEventArgs.h"
 #include "GraphicsContext.h"
 #include "Stylesheet.h"
+#include "Skin.h"
+#include <vector>
 namespace spider {
     class GraphicsContext;
 
@@ -13,6 +15,14 @@ namespace spider {
 
 
     public:
+        Skin *skin;
+        vector<string> *classList;
+/*
+        bool hasClass(string _class);
+        void addClass(string _class);
+        void removeClass(string _class);
+*/
+
         rectangle *absoluteBounds;
         void applyStylesheet(Stylesheet *style);
         int width;
@@ -43,8 +53,8 @@ namespace spider {
         Element *windowElement;
         Element *mainWindowElement;
         virtual void draw(int x, int y, GraphicsContext *c);
-        string getType() {
-            return "Element";
+        virtual string getType() {
+            return "element";
         }
         rectangle *getAbsoluteBounds() {
             return this->absoluteBounds;

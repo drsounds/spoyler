@@ -7,7 +7,7 @@ Image::Image()
 Image::Image(unsigned int width, unsigned int height) {
     this->pixels = new pixel[width * height];
 }
-Image *Image::sliceImage(unsigned int x, unsigned int y, unsigned int width, unsigned int height) {
+Image *Image::sliceImage(unsigned int x, unsigned int y, unsigned int width, unsigned int height, int topBorder, int leftBorder, int rightBorder, int bottomBorder) {
     unsigned int startPos = x + (y * width * height);
     unsigned int length = width + (height * width);
 
@@ -20,6 +20,10 @@ Image *Image::sliceImage(unsigned int x, unsigned int y, unsigned int width, uns
         pixel->a = this->pixels[startPos + i].a;
 
     }
+    image->leftBorder = leftBorder;
+    image->topBorder = topBorder;
+    image->rightBorder = rightBorder;
+    image->bottomBorder = bottomBorder;
     return image;
 }
 pixel *Image::getPixel(unsigned int x, unsigned int y) {

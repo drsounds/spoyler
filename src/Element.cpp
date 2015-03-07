@@ -69,8 +69,22 @@ void Element::mouseup(int mouseButton, int x, int y) {
 		}
 	}
 }
+void Element::addClass(string value) {
+    this->classList->push_back(value);
+}
+
+bool Element::hasClass(string value) {
+   return  std::find(this->classList->begin(), this->classList->end(), value) != this->classList->end();
+}
+
+void Element::removeClass(string value) {
+    this->classList->erase(std::find(this->classList->begin(), this->classList->end(), value), this->classList->end());
+}
+
 Element::Element() :
     Node() {
+
+    this->classList = new vector<string>;
     this->absoluteBounds = NULL;
 	this->setScrollable(false);
 	this->visible = true;
@@ -113,8 +127,17 @@ FontStyle *Element::getFont() {
 void Element::applyStylesheet(Stylesheet *style) {
 
 }
+
+void Element::applyColorAttributeFromSkin (string attr, string skin) {
+    if (this->skin->colors->find(attr) != this->skin->colors->end()) {
+        Color *color = this->skin->colors[attr];
+        this->set(attr, color->toHTMLColor());
+    }
+}
+
 Element::Element(Element *parent) :
     Node() {
+    this->classList = new vector<string>;
     this->absoluteBounds = NULL;
 	this->setScrollable(false);
 
@@ -124,17 +147,25 @@ Element::Element(Element *parent) :
     this->data = NULL;
 	this->observers = new vector<Observer *>();
 	this->setParent(parent);
+	this->skin = parent->skin;
+    #if false
     this->set("fgcolor", new string("#ffffff"));
     this->set("bgcolor", new string("#000000"));
     this->set("font", new string("MS Sans Serif"));
     this->set("highlight", "#a9d9fe");
     this->set("size", new string("11"));
+    #endif
+
+    this->applyColorAttributeFromSkin("bgcolor", "body.background.color");
+
 	if (this->getParent() != NULL) {
+        #if false
         this->set("bgcolor", new string(this->getParent()->get("bgcolor")));
         this->set("fgcolor", new string(this->getParent()->get("fgcolor")));
         this->set("font", new string(this->getParent()->get("font")));
         this->set("highlight", new string(this->getParent()->get("highlight")));
         this->set("size", new string(this->getParent()->get("size")));
+        #endif
         this->font = parent->font;
         this->mainWindowElement = parent->getMainWindowElement();
         this->windowElement = parent->getWindowElement();
@@ -205,6 +236,8 @@ void Element::setY(int y) {
 void Element::setZ(int z) {
 	this->z = z;
 }
+
+
 
 void Element::set(const std::string& title, std::string *val) {
     int n = 0;

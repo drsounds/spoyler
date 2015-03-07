@@ -13,6 +13,9 @@ class TitleElement : public VBoxElement
         void setTitle(const string&);
         string getEntity();
         void setEntity(const string&);
+        virtual string getType() {
+            return "title";
+        }
     protected:
         TextElement *title;
         TextElement *entity;

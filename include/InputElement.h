@@ -11,6 +11,9 @@ private:
         InputElement(Element *parent);
         virtual ~InputElement();
         virtual void draw(int x, int y, GraphicsContext *g);
+        virtual string getType() {
+            return "input";
+        }
     protected:
     private:
 };

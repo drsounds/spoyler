@@ -16,7 +16,11 @@ class InfoElement : public HBoxElement
         HBoxElement *hbox;
         TextElement *textElement;
         ButtonElement *btnElement;
+
     public:
+        virtual string getType() {
+            return "info";
+        }
         MessageType getMessageType() {
             return this->type;
         }

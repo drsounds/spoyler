@@ -11,6 +11,9 @@ namespace spider {
 
         TreeItem *item;
     public:
+        virtual string getType() {
+            return "treeview";
+        }
         TreeItem *getItem() {
             return this->item;
         }

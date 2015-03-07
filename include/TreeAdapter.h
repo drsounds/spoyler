@@ -7,7 +7,6 @@ namespace spider {
 	public:
 		virtual T getItemAt(int pos);
 		virtual int count();
-
 	};
 }
 

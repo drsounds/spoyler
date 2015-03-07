@@ -9,6 +9,9 @@ namespace spider {
 class TabbarViewElement : public ViewElement
 {
     public:
+        virtual string getType() {
+            return "table";
+        }
         TabbarViewElement();
         TabbarViewElement(Element *parent);
         virtual ~TabbarViewElement();

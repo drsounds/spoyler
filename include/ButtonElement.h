@@ -1,6 +1,9 @@
 #ifndef BUTTONELEMENT_H
 #define BUTTONELEMENT_H
 #include "Element.h"
+
+string RGBToHex(int rNum, int gNum, int bNum);
+
 namespace spider {
 	class ButtonElement : public Element {
 	public:
@@ -9,6 +12,9 @@ namespace spider {
 	    }
 		ButtonElement();
 		void draw(int x, int y, spider::GraphicsContext *c);
+		virtual string getType() {
+            return "button";
+		}
 	};
 }
 

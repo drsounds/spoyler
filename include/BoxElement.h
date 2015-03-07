@@ -9,6 +9,9 @@ namespace spider {
 		BoxElement();
 		~BoxElement();
 		void pack();
+		virtual string gettype() {
+            return "box";
+		}
 
 	};
 }

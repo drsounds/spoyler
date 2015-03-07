@@ -9,6 +9,9 @@ class FlowElement : public Element
         FlowElement(Element *parent);
         virtual ~FlowElement();
         void pack();
+        virtual string getType() {
+            return "flow";
+        }
     protected:
     private:
 };

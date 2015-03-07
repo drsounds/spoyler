@@ -15,7 +15,9 @@ public:
 		WindowElement();
 		virtual spider::GraphicsContext *createGraphics();
 		virtual void invalidateRegion(rectangle rect) {}
-
+        virtual string getType() {
+            return "window";
+        }
 	};
 
 };

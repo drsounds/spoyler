@@ -100,7 +100,7 @@ void Win32GraphicsContext::fillRectangle(int x1, int y1, int x2, int y2, Color *
 	SelectObject(this->hDC, old);
 	DeleteObject(hpen);
 }
-void Win32GraphicsContext::drawImage(Image *image, int x1, int y1, int x2, int y2) {
+void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int height) {
 
     // We use a handle so we only have to recreate the operating system specific bitmap once,
     // and then reuse it.
@@ -126,7 +126,28 @@ void Win32GraphicsContext::drawImage(Image *image, int x1, int y1, int x2, int y
     HDC *memDC = CreateCompatibleDC(this->hDC);
     HBITMAP bmp = SelectObject(memDC, (HBITMAP)image->handle);
     GetObject(g_hbmBall, sizeof(bm), &bm);
-    BitBlt(this->hDC, x1, y1, bm.bmWidth, bm.bmHeight, memDC, y1, y2, SRCCOPY);
+
+    // BitBlt fill
+    StretchBlt(this->hDC, x + image->leftBorder, y + image->topBorder, bm.bmWidth - image->leftBorder - image->rightBorder, bm.bmHeight - image->topBorder - image->bottomBorder, memDC, image->leftBorder, image->topBorder, width - image->rightBorder - image->leftBorder, height - image->topBorder - image->bottomBorder, SRCCOPY);
+
+    // StretchBlt topLeft corner
+    StretchBlt(this->hDC, x, y, image->leftBorder, image->topBorder, memDC, 0, 0, image->leftBorder, image->topBorder, SRCCOPY);
+
+    // StretchBlt top
+    StretchBlt(this->hDC, x + image->leftBorder, y, image->width - image->leftBorder - image->rightBorder, image->topBorder, memDC, image->leftBorder, 0, image->width - image->leftBorder - image->rightBorder, image->topBorder, SRCCOPY);
+
+    // StretchBlt top right
+    StretchBlt(this->hDC, x + width - image->rightBorder, y, image->rightBorder, image->topBorder, memDC, image->width - image->rightBorder, 0, image->rightBorder, image->height - image->bottomBorder, SRCCOPY);
+
+    // StretchBlt bottom
+    StretchBlt(this->hDC, x + width - image->rightBorder - image->leftBorder, y + height - image->bottomBorder, width - image->leftBorder - image->rightBorder, height - image->bottomBorder - image->topBorder, memDC, image->leftBorder, image->height - image->bottomBorder, image->width - image->leftBorder - image->rightBorder, image->bottomBorder, SRCCOPY);
+
+    // StretchBlt Left bottom
+    StretchBlt(this->hdc, x, y + height - image->bottomBorder, image->leftBorder, image->bottomBorder, memDC, 0, image->height - image->bottomBorder, image->leftBorder, image->bottomBorder, SRCCOPY);
+
+    // StretchBlt Left
+    StretchBlt(this->hdc, x, y + image->topBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, memDC, 0, image->height - image->topBorder - image->bottomBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, SRCCOPY);
+
     DeleteObject(memDC);
 
 }

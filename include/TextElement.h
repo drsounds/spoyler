@@ -8,6 +8,9 @@ class TextElement : public Element
         TextElement(Element *parent);
         void draw(int x, int y, GraphicsContext *g);
         virtual ~TextElement();
+        virtual string getType() {
+            return "text";
+        }
     protected:
     private:
 };

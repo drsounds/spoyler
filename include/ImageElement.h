@@ -8,6 +8,9 @@ class ImageElement : public Element
         ImageElement(Element *parent);
         virtual ~ImageElement();
         void draw(int x, int y, GraphicsContext *g);
+        virtual string getType() {
+            return "img";
+        }
     protected:
     private:
 };

@@ -1,6 +1,29 @@
 #include "libspider.h"
 #include "Color.h"
 
+/*!
+ * From http://www.dreamincode.net/forums/topic/58058-converting-rgb-to-hex/
+ **/
+string RGBToHex(int rNum, int gNum, int bNum) {
+	string result;
+    result.append("#");
+	char r[255];
+	sprintf_s(r, "%.2X", rNum);
+	result.append(r );
+
+	char g[255];
+	sprintf_s(g, "%.2X", gNum);
+	result.append(g );
+
+	char b[255];
+	sprintf_s(b, "%.2X", bNum);
+	result.append(b );
+
+	return result;
+}
+
+
+
 namespace spider {
 /**
 Colors
@@ -16,6 +39,9 @@ short Color::getB(){
 }
 short Color::getA() {
 	return this->a;
+}
+string Color::toHTMLColor() {
+    return RGBToHex(this->r, this->g, this->b);
 }
 void Color::setR(short r) {
 	this->r = r;
