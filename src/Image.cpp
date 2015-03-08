@@ -35,13 +35,13 @@ Image::Image()
     //ctor
 }
 void abort_(char *text, int t, png_byte byte) {
-
+    throw;
 }
 void abort_(char *text, char *fileName) {
-
+    throw;
 }
 void abort_(char *text) {
-
+    throw;
 }
 Image::Image(const string& fileName) {
     char *file_name = (char *)fileName.c_str();
@@ -98,7 +98,7 @@ Image::Image(const string& fileName) {
 
         cout << "Row pointers null";
     }
-    png_read_image(png_ptr, row_pointers);
+     png_read_image(png_ptr, row_pointers);
 
     fclose(fp);
 
