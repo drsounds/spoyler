@@ -46,12 +46,30 @@ void Win32GraphicsContext::invalidateRegion(spider::rectangle rect) {
 }
 
 Image *Win32GraphicsContext::loadImage(const string& _bitmap) {
-    HBITMAP bitmap = (HBITMAP)LoadImage(NULL, _bitmap.c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+    cout << "Bitmap: " << _bitmap << "\n";
 
+    char * dir = new char[1000];
+    GetCurrentDirectory(1000, dir);
+
+    string a = string(dir);
+    a.append("\\");
+    a.append(_bitmap);
+
+    MessageBox(0, a.c_str(), "Path", MB_ICONSTOP | MB_OK);
+    cout << "Bitmap path: " << a << "\r\n";
+    HBITMAP hBitmap = (HBITMAP)LoadImage(NULL,(LPCSTR)a.c_str(), IMAGE_BITMAP, 0, 0, LR_CREATEDIBSECTION | LR_LOADFROMFILE);
+    if (hBitmap == NULL) {
+        cout << GetLastError() << "\r\n";
+        MessageBox(0, "Window Handler Invalid!", "Error!", MB_ICONSTOP | MB_OK);
+    }
     BITMAP bm = {0};
-    GetObject(bitmap, sizeof(bm), &bm );
     HDC dcBitmap = CreateCompatibleDC ( NULL );
+    if (SelectObject(dcBitmap, hBitmap) == NULL) {
+        MessageBox(0, "Window Handler Invalid!", "Error!", MB_ICONSTOP | MB_OK);
+    }
+    GetObject(hBitmap, sizeof(bm), &bm );
     LPSIZE siz;
+    cout << bm.bmWidth << "px " << bm.bmHeight << "px \r\n";
     Image *image = new Image(bm.bmWidth, bm.bmHeight);
     BITMAPINFO bmpInfo;
 
@@ -63,7 +81,7 @@ Image *Win32GraphicsContext::loadImage(const string& _bitmap) {
     bmpInfo.bmiHeader.biCompression = BI_RGB;
     bmpInfo.bmiHeader.biSizeImage = 0;
     COLORREF* pixels = new COLORREF [ bm.bmWidth * bm.bmHeight ];
-    GetDIBits(dcBitmap, bitmap, 0, bm.bmHeight, pixels, &bmpInfo, DIB_RGB_COLORS );
+    GetDIBits(dcBitmap, hBitmap, 0, bm.bmHeight, pixels, &bmpInfo, DIB_RGB_COLORS );
 
     for (int i = 0; i < sizeof(pixels); i++) {
         pixel *pixel = &image->pixels[i];
@@ -73,7 +91,7 @@ Image *Win32GraphicsContext::loadImage(const string& _bitmap) {
         pixel->b = GetBValue(pixels[i]);
     }
     // Clean memory
-
+    DeleteDC(dcBitmap);
     return image;
 
 }

@@ -11133,7 +11133,7 @@
 1425739932 c:\users\alecca\documents\spoyler\include\linkelement.h
 	"TextElement.h"
 
-1425764501 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
+1425764787 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
 	"MainWindowElement.h"
 	"StartView.h"
 	"InputElement.h"
@@ -11294,10 +11294,10 @@
 	"HBoxElement.h"
 	<regex>
 
-1425764649 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
+1425811803 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
-1425764598 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
+1425811886 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
 	<Windows.h>
 	"Win32WindowElement.h"
 	"Win32GraphicsContext.h"
@@ -27440,14 +27440,71 @@
 	"Color.h"
 	"GraphicsContext.h"
 
-1425760812 c:\users\alecca\documents\spoyler\include\image.h
+1425812707 c:\users\alecca\documents\spoyler\include\image.h
 	<string>
 	"Color.h"
+	<png.h>
 
-1425761218 source:c:\users\alecca\documents\spoyler\src\image.cpp
+1425813465 source:c:\users\alecca\documents\spoyler\src\image.cpp
 	"Image.h"
 	<stdio.h>
+	<iostream>
 
-1425763751 source:c:\users\alecca\documents\spoyler\src\skin.cpp
+1425812686 source:c:\users\alecca\documents\spoyler\src\skin.cpp
 	"Skin.h"
+
+1244151612 c:\users\alecca\downloads\compressed\libpng-1.2.37-lib\include\png.h
+	"zlib.h"
+	"pngconf.h"
+	<crtdbg.h>
+
+1367198629 c:\mingw\include\zlib.h
+	"zconf.h"
+
+1367193431 c:\mingw\include\zconf.h
+	<windows.h>
+	<limits.h>
+	<sys/types.h>
+	<stdarg.h>
+	<stddef.h>
+	<unistd.h>
+	<unixio.h>
+
+1244151612 c:\users\alecca\downloads\compressed\libpng-1.2.37-lib\include\pngconf.h
+	"pngusr.h"
+	"config.h"
+	<windows.h>
+	<stdio.h>
+	<stdio.h>
+	<sys/types.h>
+	<setjmp.h>
+	<strings.h>
+	<string.h>
+	<stdlib.h>
+	<fp.h>
+	<math.h>
+	<m68881.h>
+	<mem.h>
+	<alloc.h>
+	<malloc.h>
+	<time.h>
+	<dos.h>
+
+1419776913 c:\mingw\include\setjmp.h
+	<_mingw.h>
+
+1419776913 c:\mingw\include\strings.h
+	<string.h>
+
+1419776913 c:\mingw\include\mem.h
+	<string.h>
+
+1419776913 c:\mingw\include\malloc.h
+	<_mingw.h>
+	<stdlib.h>
+
+1419776913 c:\mingw\include\dos.h
+	<_mingw.h>
+	<stddef.h>
+	<io.h>
 

@@ -2,6 +2,7 @@
 #define IMAGE_H
 #include <string>
 #include "Color.h"
+#include <png.h>
 using namespace std;
 struct pixel {
     unsigned short r;
@@ -10,7 +11,8 @@ struct pixel {
     unsigned short a;
 };
 
-
+/*! \from http://zarb.org/~gc/html/libpng.html */
+void read_png_file(char* file_name);
 
 namespace spider {
     class Color;
@@ -25,9 +27,12 @@ namespace spider {
     Color *spider_pixel_to_colour(pixel *pixel);
     class Image
     {
+
         public:
+            int x, y;
             Image(unsigned int width, unsigned int height);
             Image();
+            Image(const string& fileName);
             virtual ~Image();
             unsigned int width;
             unsigned int height;
@@ -40,6 +45,15 @@ namespace spider {
             pixel *getPixel( unsigned int x, unsigned int y);
             void *handle; // OS Specific handle, created opon first load
 
+            // PNG specific stuff
+
+            png_byte color_type;
+            png_byte bit_depth;
+
+            png_structp png_ptr;
+            png_infop info_ptr;
+            int number_of_passes;
+            png_bytep *row_pointers;
         protected:
         private:
     };
