@@ -45,7 +45,7 @@ void abort_(char *text) {
 }
 Image::Image(const string& fileName) {
     char *file_name = (char *)fileName.c_str();
-    char header[8];    // 8 is the maximum size that can be checked
+    png_bytep header[8];    // 8 is the maximum size that can be checked
 
     /* open file and test for it being a png */
     FILE *fp = fopen(file_name, "rb");
@@ -98,7 +98,7 @@ Image::Image(const string& fileName) {
 
         cout << "Row pointers null";
     }
-     png_read_image(png_ptr, row_pointers);
+    png_read_image(png_ptr, row_pointers);
 
     fclose(fp);
 

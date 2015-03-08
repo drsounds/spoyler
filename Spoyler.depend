@@ -11297,7 +11297,7 @@
 1425811803 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
-1425811886 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
+1425821497 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
 	<Windows.h>
 	"Win32WindowElement.h"
 	"Win32GraphicsContext.h"
@@ -27445,12 +27445,12 @@
 	"Color.h"
 	<png.h>
 
-1425814416 source:c:\users\alecca\documents\spoyler\src\image.cpp
+1425820255 source:c:\users\alecca\documents\spoyler\src\image.cpp
 	"Image.h"
 	<stdio.h>
 	<iostream>
 
-1425812686 source:c:\users\alecca\documents\spoyler\src\skin.cpp
+1425820126 source:c:\users\alecca\documents\spoyler\src\skin.cpp
 	"Skin.h"
 
 1244151612 c:\users\alecca\downloads\compressed\libpng-1.2.37-lib\include\png.h
@@ -27507,4 +27507,17 @@
 	<_mingw.h>
 	<stddef.h>
 	<io.h>
+
+1425820832 c:\mingw\msys\1.0\local\include\png.h
+	"pnglibconf.h"
+	"pngconf.h"
+
+1425820831 c:\mingw\msys\1.0\local\include\pnglibconf.h
+
+1425820832 c:\mingw\msys\1.0\local\include\pngconf.h
+	<limits.h>
+	<stddef.h>
+	<stdio.h>
+	<setjmp.h>
+	<time.h>
 

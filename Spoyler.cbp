@@ -19,10 +19,13 @@
 					<Add directory="C:/Program Files (x86)/Expat 2.1.0/Source/lib" />
 					<Add directory="C:/MinGW/include" />
 					<Add directory="C:/Users/Alecca/Downloads/boost_1_55_0/boost_1_55_0/DIR/include/boost-1_55" />
+					<Add directory="C:/MinGW/msys/1.0/local/include" />
 				</Compiler>
 				<Linker>
 					<Add library="C:\MinGW\lib\libexpat.dll.a" />
 					<Add library="C:\MinGW\lib\liblua.a" />
+					<Add library="C:\MinGW\msys\1.0\local\lib\libpng.dll.a" />
+					<Add library="C:\MinGW\msys\1.0\local\lib\libpng15.dll.a" />
 					<Add directory="C:/Users/Alecca/Downloads/boost_1_55_0/boost_1_55_0/DIR/lib" />
 				</Linker>
 			</Target>

@@ -8,7 +8,7 @@ Skin::Skin(const string& bitmap, GraphicsContext *g) {
     this->colors = new std::map<string, pixel *>;
     this->images = new std::map<string, Image *>;
     cout << bitmap << "";
-    Image *image = new Image(string("skin.png"));
+    Image *image = new Image(bitmap);
     this->image = image;
     cout << this->colors << "";
     (*this->colors)["body.background.color"] = this->image->getPixel(0, 0);
