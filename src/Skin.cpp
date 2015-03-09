@@ -7,12 +7,12 @@ Skin::Skin()
 Skin::Skin(const string& bitmap, GraphicsContext *g) {
     this->colors = new std::map<string, pixel *>;
     this->images = new std::map<string, Image *>;
-    cout << bitmap << "";
+    cout << bitmap << "\r\n";
     Image *image = new Image(bitmap);
     cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
     this->image = image;
     cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
-    (*this->colors)["body.background.color"] = this->image->getPixel(0, 0);
+    this->colors->insert(pair<string, pixel *>("body.background.color", this->image->getPixel(0, 0)));
     cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
     (*this->colors)["body.foreground.color"] = this->image->getPixel(1, 0);
     cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";

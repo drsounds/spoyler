@@ -24,7 +24,6 @@ namespace spider {
         bool hasClass(string _class);
         void addClass(string _class);
         void removeClass(string _class);
-        void setObject(string key, void *object);
         void setObject(const std::string& title, void *object);
         rectangle *absoluteBounds;
         void applyStylesheet(Stylesheet *style);

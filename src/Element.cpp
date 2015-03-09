@@ -134,8 +134,7 @@ void Element::applyColorAttributeFromSkin (string attr, string prop) {
     if (this->skin == NULL) {
         this->skin = new Skin("skin.png", NULL);
     }
-    cout << attr << "\r\n";
-    cout << skin << "\r\n";
+    cout << prop << "\r\n";
     cout << this->skin->colors << "\r\n";
     cout << attr << "\r\n";
     if (this->skin->colors->find(prop) != this->skin->colors->end()) {
