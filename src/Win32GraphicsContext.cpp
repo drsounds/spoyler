@@ -121,6 +121,7 @@ void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int 
     // We use a handle so we only have to recreate the operating system specific bitmap once,
     // and then reuse it.
     BITMAP bm;
+
     if (image->handle == NULL) {
         HDC memDC = CreateCompatibleDC(this->hDC);
         HBITMAP bitmap = CreateCompatibleBitmap(memDC, image->width, image->height);
@@ -134,7 +135,6 @@ void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int 
                 SetPixel(memDC, x, y, color);
             }
         }
-
 
         DeleteObject(memDC);
         image->handle = (void *)bitmap;

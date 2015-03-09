@@ -138,7 +138,7 @@ void Element::applyColorAttributeFromSkin (string attr, string prop) {
     cout << this->skin->colors << "\r\n";
     cout << attr << "\r\n";
     if (this->skin->colors->find(prop) != this->skin->colors->end()) {
-        pixel *color = (*this->skin->colors)[attr];
+        pixel *color = (*this->skin->colors)[prop];
 
         this->set(attr, spider_pixel_to_hex(color));
     }
@@ -153,7 +153,7 @@ void Element::applyImageAttributeFromSkin (string attr, string prop) {
     cout << this->skin->colors << "\r\n";
     cout << attr << "\r\n";
     if (this->skin->images->find(prop) != this->skin->images->end()) {
-        Image *img = (*this->skin->images)[attr];
+        Image *img = (*this->skin->images)[prop];
 
         this->setObject(attr, (void *)img);
     }
@@ -350,6 +350,7 @@ void Element::draw(int x, int y, GraphicsContext *c) {
         fontFamily = new string("MS Sans Serif");
     }
     if (this->backgroundImage != NULL) {
+
         c->drawImage(this->backgroundImage,  x, y, width, height);
     } else {
         c->fillRectangle(x, y, width, height, bgColor);

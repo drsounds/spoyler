@@ -129,9 +129,11 @@ Image::Image(const string& fileName) {
                 i++;
             }
     }
+    this->handle = NULL;
 }
 Image::Image(unsigned int width, unsigned int height) {
     this->pixels = new vector<pixel *>;
+    this->handle = NULL;
 }
 Image *Image::sliceImage(unsigned int x, unsigned int y, unsigned int width, unsigned int height, int leftBorder, int topBorder, int bottomBorder, int rightBorder) {
     unsigned int startPos = x + (y * width * height);

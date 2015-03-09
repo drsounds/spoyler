@@ -13,6 +13,10 @@ Skin::Skin(const string& bitmap, GraphicsContext *g) {
     this->image = image;
     cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
     this->colors->insert(pair<string, pixel *>("body.background.color", this->image->getPixel(0, 0)));
+
+    if ((*this->colors)["body.background.color"] == NULL) {
+        exit(-1);
+    }
     cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
     (*this->colors)["body.foreground.color"] = this->image->getPixel(1, 0);
     cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
