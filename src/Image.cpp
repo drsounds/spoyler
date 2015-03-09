@@ -44,6 +44,7 @@ void abort_(char *text) {
     throw;
 }
 Image::Image(const string& fileName) {
+    this->pixels = new vector<pixel *>;
     char *file_name = (char *)fileName.c_str();
     png_bytep header[8];    // 8 is the maximum size that can be checked
 
@@ -87,9 +88,9 @@ Image::Image(const string& fileName) {
     if (setjmp(png_jmpbuf(png_ptr)))
             abort_("[read_png_file] Error during read_image");
 
-    row_pointers = (png_bytep *) new char[ height];
+    row_pointers = (png_bytep *) new png_bytep[ height];
     for (y=0; y<height; y++)
-            row_pointers[y] = (png_byte*) new char [png_get_rowbytes(png_ptr,info_ptr)];
+            row_pointers[y] = (png_byte*) new png_byte [png_get_rowbytes(png_ptr,info_ptr)];
     if (png_ptr == NULL) {
 
         cout << "PNG pointer null";
@@ -112,24 +113,25 @@ Image::Image(const string& fileName) {
             abort_("[process_file] color_type of input file must be PNG_COLOR_TYPE_RGBA (%d) (is %d)",
                    PNG_COLOR_TYPE_RGBA, png_get_color_type(png_ptr, info_ptr));
 
-    this->pixels = new pixel[width * height];
+    cout << "Pixels: " << sizeof(this->pixels) << "\r\n";
     int i = 0;
     for (y=0; y<height; y++) {
             png_byte* row = row_pointers[y];
             for (x=0; x<width; x++) {
                 png_byte* ptr = &(row[x*4]);
-                this->pixels[i].r = ptr[0];
-                this->pixels[i].g = ptr[1];
-                this->pixels[i].b = ptr[2];
-                this->pixels[i].a = ptr[3];
+                pixel *pix = new pixel;
 
+                pix->r = ptr[0];
+                pix->g = ptr[1];
+                pix->b = ptr[2];
+                pix->a = ptr[3];
+                this->pixels->push_back(pix);
                 i++;
-
             }
     }
 }
 Image::Image(unsigned int width, unsigned int height) {
-    this->pixels = new pixel[width * height];
+    this->pixels = new vector<pixel *>;
 }
 Image *Image::sliceImage(unsigned int x, unsigned int y, unsigned int width, unsigned int height, int leftBorder, int topBorder, int bottomBorder, int rightBorder) {
     unsigned int startPos = x + (y * width * height);
@@ -137,11 +139,12 @@ Image *Image::sliceImage(unsigned int x, unsigned int y, unsigned int width, uns
 
     Image *image = new Image(width, height);
     for (int i = 0, x = 0; x < startPos + length; i++, x++) {
-        pixel *pixel = &image->pixels[i];
-        pixel->r = this->pixels[startPos + i].r;
-        pixel->g = this->pixels[startPos + i].g;
-        pixel->b = this->pixels[startPos + i].b;
-        pixel->a = this->pixels[startPos + i].a;
+        pixel *pix = new pixel;
+        pix->r = this->pixels->at(startPos + i)->r;
+        pix->g = this->pixels->at(startPos + i)->g;
+        pix->b = this->pixels->at(startPos + i)->b;
+        pix->a = this->pixels->at(startPos + i)->a;
+        this->pixels->push_back(pix);
 
     }
     image->leftBorder = leftBorder;
@@ -152,8 +155,8 @@ Image *Image::sliceImage(unsigned int x, unsigned int y, unsigned int width, uns
 }
 pixel *Image::getPixel(unsigned int x, unsigned int y) {
     unsigned int pos = x + (this->width * y);
-    pixel *pixel = &this->pixels[pos];
-    return pixel;
+    pixel *pix = this->pixels->at(pos);
+    return pix;
 }
 Image::~Image()
 {

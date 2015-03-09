@@ -1,6 +1,7 @@
 #include "HeaderElement.h"
 namespace spider {
 HeaderElement::HeaderElement(Element *parent)
+ : HBoxElement(parent)
 {
     this->getPadding()->top = 20;
     this->getPadding()->left = 20;

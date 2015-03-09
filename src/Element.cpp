@@ -130,16 +130,36 @@ void Element::applyStylesheet(Stylesheet *style) {
 
 }
 
-void Element::applyColorAttributeFromSkin (string attr, string skin) {
-    cout << attr << "";
-    cout << skin << "";
-    cout << this->skin->colors << "";
-    if (this->skin->colors->find(attr) != this->skin->colors->end()) {
+void Element::applyColorAttributeFromSkin (string attr, string prop) {
+    if (this->skin == NULL) {
+        this->skin = new Skin("skin.png", NULL);
+    }
+    cout << attr << "\r\n";
+    cout << skin << "\r\n";
+    cout << this->skin->colors << "\r\n";
+    cout << attr << "\r\n";
+    if (this->skin->colors->find(prop) != this->skin->colors->end()) {
         pixel *color = (*this->skin->colors)[attr];
 
         this->set(attr, spider_pixel_to_hex(color));
     }
 }
+
+void Element::applyImageAttributeFromSkin (string attr, string prop) {
+    if (this->skin == NULL) {
+        this->skin = new Skin("skin.png", NULL);
+    }
+    cout << attr << "\r\n";
+    cout << skin << "\r\n";
+    cout << this->skin->colors << "\r\n";
+    cout << attr << "\r\n";
+    if (this->skin->images->find(prop) != this->skin->images->end()) {
+        Image *img = (*this->skin->images)[attr];
+
+        this->setObject(attr, (void *)img);
+    }
+}
+
 
 Element::Element(Element *parent) :
     Node() {
@@ -153,7 +173,8 @@ Element::Element(Element *parent) :
     this->data = NULL;
 	this->observers = new vector<Observer *>();
 	this->setParent(parent);
-	this->skin = parent->skin;
+	this->skin = ((Element *)this->parent)->skin;
+
 
     #if false
     this->set("fgcolor", new string("#ffffff"));
@@ -164,7 +185,15 @@ Element::Element(Element *parent) :
     #endif
 
     this->applyColorAttributeFromSkin(string("bgcolor"), string("body.background.color"));
+    this->applyColorAttributeFromSkin(string("fgcolor"), string("body.foreground.color"));
 
+    string type = string(this->getType());
+
+    this->applyColorAttributeFromSkin(string("bgcolor"), string(this->getType()) + "body.background.color");
+    this->applyColorAttributeFromSkin(string("fgcolor"), string(this->getType()) + "body.foreground.color");
+    if (this->skin->hasImage(string(this->getType()) + ".background.image")) {
+        this->backgroundImage = this->skin->getImage(string(this->getType()) + ".background.image", "");
+    }
 	if (this->getParent() != NULL) {
         #if false
         this->set("bgcolor", new string(this->getParent()->get("bgcolor")));
@@ -245,6 +274,9 @@ void Element::setZ(int z) {
 }
 
 
+void Element::setObject(const std::string& title, void *object) {
+    (*this->getProperties())[title] = (void *)object;
+}
 
 void Element::set(const std::string& title, std::string *val) {
     int n = 0;
@@ -318,7 +350,11 @@ void Element::draw(int x, int y, GraphicsContext *c) {
     if (fontFamily == NULL) {
         fontFamily = new string("MS Sans Serif");
     }
-	c->fillRectangle(x, y, width, height, bgColor);
+    if (this->backgroundImage != NULL) {
+        c->drawImage(this->backgroundImage,  x, y, width, height);
+    } else {
+        c->fillRectangle(x, y, width, height, bgColor);
+    }
 	//c->drawRectangle(x, y, this->getWidth(), this->getHeight(), (Color *)this->getAttributeObj("bgcolor"));
 	//Color color(255, 0, 0, 255);
     //	c->drawRectangle(0, 0, this->getWidth(), this->getHeight() , &color);

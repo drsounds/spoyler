@@ -22,7 +22,8 @@ void TitleElement::setEntity(const string& entity) {
 }
 string TitleElement::getEntity() {
 }
-TitleElement::TitleElement(Element *parent) {
+TitleElement::TitleElement(Element *parent)
+ : VBoxElement(parent){
     entity = new TextElement(this);
     entity->setInnerText("Object");
     entity->set("height", "180");

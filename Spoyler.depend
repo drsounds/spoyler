@@ -7486,7 +7486,7 @@
 1425739993 c:\users\alecca\documents\spoyler\include\boxelement.h
 	"Element.h"
 
-1425759946 c:\users\alecca\documents\spoyler\include\element.h
+1425891734 c:\users\alecca\documents\spoyler\include\element.h
 	"Node.h"
 	"Observable.h"
 	"FontStyle.h"
@@ -11058,7 +11058,7 @@
 	"Element.h"
 	"expat.h"
 
-1425763763 source:c:\users\alecca\documents\spoyler\src\element.cpp
+1425890455 source:c:\users\alecca\documents\spoyler\src\element.cpp
 	"Element.h"
 	<iostream>
 	<cstdio>
@@ -11294,7 +11294,7 @@
 	"HBoxElement.h"
 	<regex>
 
-1425811803 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
+1425890023 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
 1425821497 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
@@ -11336,7 +11336,7 @@
 1422718654 source:c:\users\alecca\documents\spoyler\src\inputeventargs.cpp
 	"InputEventArgs.h"
 
-1425221359 source:c:\users\alecca\documents\spoyler\src\doctrineview.cpp
+1425890709 source:c:\users\alecca\documents\spoyler\src\doctrineview.cpp
 	"DoctrineView.h"
 	"TextElement.h"
 	<regex>
@@ -27412,14 +27412,14 @@
 	"DOMViewElement.h"
 	"HeaderElement.h"
 
-1425224774 source:c:\users\alecca\documents\spoyler\src\userview.cpp
+1425890736 source:c:\users\alecca\documents\spoyler\src\userview.cpp
 	"UserView.h"
 	<boost/algorithm/string.hpp>
 	<string>
 	<vector>
 	<regex>
 
-1425224740 source:c:\users\alecca\documents\spoyler\src\headerelement.cpp
+1425890760 source:c:\users\alecca\documents\spoyler\src\headerelement.cpp
 	"HeaderElement.h"
 
 1425740031 c:\users\alecca\documents\spoyler\include\headerelement.h
@@ -27431,7 +27431,7 @@
 	"VBoxElement.h"
 	"TextElement.h"
 
-1425224863 source:c:\users\alecca\documents\spoyler\src\titleelement.cpp
+1425890786 source:c:\users\alecca\documents\spoyler\src\titleelement.cpp
 	"TitleElement.h"
 
 1425763601 c:\users\alecca\documents\spoyler\include\skin.h
@@ -27440,17 +27440,18 @@
 	"Color.h"
 	"GraphicsContext.h"
 
-1425812707 c:\users\alecca\documents\spoyler\include\image.h
+1425889494 c:\users\alecca\documents\spoyler\include\image.h
 	<string>
 	"Color.h"
+	<vector>
 	<png.h>
 
-1425820255 source:c:\users\alecca\documents\spoyler\src\image.cpp
+1425889926 source:c:\users\alecca\documents\spoyler\src\image.cpp
 	"Image.h"
 	<stdio.h>
 	<iostream>
 
-1425820126 source:c:\users\alecca\documents\spoyler\src\skin.cpp
+1425889049 source:c:\users\alecca\documents\spoyler\src\skin.cpp
 	"Skin.h"
 
 1244151612 c:\users\alecca\downloads\compressed\libpng-1.2.37-lib\include\png.h

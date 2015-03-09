@@ -9,12 +9,17 @@ Skin::Skin(const string& bitmap, GraphicsContext *g) {
     this->images = new std::map<string, Image *>;
     cout << bitmap << "";
     Image *image = new Image(bitmap);
+    cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
     this->image = image;
-    cout << this->colors << "";
+    cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
     (*this->colors)["body.background.color"] = this->image->getPixel(0, 0);
+    cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
     (*this->colors)["body.foreground.color"] = this->image->getPixel(1, 0);
+    cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
     (*this->colors)["::selected.background.color"] = this->image->getPixel(7, 0);
+    cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
     (*this->colors)["::selected.foreground.color"] = this->image->getPixel(8, 0);
+    cout << "Sizeof pixels: " << sizeof(image->pixels) << "\r\n";
     (*this->images)["tab.background.image::active"] = this->image->sliceImage(0, 1, 32, 23, 1, 1, 1, 1);
     (*this->images)["tabbar.background.image"] = this->image->sliceImage(101, 0, 20, 23, 0, 0, 0, 0);
     (*this->images)["button.background.image"] = this->image->sliceImage(128, 1, 71, 19, 3, 13, 13, 3);

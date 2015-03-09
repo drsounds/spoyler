@@ -2,6 +2,7 @@
 #define IMAGE_H
 #include <string>
 #include "Color.h"
+#include <vector>
 #include <png.h>
 using namespace std;
 struct pixel {
@@ -40,7 +41,7 @@ namespace spider {
             int topBorder;
             int bottomBorder;
             int rightBorder;
-            pixel *pixels;
+            vector<pixel *> *pixels;
             Image *sliceImage(unsigned int x,unsigned int y, unsigned int width, unsigned int height, int left, int top, int bottom, int right);
             pixel *getPixel( unsigned int x, unsigned int y);
             void *handle; // OS Specific handle, created opon first load

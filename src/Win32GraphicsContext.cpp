@@ -84,11 +84,11 @@ Image *Win32GraphicsContext::loadImage(const string& _bitmap) {
     GetDIBits(dcBitmap, hBitmap, 0, bm.bmHeight, pixels, &bmpInfo, DIB_RGB_COLORS );
 
     for (int i = 0; i < sizeof(pixels); i++) {
-        pixel *pixel = &image->pixels[i];
-        pixel->a = 255;
-        pixel->r = GetRValue(pixels[i]);
-        pixel->g = GetGValue(pixels[i]);
-        pixel->b = GetBValue(pixels[i]);
+        pixel *pix = image->pixels->at(i);
+        pix->a = 255;
+        pix->r = GetRValue(pixels[i]);
+        pix->g = GetGValue(pixels[i]);
+        pix->b = GetBValue(pixels[i]);
     }
     // Clean memory
     DeleteDC(dcBitmap);
@@ -129,8 +129,8 @@ void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int 
 
         for (int x = 0; x < image->width; x++) {
             for (int y = 0; y < image->height; y++) {
-                pixel *pixel = &image->pixels[x * y];
-                COLORREF color = RGB(pixel->r, pixel->g, pixel->b);
+                pixel *pix = image->pixels->at(x * y);
+                COLORREF color = RGB(pix->r, pix->g, pix->b);
                 SetPixel(memDC, x, y, color);
             }
         }

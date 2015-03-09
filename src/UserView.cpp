@@ -8,6 +8,7 @@ namespace spider {
     namespace views {
 
         UserView::UserView(Element *parent)
+         : ViewElement(parent)
         {
             this->getPadding()->top = 0;
             this->getPadding()->left = 0;

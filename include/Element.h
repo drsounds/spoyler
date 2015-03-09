@@ -17,12 +17,15 @@ namespace spider {
 
     public:
         Skin *skin;
+        Image *backgroundImage;
         vector<string> *classList;
         void applyColorAttributeFromSkin (string attr, string skin);
+        void applyImageAttributeFromSkin (string attr, string skin);
         bool hasClass(string _class);
         void addClass(string _class);
         void removeClass(string _class);
-
+        void setObject(string key, void *object);
+        void setObject(const std::string& title, void *object);
         rectangle *absoluteBounds;
         void applyStylesheet(Stylesheet *style);
         int width;

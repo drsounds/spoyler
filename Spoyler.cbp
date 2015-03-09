@@ -24,8 +24,8 @@
 				<Linker>
 					<Add library="C:\MinGW\lib\libexpat.dll.a" />
 					<Add library="C:\MinGW\lib\liblua.a" />
-					<Add library="C:\MinGW\msys\1.0\local\lib\libpng.dll.a" />
-					<Add library="C:\MinGW\msys\1.0\local\lib\libpng15.dll.a" />
+					<Add library="C:\MinGW\msys\1.0\local\lib\libz.a" />
+					<Add library="C:\MinGW\msys\1.0\local\lib\libpng16.dll.a" />
 					<Add directory="C:/Users/Alecca/Downloads/boost_1_55_0/boost_1_55_0/DIR/lib" />
 				</Linker>
 			</Target>
