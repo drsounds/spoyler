@@ -18,7 +18,7 @@ namespace spider {
 		virtual void drawLine(int x, int y, int x2, int y2, Color *color) {}
 		virtual void drawRectangle(int x, int y, int w, int h, Color *color) {}
 		virtual void fillRectangle(int x, int y, int w, int h, Color *color) {}
-		virtual void drawImage(void *image, int x, int y, int w, int h) {}
+		virtual void drawImage(Image *image, int x, int y, int w, int h) {}
 		virtual void drawControl(int x, int y, int w, int h, char *name) {}
 		virtual void drawString(char *text, FontStyle *fs, Color *color, int x, int y, int w, int h) {}
 		virtual void invalidateRegion(rectangle region) {}

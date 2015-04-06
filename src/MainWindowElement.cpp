@@ -66,6 +66,7 @@ namespace spider {
         header->getPadding()->left = 13;
         header->getPadding()->bottom = 13;
         header->getPadding()->right =  13;
+        header->backgroundImage = (Image *)(*header->skin->images)["header.background.image"];
         this->appendChild(header);
 
         // add search element

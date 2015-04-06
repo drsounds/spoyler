@@ -17,7 +17,7 @@ namespace spider {
 
     public:
         Skin *skin;
-        Image *backgroundImage;
+        Image *backgroundImage = NULL;
         vector<string> *classList;
         void applyColorAttributeFromSkin (string attr, string skin);
         void applyImageAttributeFromSkin (string attr, string skin);

@@ -41,9 +41,11 @@ namespace spider {
             int topBorder;
             int bottomBorder;
             int rightBorder;
-            vector<pixel *> *pixels;
+            int numPixels;
+            pixel *pixels;
             Image *sliceImage(unsigned int x,unsigned int y, unsigned int width, unsigned int height, int left, int top, int bottom, int right);
-            pixel *getPixel( unsigned int x, unsigned int y);
+            pixel getPixel( unsigned int x, unsigned int y);
+            pixel *getPixelPtr(unsigned int x, unsigned int y);
             void *handle; // OS Specific handle, created opon first load
 
             // PNG specific stuff

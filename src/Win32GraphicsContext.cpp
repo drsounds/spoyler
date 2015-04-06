@@ -84,7 +84,7 @@ Image *Win32GraphicsContext::loadImage(const string& _bitmap) {
     GetDIBits(dcBitmap, hBitmap, 0, bm.bmHeight, pixels, &bmpInfo, DIB_RGB_COLORS );
 
     for (int i = 0; i < sizeof(pixels); i++) {
-        pixel *pix = image->pixels->at(i);
+        pixel *pix = &image->pixels[i];
         pix->a = 255;
         pix->r = GetRValue(pixels[i]);
         pix->g = GetGValue(pixels[i]);
@@ -130,8 +130,10 @@ void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int 
 
         for (int x = 0; x < image->width; x++) {
             for (int y = 0; y < image->height; y++) {
-                pixel *pix = image->pixels->at(x * y);
-                COLORREF color = RGB(pix->r, pix->g, pix->b);
+                int _size = image->numPixels;
+                // cout << "Count of pixels :" << _size << " Num of pixels: " << (x + (y * x)) << "\r\n";
+                pixel pix = image->getPixel(x, y);
+                COLORREF color = RGB(pix.r, pix.g, pix.b);
                 SetPixel(memDC, x, y, color);
             }
         }
@@ -144,26 +146,29 @@ void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int 
     GetObject(bmp, sizeof(bm), &bm);
 
     // BitBlt fill
-    StretchBlt(this->hDC, x + image->leftBorder, y + image->topBorder, bm.bmWidth - image->leftBorder - image->rightBorder, bm.bmHeight - image->topBorder - image->bottomBorder, memDC, image->leftBorder, image->topBorder, width - image->rightBorder - image->leftBorder, height - image->topBorder - image->bottomBorder, SRCCOPY);
+    if (false) {
+        StretchBlt(this->hDC, x + image->leftBorder, y + image->topBorder, bm.bmWidth - image->leftBorder - image->rightBorder, bm.bmHeight - image->topBorder - image->bottomBorder, memDC, image->leftBorder, image->topBorder, width - image->rightBorder - image->leftBorder, height - image->topBorder - image->bottomBorder, SRCCOPY);
 
-    // StretchBlt topLeft corner
-    StretchBlt(this->hDC, x, y, image->leftBorder, image->topBorder, memDC, 0, 0, image->leftBorder, image->topBorder, SRCCOPY);
+        // StretchBlt topLeft corner
+        StretchBlt(this->hDC, x, y, image->leftBorder, image->topBorder, memDC, 0, 0, image->leftBorder, image->topBorder, SRCCOPY);
 
-    // StretchBlt top
-    StretchBlt(this->hDC, x + image->leftBorder, y, image->width - image->leftBorder - image->rightBorder, image->topBorder, memDC, image->leftBorder, 0, image->width - image->leftBorder - image->rightBorder, image->topBorder, SRCCOPY);
+        // StretchBlt top
+        StretchBlt(this->hDC, x + image->leftBorder, y, image->width - image->leftBorder - image->rightBorder, image->topBorder, memDC, image->leftBorder, 0, image->width - image->leftBorder - image->rightBorder, image->topBorder, SRCCOPY);
 
-    // StretchBlt top right
-    StretchBlt(this->hDC, x + width - image->rightBorder, y, image->rightBorder, image->topBorder, memDC, image->width - image->rightBorder, 0, image->rightBorder, image->height - image->bottomBorder, SRCCOPY);
+        // StretchBlt top right
+        StretchBlt(this->hDC, x + width - image->rightBorder, y, image->rightBorder, image->topBorder, memDC, image->width - image->rightBorder, 0, image->rightBorder, image->height - image->bottomBorder, SRCCOPY);
 
-    // StretchBlt bottom
-    StretchBlt(this->hDC, x + width - image->rightBorder - image->leftBorder, y + height - image->bottomBorder, width - image->leftBorder - image->rightBorder, height - image->bottomBorder - image->topBorder, memDC, image->leftBorder, image->height - image->bottomBorder, image->width - image->leftBorder - image->rightBorder, image->bottomBorder, SRCCOPY);
+        // StretchBlt bottom
+        StretchBlt(this->hDC, x + width - image->rightBorder - image->leftBorder, y + height - image->bottomBorder, width - image->leftBorder - image->rightBorder, height - image->bottomBorder - image->topBorder, memDC, image->leftBorder, image->height - image->bottomBorder, image->width - image->leftBorder - image->rightBorder, image->bottomBorder, SRCCOPY);
 
-    // StretchBlt Left bottom
-    StretchBlt(this->hDC, x, y + height - image->bottomBorder, image->leftBorder, image->bottomBorder, memDC, 0, image->height - image->bottomBorder, image->leftBorder, image->bottomBorder, SRCCOPY);
+        // StretchBlt Left bottom
+        StretchBlt(this->hDC, x, y + height - image->bottomBorder, image->leftBorder, image->bottomBorder, memDC, 0, image->height - image->bottomBorder, image->leftBorder, image->bottomBorder, SRCCOPY);
 
-    // StretchBlt Left
-    StretchBlt(this->hDC, x, y + image->topBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, memDC, 0, image->height - image->topBorder - image->bottomBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, SRCCOPY);
-
+        // StretchBlt Left
+        StretchBlt(this->hDC, x, y + image->topBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, memDC, 0, image->height - image->topBorder - image->bottomBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, SRCCOPY);
+    } else {
+        StretchBlt(this->hDC, x, y, width, height, memDC, 0, 0, image->width, image->height, SRCCOPY);
+    }
     DeleteObject(memDC);
 
 }
