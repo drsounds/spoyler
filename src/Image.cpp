@@ -128,6 +128,7 @@ Image::Image(const string& fileName) {
                 pix.g = ptr[1];
                 pix.b = ptr[2];
                 pix.a = ptr[3];
+
                 this->pixels[i] = pix;
                 i++;
             }
@@ -142,19 +143,28 @@ Image::Image(unsigned int width, unsigned int height) {
     this->handle = NULL;
 }
 Image *Image::sliceImage(unsigned int x, unsigned int y, unsigned int width, unsigned int height, int leftBorder, int topBorder, int bottomBorder, int rightBorder) {
-    unsigned int startPos = x + (y * width * height);
-    unsigned int length = width + (height * width);
-
+    unsigned int startPos = x + (y * this->width);
+    cout << "Start pos: " << startPos << "\r\n";
     Image *image = new Image(width, height);
+    unsigned int length = width * height;
 
-    for (int i = 0, x = 0; x < startPos + length; i++, x++) {
-        pixel *pix = new pixel;
-        pix->r = this->pixels[startPos + i].r;
-        pix->g = this->pixels[startPos + i].g;
-        pix->b = this->pixels[startPos + i].b;
-        pix->a = this->pixels[startPos + i].a;
-        image->pixels[i] = *pix;
-        x++;
+
+    for (unsigned int w = 0, h = 0, i = startPos; h < height && i < (width * height); i++, w++) {
+        pixel pix = {0};
+
+        pix.r = this->pixels[i].r;
+        pix.g = this->pixels[i].g;
+        pix.b = this->pixels[i].b;
+        pix.a = this->pixels[i].a;
+        //cout << "Num pixels: " << image->numPixels << " pos: " << i << "\r\n";
+        image->pixels[w + (w * h)] = pix;
+        if (w > width) {
+            h += 1;
+            //cout << "Subliminal width: " << this->width - width << endl;
+            i += (this->width - width);
+            w = 0;
+            //cout << "W: " << w << "H:" << h << "\r\n";
+        }
     }
     image->leftBorder = leftBorder;
     image->topBorder = topBorder;

@@ -11294,10 +11294,10 @@
 	"HBoxElement.h"
 	<regex>
 
-1428355037 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
+1428356587 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
-1425825097 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
+1428355283 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
 	<Windows.h>
 	"Win32WindowElement.h"
 	"Win32GraphicsContext.h"
@@ -27446,13 +27446,13 @@
 	<vector>
 	<png.h>
 
-1428354806 source:c:\users\alecca\documents\spoyler\src\image.cpp
+1428357909 source:c:\users\alecca\documents\spoyler\src\image.cpp
 	"Image.h"
 	<stdio.h>
 	<iostream>
 	<cstdlib>
 
-1428355124 source:c:\users\alecca\documents\spoyler\src\skin.cpp
+1428357195 source:c:\users\alecca\documents\spoyler\src\skin.cpp
 	"Skin.h"
 
 1244151612 c:\users\alecca\downloads\compressed\libpng-1.2.37-lib\include\png.h
