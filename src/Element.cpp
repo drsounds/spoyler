@@ -323,6 +323,7 @@ void Element::draw(int x, int y, GraphicsContext *c) {
         return;
     }
 
+    clipView = false;
 	spider_position pos;
 	std::vector<Node *> *children = this->getChildNodes();
 	x += this->getX() ;
@@ -342,6 +343,9 @@ void Element::draw(int x, int y, GraphicsContext *c) {
 	rect2.y = 0;
 	rect2.width = width;
 	rect2.height = height;
+	if (this->clipView) {
+        c->setClip(*absoluteBounds);
+	}
     Color *bgColor = (Color *)this->getAttributeObj("bgcolor");
     Color *fgColor = (Color *)this->getAttributeObj("fgcolor");
     int fontSize = (int)this->getAttributeObj("size");
@@ -383,6 +387,9 @@ void Element::draw(int x, int y, GraphicsContext *c) {
 	x -= this->getX();
 	y -= this->getY();
 	//c->setOrigo(-x - getX(), -y - getY());
+	if (clipView) {
+        c->declipRect();
+	}
 }
 
 

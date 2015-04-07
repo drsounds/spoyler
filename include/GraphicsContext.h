@@ -25,6 +25,7 @@ namespace spider {
 		virtual void drawHTMLText(char *html, FontStyle *fs, Color *color, int x, int y, int w, int h) {}
 		virtual Image *loadImage(const string& bitmap) {}
 		virtual rectangle measureString(char *text, spider::FontStyle *font) {}
+		virtual void declipRect() {}
 		void setFontStyle(spider::FontStyle *fs) {
 			this->fontStyle = fs;
 		}

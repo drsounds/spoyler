@@ -68,9 +68,6 @@ namespace spider {
 
                 ((MainWindowElement *)this->mainWindowElement)->hideMessage();
                 ((MainWindowElement *)this->mainWindowElement)->invalidate();
-        } else {
-            ((MainWindowElement *)this->mainWindowElement)->showMessage(Warning, "The uri could not be found");
-                ((MainWindowElement *)this->mainWindowElement)->invalidate();
         }
        /* if (std::regex_match(uri.c_str(), std::regex("spotify:internal:start"))) {
 

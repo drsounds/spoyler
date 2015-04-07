@@ -1,6 +1,7 @@
 #include "StartView.h"
 #include <regex>
 #include "WhatsNewView.h"
+#include "TopListView.h"
 namespace spider {
     namespace views {
         StartView::StartView() : TabbarViewElement() {
@@ -10,7 +11,7 @@ namespace spider {
         {
             //ctor
             this->viewStack->appendChild(new views::WhatsNewView(this->viewStack));
-            this->viewStack->appendChild(new ViewElement(this->viewStack));
+            this->viewStack->appendChild(new views::TopListView(this->viewStack));
             this->tabBar->addTab(new string ("Overview"), new string("overview"), new string("spotify:internal:start"));
             this->tabBar->addTab(new string ("Top List"), new string("toplist"), new string("spotify:internal:toplist"));
         }

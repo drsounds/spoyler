@@ -7,6 +7,7 @@ ViewElement::ViewElement()
 {
 
     //ctor
+    this->clipView = true;
 }
 
 void ViewElement::request(std::string uri) {

@@ -22,7 +22,10 @@ Win32GraphicsContext::Win32GraphicsContext(HWND hWnd, HDC hDC, WindowElement *wi
 	this->hWnd = hWnd;
 }
 Win32GraphicsContext::~Win32GraphicsContext() {
+}
 
+void Win32GraphicsContext::declipRect() {
+     SelectClipRgn(this->hDC, NULL);
 }
 void Win32GraphicsContext::setOrigo(const int& x,const int& y) {
 //	spider::GraphicsContext::setOrigo(x, y);
