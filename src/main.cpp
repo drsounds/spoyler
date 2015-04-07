@@ -85,7 +85,7 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
            0,                   /* Extended possibilites for variation */
            szClassName,         /* Classname */
            _T("Code::Blocks Template Windows App"),       /* Title Text */
-           WS_OVERLAPPEDWINDOW, /* default window */
+           WS_OVERLAPPEDWINDOW | WS_VSCROLL, /* default window */
            CW_USEDEFAULT,       /* Windows decides the position */
            CW_USEDEFAULT,       /* where the window ends up on the screen */
            544,                 /* The programs width */
@@ -124,6 +124,7 @@ HBITMAP btp ;
 HGDIOBJ t ;
 HGDIOBJ f;
 HDC hdc;
+int mouseX = 0, mouseY = 0;
 BOOL CALLBACK cw (HWND hWnd, LPARAM lParam) {
     SendMessage(hWnd, WM_PAINT, 0, 0);
 }
@@ -138,7 +139,6 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
     iPosX = LOWORD(lParam);
     iPosY = HIWORD(lParam);
     GetClientRect(hWnd,&clientRect);
-
 	switch (message)
 	{
     case WM_CREATE:
@@ -154,8 +154,13 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
         window->skin = new Skin("skin.bmp", gc2);
 
         ReleaseDC(hWnd, hdc);
+        ShowScrollBar(hWnd, SB_BOTH, false);
         break;
         }
+    case WM_MOUSEMOVE:
+        mouseX = iPosX;
+        mouseY = iPosY;
+        break;
 	case WM_SIZE:
         GetClientRect(hWnd,&clientRect);
 	    InvalidateRect(hWnd,&clientRect, TRUE);
@@ -169,6 +174,35 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
 	case WM_LBUTTONDOWN:
 		window->mousedown(0, iPosX, iPosY);
 		break;
+    case WM_MOUSEWHEEL:
+        {
+            int zDelta = GET_WHEEL_DELTA_WPARAM(wParam);
+            if (zDelta > 0) {
+                window->scroll(0, 1, mouseX, mouseY);
+            } else {
+                window->scroll(0, -1, mouseX, mouseY);
+            }
+
+        }
+        break;
+    case WM_VSCROLL:
+        {
+            int scrollDir = LOWORD(wParam);
+            int scrollPos = HIWORD(wParam);
+            if (scrollDir == SB_LINEDOWN) {
+                window->scroll(0, 2);
+            }
+        }
+        break;
+    case WM_HSCROLL:
+        {
+            int scrollDir = LOWORD(wParam);
+            int scrollPos = HIWORD(wParam);
+            if (scrollDir == SB_RIGHT) {
+                window->scroll(2, 0);
+            }
+        }
+        break;
 	case WM_COMMAND:
 		wmId    = LOWORD(wParam);
 		wmEvent = HIWORD(wParam);

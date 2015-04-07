@@ -8,13 +8,16 @@ COLORREF toWin32Color(Color color) {
 	return NULL;
 }
 void Win32GraphicsContext::setClip(rectangle rect) {
-    if (rect.width == 0 || rect.height == 0) {
-        SelectClipRgn(this->hDC, NULL);
+    SetMapMode(this->hDC, MM_TEXT);
+    GetRandomRgn(this->hDC, this->currentRgn, SYSRGN);
+    HRGN region = CreateRectRgn(rect.x / 96, rect.y / 96, rect.x + rect.width, rect.y + rect.height);
+
+    OffsetRgn(region, rect.x, rect.y);
+    int t = SelectClipRgn(this->hDC, region);
+    if (t == ERROR) {
+        exit(-1);
     }
-    HRGN region = CreateRectRgn(rect.x, rect.y, rect.width, rect.height);
-
-
-    SelectClipRgn(this->hDC, region);
+    DeleteObject(region);
 }
 Win32GraphicsContext::Win32GraphicsContext(HWND hWnd, HDC hDC, WindowElement *window)
  : GraphicsContext(window) {
@@ -25,10 +28,16 @@ Win32GraphicsContext::~Win32GraphicsContext() {
 }
 
 void Win32GraphicsContext::declipRect() {
-     SelectClipRgn(this->hDC, NULL);
+    SelectClipRgn(this->hDC, this->currentRgn);
+    DeleteObject(this->currentRgn);
+
 }
 void Win32GraphicsContext::setOrigo(const int& x,const int& y) {
-//	spider::GraphicsContext::setOrigo(x, y);
+    OffsetViewportOrgEx(this->hDC, x / 96, y / 96, this->currentOffset);
+}
+void Win32GraphicsContext::restoreOrigo() {
+    if (this->currentOffset != NULL)
+        OffsetViewportOrgEx(this->hDC, this->currentOffset->x, this->currentOffset->y, NULL);
 }
 void Win32GraphicsContext::drawLine(int x1, int y1, int x2, int y2, Color *color) {
 

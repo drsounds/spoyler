@@ -18,6 +18,8 @@ public:
         virtual string getType() {
             return "window";
         }
+        virtual void scrollTo(int x, int y) {}
+        virtual void scroll(int x, int y) {}
 	};
 
 };

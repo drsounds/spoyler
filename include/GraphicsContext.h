@@ -14,6 +14,7 @@ namespace spider {
         WindowElement *window;
 	public:
         GraphicsContext(WindowElement *window);
+        virtual void restoreOrigo() {}
         virtual void setClip(rectangle rect) {}
 		virtual void drawLine(int x, int y, int x2, int y2, Color *color) {}
 		virtual void drawRectangle(int x, int y, int w, int h, Color *color) {}

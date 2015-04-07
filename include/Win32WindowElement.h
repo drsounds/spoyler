@@ -39,6 +39,9 @@ namespace spider {
 		HWND getHandle() {
  			return this->hWnd;
 		}
+		void scroll(int x, int y);
+		void scrollTo(int x, int y);
+		virtual void scroll(int x, int y, int mouseX, int mouseY);
 		void pack();
 	};
 }

@@ -323,7 +323,6 @@ void Element::draw(int x, int y, GraphicsContext *c) {
         return;
     }
 
-    clipView = false;
 	spider_position pos;
 	std::vector<Node *> *children = this->getChildNodes();
 	x += this->getX() ;
@@ -355,9 +354,10 @@ void Element::draw(int x, int y, GraphicsContext *c) {
     }
     if (this->backgroundImage != NULL) {
 
-        c->drawImage(this->backgroundImage,  x, y, width, height);
+
+        c->drawImage(this->backgroundImage,  x - scrollX, y - scrollY, width, height);
     } else {
-        c->fillRectangle(x, y, width, height, bgColor);
+        c->fillRectangle(x -scrollX, y - scrollY, width, height, bgColor);
     }
 	//c->drawRectangle(x, y, this->getWidth(), this->getHeight(), (Color *)this->getAttributeObj("bgcolor"));
 	//Color color(255, 0, 0, 255);
@@ -365,7 +365,7 @@ void Element::draw(int x, int y, GraphicsContext *c) {
     char *text = this->getInnerText();
     // draw text
     if (text != NULL)
-        c->drawString(this->getInnerText(), new FontStyle((char *)fontFamily->c_str(), fontSize, fontSize / 2, false, false), fgColor, x, y, this->getWidth(), this->getHeight());
+        c->drawString(this->getInnerText(), new FontStyle((char *)fontFamily->c_str(), fontSize, fontSize / 2, false, false), fgColor, x - scrollX, y - scrollY, this->getWidth(), this->getHeight());
 
 	// adjust for scroll
     x -= this->scrollX;
@@ -392,6 +392,39 @@ void Element::draw(int x, int y, GraphicsContext *c) {
 	}
 }
 
+void Element::scroll(int scrollX, int scrollY, int x, int y) {
+    if (this->clipView) {
+        this->scroll(scrollX, scrollY);
+
+    }
+    int xx = this->getAbsoluteBounds() != NULL ? x - this->getAbsoluteBounds()->y : x;
+    int yy = this->getAbsoluteBounds() != NULL ? y - this->getAbsoluteBounds()->y : y;
+
+
+	for(vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
+		Element *elm = static_cast<Element *>(*it);
+
+		if (elm->getAbsoluteBounds() != NULL)
+            if(x > elm->getAbsoluteBounds()->x && x < elm->getAbsoluteBounds()->x + elm->getAbsoluteBounds()->width &&
+                y > elm->getAbsoluteBounds()->y && y < elm->getAbsoluteBounds()->y + elm->getAbsoluteBounds()->height) {
+
+                elm->scroll(scrollX, scrollY, x, y);
+            }
+	}
+}
+
+void Element::scroll(int x, int y) {
+    this->scrollX += x;
+    this->scrollY += y;
+    this->invalidate();
+}
+
+void Element::scrollTo(int x, int y) {
+    this->scrollX = x;
+    this->scrollY = y;
+    this->invalidate();
+
+}
 
 char *Element::getInnerText() {
     char *data = this->data;

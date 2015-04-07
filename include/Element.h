@@ -17,6 +17,10 @@ namespace spider {
 
     public:
         Skin *skin;
+        void scroll(int x, int y);
+        void scrollTo(int x, int y);
+        void scroll(int scrollX, int scrollY, int x, int y);
+
         Image *backgroundImage = NULL;
         vector<string> *classList;
         void applyColorAttributeFromSkin (string attr, string skin);

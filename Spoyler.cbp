@@ -97,6 +97,7 @@
 		<Unit filename="include/TableViewElement.h" />
 		<Unit filename="include/TextElement.h" />
 		<Unit filename="include/TitleElement.h" />
+		<Unit filename="include/TopListView.h" />
 		<Unit filename="include/TreeAdapter.h" />
 		<Unit filename="include/TreeItem.h" />
 		<Unit filename="include/TreeViewElement.h" />
@@ -157,6 +158,7 @@
 		<Unit filename="src/TableViewElement.cpp" />
 		<Unit filename="src/TextElement.cpp" />
 		<Unit filename="src/TitleElement.cpp" />
+		<Unit filename="src/TopListView.cpp" />
 		<Unit filename="src/TreeAdapter.cpp" />
 		<Unit filename="src/TreeItem.cpp" />
 		<Unit filename="src/TreeViewElement.cpp" />

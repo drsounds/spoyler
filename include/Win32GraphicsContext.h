@@ -22,6 +22,9 @@ namespace spider {
 		HDC hDC;
 		HWND hWnd;
 	public:
+	    LPPOINT currentOffset;
+	    void restoreOrigo();
+	    HRGN currentRgn;
 		static map<Element *, HWND> *controls;
 		static map<HWND, Element *> *hwnds;
 		Win32GraphicsContext(HWND hWnd, HDC hDC, WindowElement *window);
