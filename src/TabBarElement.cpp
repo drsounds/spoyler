@@ -61,6 +61,7 @@ TabBarElement::TabBarElement()
 TabBarElement::TabBarElement(Element *parent)
  : Element(parent)
 {
+    this->backgroundImage = (Image *)this->skin->getImage("tabbar.background.image", "");
     //ctor
     this->tabs = new std::vector<Tab *>;
     this->set("active_tab_fgcolor", "#ffffff");
@@ -104,6 +105,7 @@ void TabBarElement::mousedown(int mouseButton, int x, int y) {
 }
 #define SPOTIFY2009 true
 void TabBarElement::draw(int x, int y, GraphicsContext *g) {
+    Element::draw(x, y, g);
     if (this->absoluteBounds == NULL)
         this->absoluteBounds = new rectangle;
 

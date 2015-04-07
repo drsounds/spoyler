@@ -11018,7 +11018,7 @@
 	"TabBarElement.h"
 	"ViewStackElement.h"
 
-1425743434 c:\users\alecca\documents\spoyler\include\tabbarelement.h
+1428398334 c:\users\alecca\documents\spoyler\include\tabbarelement.h
 	"Element.h"
 	<vector>
 
@@ -11058,7 +11058,7 @@
 	"Element.h"
 	"expat.h"
 
-1428354874 source:c:\users\alecca\documents\spoyler\src\element.cpp
+1428397984 source:c:\users\alecca\documents\spoyler\src\element.cpp
 	"Element.h"
 	<iostream>
 	<cstdio>
@@ -11246,7 +11246,7 @@
 1422722254 source:c:\users\alecca\documents\spoyler\src\stylesheet.cpp
 	"Stylesheet.h"
 
-1425224206 source:c:\users\alecca\documents\spoyler\src\tabbarelement.cpp
+1428398441 source:c:\users\alecca\documents\spoyler\src\tabbarelement.cpp
 	"TabBarElement.h"
 
 1422722254 source:c:\users\alecca\documents\spoyler\src\tabbarviewelement.cpp
@@ -11294,7 +11294,7 @@
 	"HBoxElement.h"
 	<regex>
 
-1428397916 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
+1428399242 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
 1428394812 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
@@ -27446,13 +27446,13 @@
 	<vector>
 	<png.h>
 
-1428397817 source:c:\users\alecca\documents\spoyler\src\image.cpp
+1428398032 source:c:\users\alecca\documents\spoyler\src\image.cpp
 	"Image.h"
 	<stdio.h>
 	<iostream>
 	<cstdlib>
 
-1428397154 source:c:\users\alecca\documents\spoyler\src\skin.cpp
+1428398125 source:c:\users\alecca\documents\spoyler\src\skin.cpp
 	"Skin.h"
 
 1244151612 c:\users\alecca\downloads\compressed\libpng-1.2.37-lib\include\png.h

@@ -17,7 +17,7 @@ Skin::Skin(const string& bitmap, GraphicsContext *g) {
     (*this->colors)["body.foreground.color"] = this->image->getPixelPtr(1, 0);
     (*this->colors)["::selected.background.color"] = this->image->getPixelPtr(7, 0);
     (*this->colors)["::selected.foreground.color"] = this->image->getPixelPtr(8, 0);
-    (*this->images)["header.background.image"] = this->image->sliceImage(214, 0, 27, 56, 1, 1, 1, 1);
+    (*this->images)["header.background.image"] = this->image->sliceImage(214, 0, 27, 56, 1, 0, 0, 0);
     (*this->images)["tab.background.image::active"] = this->image->sliceImage(0, 1, 32, 23, 1, 1, 1, 1);
     (*this->images)["tabbar.background.image"] = this->image->sliceImage(101, 0, 20, 23, 0, 0, 0, 0);
     (*this->images)["button.background.image"] = this->image->sliceImage(128, 1, 71, 19, 3, 13, 13, 3);

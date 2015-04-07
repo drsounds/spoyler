@@ -104,6 +104,9 @@ void Win32GraphicsContext::drawRectangle(int x1, int y1, int x2, int y2, Color *
 	DeleteObject(hpen);
 }
 void Win32GraphicsContext::fillRectangle(int x1, int y1, int x2, int y2, Color *color) {
+    if (color == NULL) {
+        return;
+    }
 	HBRUSH hpen = CreateSolidBrush((RGB(color->getR(), color->getG(), color->getB())));
 	HGDIOBJ old = SelectObject(this->hDC, hpen);
 	RECT r;
@@ -147,27 +150,30 @@ void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int 
     HBITMAP bmp = (HBITMAP)SelectObject(memDC, (HBITMAP)image->handle);
     GetObject(bmp, sizeof(bm), &bm);
 
-    // BitBlt fill
-    if (false) {
-        StretchBlt(this->hDC, x + image->leftBorder, y + image->topBorder, bm.bmWidth - image->leftBorder - image->rightBorder, bm.bmHeight - image->topBorder - image->bottomBorder, memDC, image->leftBorder, image->topBorder, width - image->rightBorder - image->leftBorder, height - image->topBorder - image->bottomBorder, SRCCOPY);
+    if (true) {
+        // BitBlt fill
 
         // StretchBlt topLeft corner
-        StretchBlt(this->hDC, x, y, image->leftBorder, image->topBorder, memDC, 0, 0, image->leftBorder, image->topBorder, SRCCOPY);
+        if (true) {
+            StretchBlt(this->hDC, x, y, image->leftBorder, image->topBorder, memDC, 0, 0, image->leftBorder, image->topBorder, SRCCOPY);
 
-        // StretchBlt top
-        StretchBlt(this->hDC, x + image->leftBorder, y, image->width - image->leftBorder - image->rightBorder, image->topBorder, memDC, image->leftBorder, 0, image->width - image->leftBorder - image->rightBorder, image->topBorder, SRCCOPY);
+            // StretchBlt top
+            StretchBlt(this->hDC, x + image->leftBorder, y, image->width - image->leftBorder - image->rightBorder, image->topBorder, memDC, image->leftBorder, 0, image->width - image->leftBorder - image->rightBorder, image->topBorder, SRCCOPY);
 
-        // StretchBlt top right
-        StretchBlt(this->hDC, x + width - image->rightBorder, y, image->rightBorder, image->topBorder, memDC, image->width - image->rightBorder, 0, image->rightBorder, image->height - image->bottomBorder, SRCCOPY);
+            // StretchBlt top right
+            StretchBlt(this->hDC, x + width - image->rightBorder, y, image->rightBorder, image->topBorder, memDC, image->width - image->rightBorder, 0, image->rightBorder, image->height - image->bottomBorder, SRCCOPY);
 
-        // StretchBlt bottom
-        StretchBlt(this->hDC, x + width - image->rightBorder - image->leftBorder, y + height - image->bottomBorder, width - image->leftBorder - image->rightBorder, height - image->bottomBorder - image->topBorder, memDC, image->leftBorder, image->height - image->bottomBorder, image->width - image->leftBorder - image->rightBorder, image->bottomBorder, SRCCOPY);
+            // StretchBlt bottom
+            StretchBlt(this->hDC, x + width - image->rightBorder - image->leftBorder, y + height - image->bottomBorder, width - image->leftBorder - image->rightBorder, height - image->bottomBorder - image->topBorder, memDC, image->leftBorder, image->height - image->bottomBorder, image->width - image->leftBorder - image->rightBorder, image->bottomBorder, SRCCOPY);
 
-        // StretchBlt Left bottom
-        StretchBlt(this->hDC, x, y + height - image->bottomBorder, image->leftBorder, image->bottomBorder, memDC, 0, image->height - image->bottomBorder, image->leftBorder, image->bottomBorder, SRCCOPY);
+            // StretchBlt Left bottom
+            StretchBlt(this->hDC, x, y + height - image->bottomBorder, image->leftBorder, image->bottomBorder, memDC, 0, image->height - image->bottomBorder, image->leftBorder, image->bottomBorder, SRCCOPY);
 
-        // StretchBlt Left
-        StretchBlt(this->hDC, x, y + image->topBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, memDC, 0, image->height - image->topBorder - image->bottomBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, SRCCOPY);
+            // StretchBlt Left
+            StretchBlt(this->hDC, x, y + image->topBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, memDC, 0, image->height - image->topBorder - image->bottomBorder, image->leftBorder, image->height - image->topBorder - image->bottomBorder, SRCCOPY);
+        }
+        StretchBlt(this->hDC, x + image->leftBorder, y + image->topBorder, width - image->leftBorder - image->rightBorder, height - image->topBorder - image->bottomBorder, memDC, image->leftBorder, image->topBorder, image->width - image->rightBorder - image->leftBorder, image->height - image->topBorder - image->bottomBorder, SRCCOPY);
+
     } else {
         StretchBlt(this->hDC, x, y, width, height, memDC, 0, 0, image->width, image->height, SRCCOPY);
     }
@@ -194,6 +200,9 @@ rectangle Win32GraphicsContext::measureString(char *text, FontStyle *fs) {
 void Win32GraphicsContext::drawString(char *text, FontStyle *fs, spider::Color *color, int x, int y, int w, int h) {
 #define CLEARTYPE_QUALITY 0x05
 #define ANTIALIASED_QUALITY 0x04
+    if (color == NULL) {
+        return;
+    }
     RECT rect;
     rect.left = x;
     rect.right = x + w;

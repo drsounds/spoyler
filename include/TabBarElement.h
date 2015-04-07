@@ -36,6 +36,8 @@ public:
 class TabBarElement : public Element
 {
     public:
+        Image *tabBackgroundImage;
+        Image *activeTabBackgroundImage;
         virtual string getType() {
             return "tabbar";
         }
