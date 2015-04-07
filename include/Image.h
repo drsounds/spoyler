@@ -6,10 +6,10 @@
 #include <png.h>
 using namespace std;
 struct pixel {
-    unsigned short r;
-    unsigned short g;
-    unsigned short b;
-    unsigned short a;
+    unsigned char r;
+    unsigned char g;
+    unsigned char b;
+    unsigned char a;
 };
 
 /*! \from http://zarb.org/~gc/html/libpng.html */

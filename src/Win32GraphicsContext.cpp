@@ -123,8 +123,9 @@ void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int 
     BITMAP bm;
 
     if (image->handle == NULL) {
+        cout << height;
         HDC memDC = CreateCompatibleDC(this->hDC);
-        HBITMAP bitmap = CreateCompatibleBitmap(memDC, image->width, image->height);
+        HBITMAP bitmap = CreateBitmap(image->width, image->height, 1, 32, image->pixels);
 
         SelectObject(memDC, bitmap);
 
@@ -134,7 +135,8 @@ void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int 
                 // cout << "Count of pixels :" << _size << " Num of pixels: " << (x + (y * x)) << "\r\n";
                 pixel pix = image->getPixel(x, y);
                 COLORREF color = RGB(pix.r, pix.g, pix.b);
-                SetPixel(memDC, x, y, color);
+
+
             }
         }
 

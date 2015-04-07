@@ -143,13 +143,13 @@ Image::Image(unsigned int width, unsigned int height) {
     this->handle = NULL;
 }
 Image *Image::sliceImage(unsigned int x, unsigned int y, unsigned int width, unsigned int height, int leftBorder, int topBorder, int bottomBorder, int rightBorder) {
-    unsigned int startPos = x + (y * this->width);
+    unsigned int startPos = x + (y * width);
     cout << "Start pos: " << startPos << "\r\n";
     Image *image = new Image(width, height);
     unsigned int length = width * height;
 
 
-    for (unsigned int w = 0, h = 0, i = startPos; h < height && i < (width * height); i++, w++) {
+    for (unsigned int w = 0, h = 0, pos = 0, i = startPos; h < height; pos++, i++, w++) {
         pixel pix = {0};
 
         pix.r = this->pixels[i].r;
@@ -157,13 +157,13 @@ Image *Image::sliceImage(unsigned int x, unsigned int y, unsigned int width, uns
         pix.b = this->pixels[i].b;
         pix.a = this->pixels[i].a;
         //cout << "Num pixels: " << image->numPixels << " pos: " << i << "\r\n";
-        image->pixels[w + (w * h)] = pix;
-        if (w > width) {
+        image->pixels[pos] = pix;
+        if (w >= width) {
             h += 1;
-            //cout << "Subliminal width: " << this->width - width << endl;
-            i += (this->width - width);
+            // cout << "Subliminal width: " << this->width - width << endl;
+            i += this->width - width;
             w = 0;
-            //cout << "W: " << w << "H:" << h << "\r\n";
+            // cout << "W: " << w << "H:" << h << "\r\n";
         }
     }
     image->leftBorder = leftBorder;
