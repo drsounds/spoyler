@@ -12,6 +12,7 @@ namespace spider {
                 virtual ~WhatsNewView();
                 void navigate(string uri);
                 bool acceptsUri(string uri);
+                string getType();
             protected:
             private:
         };

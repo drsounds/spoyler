@@ -12,9 +12,7 @@ namespace spider {
                 virtual ~TopListView();
                 bool acceptsUri(string uri);
                 void navigate(string uri);
-                string getType() {
-                    return "toplistview";
-                }
+                string getType();
             protected:
             private:
         };

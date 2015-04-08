@@ -21,6 +21,10 @@ namespace spider {
             return std::regex_match(uri.c_str(), std::regex("spotify:internal:(start|toplist)"));
         }
 
+        string StartView::getType() {
+            return "startview";
+        }
+
         StartView::~StartView()
         {
             //dtor

@@ -10,9 +10,7 @@ namespace spider {
                 StartView(Element *parent);
                 virtual ~StartView();
                 bool acceptsUri(string uri);
-                virtual string getType() {
-                    return "startview";
-                }
+                virtual string getType();
             protected:
             private:
         };

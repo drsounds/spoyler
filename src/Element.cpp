@@ -99,7 +99,7 @@ Element::Element() :
     this->set("highlight", "#a9d9fe");
     this->set("font", new string("Tahoma"));
     this->set("size", new string("11"));
-	this->font = new FontStyle("MS Sans Serif", 11, 1, false, false);
+	this->font = new FontStyle("Tahoma", 13, 1, false, false);
 	this->x = 0;
 	this->y = 0;
 	this->z = 0;

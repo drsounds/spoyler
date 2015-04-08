@@ -9,17 +9,21 @@ namespace spider {
         TopListView::TopListView() :
             ContainerViewElement::ContainerViewElement() {
         }
+        string TopListView::getType() {
+            return "toplistview";
+        }
         TopListView::TopListView(Element *parent)
             : ContainerViewElement::ContainerViewElement(parent)
         {
 
             this->clipView = true;
              // Build the view
+            // Build the view
             HBoxElement *hbox = new HBoxElement(this);
             hbox->getPadding()->top = 12;
             hbox->getPadding()->left = 16;
             hbox->getPadding()->bottom = 12;
-            hbox->getPadding()->right = 16;
+            hbox->getPadding()->right =  16;
 
 
 
@@ -30,16 +34,13 @@ namespace spider {
             // Add Header
             HBoxElement *title = new HBoxElement(hbox);
             title->set("fgcolor", "#aaffaa");
-            title->setInnerText("Top List (Coming soon)\0");
+            title->setInnerText("What's New\0");
             title->set("height", "60");
             title->set("width", "120");
             title->set("size", "16");
             hbox->appendChild(title);
-
             TableViewElement *tableView = new TableViewElement(this, new MockTableViewDataSource());
             this->appendChild(tableView);
-            tableView->setHeight(100);
-
         }
         void TopListView::navigate(string uri) {
 

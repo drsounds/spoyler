@@ -12,6 +12,7 @@ namespace spider {
             this->clipView = true;
             //ctor
         }
+
         bool WhatsNewView::acceptsUri(string uri) {
             return std::regex_match(uri.c_str(), std::regex("spotify:internal:start"));
         }
@@ -81,9 +82,9 @@ namespace spider {
             title2->set("size", "16");
             hbox2->appendChild(title2);
 
-            TableViewElement *tableView = new TableViewElement(this, new MockTableViewDataSource());
-            this->appendChild(tableView);
-
+        }
+        string WhatsNewView::getType() {
+            return "whatsnewview";
         }
         void WhatsNewView::navigate(string uri) {
 

@@ -4,10 +4,26 @@
 #include "PlayQueueView.h"
 #include "MainWindowElement.h"
 #include <vector>
+#include <boost/algorithm/string/predicate.hpp>
+inline bool ends_with(std::string const & value, std::string const & ending)
+{
+    if (ending.size() > value.size()) return false;
+    return std::equal(ending.rbegin(), ending.rend(), value.rbegin());
+}
 namespace spider {
     void ViewStackElement::appendChild(Node *child) {
-        Node::appendChild(child);
-        ((Element *)child)->setVisible(false);
+
+        ViewElement *view = (ViewElement *)child;
+        string type = view->getType();
+        if (boost::algorithm::ends_with(type, "view")) {
+
+            Node::appendChild(child);
+            cout << "valid view: " << type << endl;
+
+            ((Element *)child)->setVisible(false);
+        } else {
+            exit(0);
+        }
     }
     ViewStackElement::ViewStackElement()
     : BoxElement::BoxElement() {
@@ -55,35 +71,28 @@ namespace spider {
         for (std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
             Node *node = static_cast<Node *>(*it);
             ViewElement *view = (ViewElement *)node;
-            if (view->acceptsUri(uri)) {
-                std::cout << uri << std::endl;
-                std::cout << view->getType() << std::endl;
-                view->setVisible(true);
-                view->navigate(uri);
-                activeView = view;
-                foundView = true;
+            string type = view->getType();
+            std::cout << view->getType() << std::endl;
+            if (ends_with(type, "view")) {
+                if (view->acceptsUri(uri)) {
+                    std::cout << uri << std::endl;
+                    std::cout << view->getType() << std::endl;
+                    cout << "View " << view->getType() << " shown" << endl;
+                    view->setVisible(true);
+                    view->navigate(uri);
+                    activeView = view;
+
+                } else {
+                    cout << "View " << view->getType() << " hidden" << endl;
+                    view->setVisible(false);
+                }
 
             } else {
+                cout << "Wrong view: " << view->getType() << endl;
             }
             this->invalidate();
         }
 
-        if (foundView) {
-             for (std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
-                Node *node = static_cast<Node *>(*it);
-                ViewElement *view = (ViewElement *)node;
-                if (view->acceptsUri(uri)) {
-                    view->setVisible(true);
-
-
-                } else {
-                    view->hide();
-                }
-             }
-
-                ((MainWindowElement *)this->mainWindowElement)->hideMessage();
-                ((MainWindowElement *)this->mainWindowElement)->invalidate();
-        }
        /* if (std::regex_match(uri.c_str(), std::regex("spotify:internal:start"))) {
 
             // Show What's new view

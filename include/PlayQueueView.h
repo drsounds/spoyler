@@ -13,9 +13,7 @@ namespace spider {
                 void navigate(string uri);
                 bool acceptsUri(string uri);
                 virtual ~PlayQueueView();
-                virtual string getType() {
-                    return "playqueue";
-                }
+                string getType();
             protected:
             private:
         };

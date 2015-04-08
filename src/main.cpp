@@ -151,7 +151,7 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
         btp = CreateCompatibleBitmap(hdc, 10000, 10000);
         SelectObject(memDC, btp);
         gc2 = new Win32GraphicsContext(hWnd, memDC, window);
-        window->skin = new Skin("skin.bmp", gc2);
+        window->skin = new Skin("skin.png", gc2);
         gc2->skin = window->skin;
 
         ReleaseDC(hWnd, hdc);

@@ -10,12 +10,17 @@ namespace spider {
         {
             //ctor
         }
+        string PlayQueueView::getType() {
+
+            return "playqueueview";
+
+        }
         PlayQueueView::PlayQueueView(Element *parent)
             : ContainerViewElement(parent)
         {
             this->clipView = true;
             //ctor
-            /*HeaderElement *headerElement = new HeaderElement(this);
+            /*HeatherElement *headerElement = new HeaderElement(this);
             headerElement->title->setTitle("Test");
             this->appendChild(headerElement);*/
             TableViewElement *tableView = new TableViewElement(this, new MockTableViewDataSource());
