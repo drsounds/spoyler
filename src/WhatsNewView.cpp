@@ -7,6 +7,7 @@ namespace spider {
         WhatsNewView::WhatsNewView()
          : ViewElement::ViewElement()
         {
+            this->clipView = true;
             //ctor
         }
         bool WhatsNewView::acceptsUri(string uri) {

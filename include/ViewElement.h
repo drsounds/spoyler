@@ -15,6 +15,7 @@ namespace spider {
             virtual bool acceptsUri(string uri) {
                 return false;
             }
+            virtual void scroll(int scrollX, int scrollY, int mouseX, int mouseY);
             void pack();
         protected:
         private:

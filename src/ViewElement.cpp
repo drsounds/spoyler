@@ -9,7 +9,13 @@ ViewElement::ViewElement()
     //ctor
     this->clipView = true;
 }
-
+void ViewElement::scroll(int scrollX, int scrollY, int mouseX, int mouseY) {
+    if (this->clipView) {
+        this->scrollX += x;
+        this->scrollY += y;
+        this->invalidate();
+    }
+}
 void ViewElement::request(std::string uri) {
 
 }
@@ -36,6 +42,7 @@ void ViewElement::pack() {
 ViewElement::ViewElement(Element *parent)
  : VBoxElement::VBoxElement(parent)
 {
+    this->clipView = true;
     //ctor
 }
 void ViewElement::navigate(string uri) {

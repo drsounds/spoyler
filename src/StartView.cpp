@@ -9,6 +9,7 @@ namespace spider {
         StartView::StartView(Element *parent)
          : TabbarViewElement(parent)
         {
+            this->clipView = false;
             //ctor
             this->viewStack->appendChild(new views::WhatsNewView(this->viewStack));
             this->viewStack->appendChild(new views::TopListView(this->viewStack));

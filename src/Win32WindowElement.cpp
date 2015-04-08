@@ -30,7 +30,7 @@ namespace spider {
         return new Win32GraphicsContext(this->hWnd, NULL, this);
     }
     void Win32WindowElement::scroll(int x, int y) {
-
+        this->mainWindow->scroll(x, y);
     }
     void Win32WindowElement::scrollTo(int x, int y) {
 
@@ -50,8 +50,8 @@ namespace spider {
             elm->pack();
         }
     }
-    void Win32WindowElement::scroll(int x, int y, int scrollX, int scrollY) {
-
+    void Win32WindowElement::scroll(int scrollX, int scrollY, int mouseX, int mouseY) {
+        this->mainWindow->scroll(scrollX, scrollY, mouseX, mouseY);
     }
     void sample_click(spider::Element *elm, void *data) {
         MessageBox(((Win32WindowElement *)elm->getWindowNode())->getHandle(), (LPCSTR)"Test",(LPCSTR)L"A", 0);

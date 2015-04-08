@@ -28,7 +28,7 @@ Win32GraphicsContext::~Win32GraphicsContext() {
 }
 
 void Win32GraphicsContext::declipRect() {
-    SelectClipRgn(this->hDC, this->currentRgn);
+    SelectClipRgn(this->hDC, NULL);
     DeleteObject(this->currentRgn);
 
 }

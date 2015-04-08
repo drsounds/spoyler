@@ -85,7 +85,6 @@ void Element::removeClass(string value) {
 
 Element::Element() :
     Node() {
-
     this->classList = new vector<string>;
     this->absoluteBounds = NULL;
 	this->setScrollable(false);
@@ -334,6 +333,7 @@ void Element::draw(int x, int y, GraphicsContext *c) {
     this->absoluteBounds->y = y + this->getMargins()->bottom;
     this->absoluteBounds->width = this->getWidth() - this->getMargins()->left + this->getMargins()->right;
     this->absoluteBounds->height = this->getHeight() - this->getMargins()->top + this->getMargins()->bottom;
+
 	int width =  this->getWidth();
 	int height = this->getHeight();
 
@@ -393,36 +393,48 @@ void Element::draw(int x, int y, GraphicsContext *c) {
 }
 
 void Element::scroll(int scrollX, int scrollY, int x, int y) {
-    if (this->clipView) {
-        this->scroll(scrollX, scrollY);
 
-    }
     int xx = this->getAbsoluteBounds() != NULL ? x - this->getAbsoluteBounds()->y : x;
     int yy = this->getAbsoluteBounds() != NULL ? y - this->getAbsoluteBounds()->y : y;
 
-
+    bool foundElement = false;
 	for(vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
 		Element *elm = static_cast<Element *>(*it);
 
 		if (elm->getAbsoluteBounds() != NULL)
             if(x > elm->getAbsoluteBounds()->x && x < elm->getAbsoluteBounds()->x + elm->getAbsoluteBounds()->width &&
                 y > elm->getAbsoluteBounds()->y && y < elm->getAbsoluteBounds()->y + elm->getAbsoluteBounds()->height) {
+                foundElement = true;
+                if (elm->clipView) {
+                    elm->scroll(scrollX, scrollY);
+                } else {
+                    elm->scroll(scrollX, scrollY, x, y);
+                }
 
-                elm->scroll(scrollX, scrollY, x, y);
             }
 	}
+	if (!foundElement) {
+        if (this->clipView) {
+            this->scroll(scrollX, scrollY);
+        }
+	}
+
 }
 
 void Element::scroll(int x, int y) {
-    this->scrollX += x;
-    this->scrollY += y;
-    this->invalidate();
+    if (this->clipView) {
+        this->scrollX += x;
+        this->scrollY += y;
+        this->invalidate();
+    }
 }
 
 void Element::scrollTo(int x, int y) {
-    this->scrollX = x;
-    this->scrollY = y;
-    this->invalidate();
+    if (this->clipView) {
+        this->scrollX = x;
+        this->scrollY = y;
+        this->invalidate();
+    }
 
 }
 

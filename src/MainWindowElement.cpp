@@ -58,6 +58,7 @@ namespace spider {
     }
     void MainWindowElement::layout() {
         this->setMainWindowElement(this);
+        this->clipView = false;
         this->set("bgcolor", "#373737");
         spider::HBoxElement *header = new spider::HBoxElement(this);
         header->set("bgcolor", "#767676");

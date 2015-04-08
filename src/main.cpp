@@ -178,9 +178,9 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
         {
             int zDelta = GET_WHEEL_DELTA_WPARAM(wParam);
             if (zDelta > 0) {
-                window->scroll(0, 1, mouseX, mouseY);
+                window->scroll(0, -10, mouseX, mouseY);
             } else {
-                window->scroll(0, -1, mouseX, mouseY);
+                window->scroll(0, 10, mouseX, mouseY);
             }
 
         }

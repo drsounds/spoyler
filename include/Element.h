@@ -38,7 +38,7 @@ namespace spider {
         int z;
         int scrollX;
         int scrollY;
-        bool clipView;
+        bool clipView = false;
         string name;
 
 

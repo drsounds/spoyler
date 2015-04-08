@@ -51,6 +51,7 @@ TabBarEventArgs::TabBarEventArgs(Tab *tab) {
 TabBarElement::TabBarElement()
  : Element()
 {
+    this->clipView = false;
     //ctor
     this->tabs = new std::vector<Tab *>;
     this->set("active_tab_fgcolor", "#ffffff");
