@@ -41,6 +41,7 @@ namespace spider {
             hbox->appendChild(title);
             TableViewElement *tableView = new TableViewElement(this, new MockTableViewDataSource());
             this->appendChild(tableView);
+            tableView->setWidth(100000);
         }
         void TopListView::navigate(string uri) {
 

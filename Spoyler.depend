@@ -11284,11 +11284,11 @@
 1428483286 source:c:\users\alecca\documents\spoyler\src\vboxelement.cpp
 	"VBoxElement.h"
 
-1428480676 source:c:\users\alecca\documents\spoyler\src\viewelement.cpp
+1428516970 source:c:\users\alecca\documents\spoyler\src\viewelement.cpp
 	"ViewElement.h"
 	<string>
 
-1428516449 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
+1428518701 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
 	"ViewStackElement.h"
 	"WhatsNewView.h"
 	<regex>
@@ -11335,7 +11335,7 @@
 	<TableViewCell.h>
 	<TableViewColumn.h>
 
-1428516847 source:c:\users\alecca\documents\spoyler\src\tableviewelement.cpp
+1428517688 source:c:\users\alecca\documents\spoyler\src\tableviewelement.cpp
 	"TableViewElement.h"
 
 1428483811 c:\users\alecca\documents\spoyler\include\tableviewelement.h
@@ -27539,7 +27539,7 @@
 	"Element.h"
 	"ContainerViewElement.h"
 
-1428516684 source:c:\users\alecca\documents\spoyler\src\toplistview.cpp
+1428518739 source:c:\users\alecca\documents\spoyler\src\toplistview.cpp
 	"TopListView.h"
 	"HBoxElement.h"
 	"TableViewElement.h"

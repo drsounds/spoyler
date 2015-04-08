@@ -45,6 +45,7 @@ namespace spider {
             Node *node = static_cast<Node *>(*it);
             Element *view = (Element *)node;
             string type = view->getType();
+            view->setWidth(this->getWidth() - (view->getMargins()->bottom * 2 + this->getPadding()->bottom * 2));
             cout << "View of type: " << type << endl;
             if (view->absoluteBounds != NULL && this->absoluteBounds != NULL) {
                 view->absoluteBounds->height = this->absoluteBounds->height;

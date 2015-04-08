@@ -19,7 +19,7 @@ namespace spider {
         TableViewDataSource *dataSource = this->dataSource;
 
         // Draw table data here
-        int width = this->parent != NULL ? ((Element *)this->parent)->getWidth() : 0;
+        int width = ((Element *)this)->getWidth();
 
         int columnY = y;
         if (columnY < 60) {
