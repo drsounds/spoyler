@@ -24,6 +24,7 @@ namespace spider {
         vector<Node *> *children = this->getChildNodes();
     }
     void ViewStackElement::pack() {
+        BoxElement::pack();
          for (std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
             Node *node = static_cast<Node *>(*it);
             Element *view = (Element *)node;
