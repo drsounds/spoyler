@@ -7,7 +7,6 @@ ViewElement::ViewElement()
 {
 
     //ctor
-    this->clipView = true;
 }
 void ViewElement::scroll(int scrollX, int scrollY, int mouseX, int mouseY) {
     if (this->clipView) {

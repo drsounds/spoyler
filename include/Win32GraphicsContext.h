@@ -30,6 +30,7 @@ namespace spider {
 		Win32GraphicsContext(HWND hWnd, HDC hDC, WindowElement *window);
 		~Win32GraphicsContext();
         Image *loadImage(const string& bitmap);
+        virtual void drawSkinImage(string resourceId, int x, int y, int w, int h);
 		void setClip(rectangle rect);
 		void drawLine(int x1, int y1, int w, int h, spider::Color *color);
 		void drawImage(Image *image, int x1, int y1, int w, int h);

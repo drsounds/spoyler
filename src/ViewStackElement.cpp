@@ -23,6 +23,18 @@ namespace spider {
          this->activeView = NULL;
         vector<Node *> *children = this->getChildNodes();
     }
+    void ViewStackElement::pack() {
+         for (std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
+            Node *node = static_cast<Node *>(*it);
+            Element *view = (Element *)node;
+            string type = view->getType();
+            cout << "View of type: " << type << endl;
+            if (view->absoluteBounds != NULL && this->absoluteBounds != NULL) {
+                view->absoluteBounds->height = this->absoluteBounds->height;
+                view->absoluteBounds->width = this->absoluteBounds->width;
+            }
+         }
+    }
     /**
      * Main navigation handler inside Spotify
      **/
@@ -43,6 +55,8 @@ namespace spider {
             Node *node = static_cast<Node *>(*it);
             ViewElement *view = (ViewElement *)node;
             if (view->acceptsUri(uri)) {
+                std::cout << uri << std::endl;
+                std::cout << view->getType() << std::endl;
                 view->setVisible(true);
                 view->navigate(uri);
                 activeView = view;

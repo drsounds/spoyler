@@ -2,9 +2,10 @@
 #define PLAYQUEUEVIEW_H
 #include "Element.h"
 #include "ViewElement.h"
+#include "ContainerViewElement.h"
 namespace spider {
     namespace views {
-        class PlayQueueView : public ViewElement
+        class PlayQueueView : public ContainerViewElement
         {
             public:
                 PlayQueueView();

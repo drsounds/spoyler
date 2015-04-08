@@ -1,15 +1,19 @@
 #include "TopListView.h"
 #include "HBoxElement.h"
+#include "TableViewElement.h"
+#include "MockTableViewDataSource.h"
 #include "VBoxElement.h"
 #include <regex>
 namespace spider {
     namespace views {
         TopListView::TopListView() :
-            ViewElement::ViewElement() {
+            ContainerViewElement::ContainerViewElement() {
         }
         TopListView::TopListView(Element *parent)
-            : ViewElement::ViewElement(parent)
+            : ContainerViewElement::ContainerViewElement(parent)
         {
+
+            this->clipView = true;
              // Build the view
             HBoxElement *hbox = new HBoxElement(this);
             hbox->getPadding()->top = 12;
@@ -32,6 +36,9 @@ namespace spider {
             title->set("size", "16");
             hbox->appendChild(title);
 
+            TableViewElement *tableView = new TableViewElement(this, new MockTableViewDataSource());
+            this->appendChild(tableView);
+            tableView->setHeight(100);
 
         }
         void TopListView::navigate(string uri) {

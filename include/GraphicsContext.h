@@ -5,6 +5,7 @@
 #include "Color.h"
 #include "Element.h"
 #include "Image.h"
+#include "Skin.h"
 namespace spider {
     class Element;
     class WindowElement;
@@ -14,6 +15,8 @@ namespace spider {
         WindowElement *window;
 	public:
         GraphicsContext(WindowElement *window);
+        Skin *skin;
+        virtual void drawSkinImage(string resourceId, int x, int y, int w, int h) {}
         virtual void restoreOrigo() {}
         virtual void setClip(rectangle rect) {}
 		virtual void drawLine(int x, int y, int x2, int y2, Color *color) {}

@@ -1,10 +1,10 @@
 #ifndef TOPLISTVIEW_H
 #define TOPLISTVIEW_H
 #include "Element.h"
-#include "ViewElement.h"
+#include "ContainerViewElement.h"
 namespace spider {
     namespace views {
-        class TopListView : public ViewElement
+        class TopListView : public ContainerViewElement
         {
             public:
                 TopListView();
@@ -12,6 +12,9 @@ namespace spider {
                 virtual ~TopListView();
                 bool acceptsUri(string uri);
                 void navigate(string uri);
+                string getType() {
+                    return "toplistview";
+                }
             protected:
             private:
         };

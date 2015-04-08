@@ -11,6 +11,7 @@ namespace spider {
         ViewElement *activeView;
 
     public:
+        virtual void pack();
         virtual string getType() {
             return "viewstack";
         }

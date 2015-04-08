@@ -400,18 +400,29 @@ void Element::scroll(int scrollX, int scrollY, int x, int y) {
     bool foundElement = false;
 	for(vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
 		Element *elm = static_cast<Element *>(*it);
+		string ttype = elm->getType();
+		char *type = (char *)ttype.c_str();
+		cout << type << endl;
+        if (elm->isVisible()) {
+            if (elm->getAbsoluteBounds() != NULL) {
 
-		if (elm->getAbsoluteBounds() != NULL)
-            if(x > elm->getAbsoluteBounds()->x && x < elm->getAbsoluteBounds()->x + elm->getAbsoluteBounds()->width &&
-                y > elm->getAbsoluteBounds()->y && y < elm->getAbsoluteBounds()->y + elm->getAbsoluteBounds()->height) {
-                foundElement = true;
-                if (elm->clipView) {
-                    elm->scroll(scrollX, scrollY);
-                } else {
-                    elm->scroll(scrollX, scrollY, x, y);
+                if(x > elm->getAbsoluteBounds()->x && x < elm->getAbsoluteBounds()->x + elm->getAbsoluteBounds()->width &&
+                    y > elm->getAbsoluteBounds()->y && y < elm->getAbsoluteBounds()->y + elm->getAbsoluteBounds()->height ) {
+                    foundElement = true;
+                    if (elm->clipView) {
+                        elm->scroll(scrollX, scrollY);
+                    } else {
+                        elm->scroll(scrollX, scrollY, x, y);
+                    }
+
                 }
+                else {
 
+                }
+            } else {
             }
+        }
+
 	}
 	if (!foundElement) {
         if (this->clipView) {
@@ -425,6 +436,9 @@ void Element::scroll(int x, int y) {
     if (this->clipView) {
         this->scrollX += x;
         this->scrollY += y;
+        if (scrollY < 0) {
+            scrollY = 0;
+        }
         this->invalidate();
     }
 }
@@ -433,7 +447,12 @@ void Element::scrollTo(int x, int y) {
     if (this->clipView) {
         this->scrollX = x;
         this->scrollY = y;
+
+        if (scrollY < 0) {
+            scrollY = 0;
+        }
         this->invalidate();
+
     }
 
 }

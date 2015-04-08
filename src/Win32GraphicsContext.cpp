@@ -19,11 +19,18 @@ void Win32GraphicsContext::setClip(rectangle rect) {
     }
     DeleteObject(region);
 }
+
+void Win32GraphicsContext::drawSkinImage(string resourceId, int x, int y, int w, int h) {
+    Image *image = this->skin->getImage(resourceId, "");
+    this->drawImage(image, x, y, w, h);
+}
+
 Win32GraphicsContext::Win32GraphicsContext(HWND hWnd, HDC hDC, WindowElement *window)
  : GraphicsContext(window) {
 	this->hDC = hDC;
 	this->hWnd = hWnd;
 }
+
 Win32GraphicsContext::~Win32GraphicsContext() {
 }
 

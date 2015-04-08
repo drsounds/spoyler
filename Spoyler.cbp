@@ -58,6 +58,7 @@
 		<Unit filename="include/BoxElement.h" />
 		<Unit filename="include/ButtonElement.h" />
 		<Unit filename="include/Color.h" />
+		<Unit filename="include/ContainerViewElement.h" />
 		<Unit filename="include/DOMViewElement.h" />
 		<Unit filename="include/DoctrineView.h" />
 		<Unit filename="include/Element.h" />
@@ -76,6 +77,7 @@
 		<Unit filename="include/InputEventArgs.h" />
 		<Unit filename="include/LinkElement.h" />
 		<Unit filename="include/MainWindowElement.h" />
+		<Unit filename="include/MockTableViewDataSource.h" />
 		<Unit filename="include/MouseEventArgs.h" />
 		<Unit filename="include/Node.h" />
 		<Unit filename="include/Observable.h" />
@@ -119,6 +121,7 @@
 		<Unit filename="src/BoxElement.cpp" />
 		<Unit filename="src/ButtonElement.cpp" />
 		<Unit filename="src/Color.cpp" />
+		<Unit filename="src/ContainerViewElement.cpp" />
 		<Unit filename="src/DOMViewElement.cpp" />
 		<Unit filename="src/DoctrineView.cpp" />
 		<Unit filename="src/Element.cpp" />
@@ -137,6 +140,7 @@
 		<Unit filename="src/InputEventArgs.cpp" />
 		<Unit filename="src/LinkElement.cpp" />
 		<Unit filename="src/MainWindowElement.cpp" />
+		<Unit filename="src/MockTableViewDataSource.cpp" />
 		<Unit filename="src/MouseEventArgs.cpp" />
 		<Unit filename="src/Node.cpp" />
 		<Unit filename="src/Observable.cpp" />

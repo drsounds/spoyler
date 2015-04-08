@@ -1,10 +1,10 @@
 #ifndef DOCTRINEVIEW_H
 #define DOCTRINEVIEW_H
-#include "ViewElement.h"
+#include "ContainerViewElement.h"
 #include "TextElement.h"
 namespace spider {
     namespace views {
-class DoctrineView : public ViewElement
+class DoctrineView : public ContainerViewElement
 {
 
     public:

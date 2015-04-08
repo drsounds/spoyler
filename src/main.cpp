@@ -152,6 +152,7 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
         SelectObject(memDC, btp);
         gc2 = new Win32GraphicsContext(hWnd, memDC, window);
         window->skin = new Skin("skin.bmp", gc2);
+        gc2->skin = window->skin;
 
         ReleaseDC(hWnd, hdc);
         ShowScrollBar(hWnd, SB_BOTH, false);

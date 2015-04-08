@@ -9,14 +9,14 @@ TitleElement::~TitleElement()
 {
 
 }
-void TitleElement::setTitle(const string& title) {
+void TitleElement::setTitle(string title) {
 
     this->title->setInnerText((char *)title.c_str());
 }
 string TitleElement::getTitle() {
 }
 
-void TitleElement::setEntity(const string& entity) {
+void TitleElement::setEntity(string entity) {
 
     this->title->setInnerText((char *)entity.c_str());
 }

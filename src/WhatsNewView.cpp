@@ -1,11 +1,13 @@
 #include "WhatsNewView.h"
 #include "ButtonElement.h"
 #include "HBoxElement.h"
+#include "TableViewElement.h"
+#include "MockTableViewDataSource.h"
 #include <regex>
 namespace spider {
     namespace views {
         WhatsNewView::WhatsNewView()
-         : ViewElement::ViewElement()
+         : ContainerViewElement::ContainerViewElement()
         {
             this->clipView = true;
             //ctor
@@ -14,7 +16,7 @@ namespace spider {
             return std::regex_match(uri.c_str(), std::regex("spotify:internal:start"));
         }
         WhatsNewView::WhatsNewView(Element *parent)
-         : ViewElement::ViewElement(parent)
+         : ContainerViewElement::ContainerViewElement(parent)
         {
 
 
@@ -78,6 +80,8 @@ namespace spider {
             title2->set("width", "620");
             title2->set("size", "16");
             hbox2->appendChild(title2);
+
+
 
         }
         void WhatsNewView::navigate(string uri) {

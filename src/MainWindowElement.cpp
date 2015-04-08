@@ -5,6 +5,7 @@
 #include "SplitterElement.h"
 #include "DoctrineView.h"
 #include "Win32GraphicsContext.h"
+#include "PlayQueueView.h"
 #include "UserView.h"
 namespace spider {
     MainWindowElement::MainWindowElement()
@@ -117,7 +118,7 @@ namespace spider {
         TreeItem *item = new TreeItem(new Uri("spotify:internal:start"));
 
         item->setSelected(false);
-        TreeItem *item2 = new TreeItem(new Uri("spotify:doctrine:bungalow"));
+        TreeItem *item2 = new TreeItem(new Uri("spotify:internal:history"));
 
         item2->setSelected(false);
         treeView->addEventListener("itemselected", treeview_itemselected);
@@ -132,8 +133,7 @@ namespace spider {
         viewStack->set("flex", "1");
         viewStack->setWindowElement(this->getWindowElement());
         viewStack->appendChild(new spider::views::StartView(this));
-        viewStack->appendChild(new spider::views::DoctrineView(this));
-        viewStack->appendChild(new spider::views::UserView(this));
+        viewStack->appendChild(new spider::views::PlayQueueView(this));
         spider::HBoxElement *footer = new spider::HBoxElement(this);
         footer->set("bgcolor", "#444444");
         footer->set("height", "86");

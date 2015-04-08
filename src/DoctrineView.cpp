@@ -7,7 +7,7 @@
 namespace spider {
     namespace views {
         DoctrineView::DoctrineView(Element *parent)
-         : ViewElement(parent)
+         : ContainerViewElement(parent)
         {
             this->getPadding()->top = 20;
             this->getPadding()->left = 20;

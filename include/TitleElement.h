@@ -10,9 +10,9 @@ class TitleElement : public VBoxElement
         TitleElement(Element *parent);
         virtual ~TitleElement();
         string getTitle();
-        void setTitle(const string&);
+        void setTitle(string);
         string getEntity();
-        void setEntity(const string&);
+        void setEntity(string);
         virtual string getType() {
             return "title";
         }
