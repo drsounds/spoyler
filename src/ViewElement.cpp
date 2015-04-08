@@ -37,7 +37,7 @@ std::string ViewElement::loadView(std::string view) {
 void ViewElement::pack() {
     VBoxElement::pack();
     for(std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
-            Element *child = (Element *)*it;
+        Element *child = (Element *)*it;
         child->setWidth(this->getWidth());
     }
 }

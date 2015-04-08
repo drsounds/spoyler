@@ -2,11 +2,11 @@
 #define TABLEVIEWCOLUMN_H
 
 namespace spider {
-class TableViewColumn
+class TableColumn
 {
     public:
-        TableViewColumn();
-        virtual ~TableViewColumn();
+        TableColumn();
+        virtual ~TableColumn();
     protected:
     private:
 };

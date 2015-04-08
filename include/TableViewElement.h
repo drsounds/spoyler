@@ -1,18 +1,16 @@
 #ifndef TABLEVIEWELEMENT_H
 #define TABLEVIEWELEMENT_H
 #include "Element.h"
-#include "TableViewDataSource.h"
+#include "TableDataSource.h"
 namespace spider {
-class TableViewElement : public Element
+class TableElement : public Element
 {
     public:
-        TableViewDataSource *dataSource;
-        TableViewElement();
-        TableViewElement(Element *parent, TableViewDataSource *dataSource);
-        virtual ~TableViewElement();
-        virtual string getType() {
-            return "TableView";
-        }
+        TableDataSource *dataSource;
+        TableElement();
+        TableElement(Element *parent, TableDataSource *dataSource);
+        virtual ~TableElement();
+        virtual string getType();
         virtual void draw(int x, int y, GraphicsContext *g);
     protected:
     private:

@@ -5,7 +5,7 @@
 #include "ViewElement.h"
 #include "TabBarElement.h"
 #include "ViewStackElement.h"
-#include "TableViewDataSource.h"
+#include "TableDataSource.h"
 namespace spider {
 class TabbarViewElement : public ViewElement
 {

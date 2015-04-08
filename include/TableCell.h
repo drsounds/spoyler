@@ -3,11 +3,11 @@
 #include <string>
 using namespace std;
 namespace spider {
-class TableViewCell
+class TableCell
 {
     public:
-        TableViewCell();
-        virtual ~TableViewCell();
+        TableCell();
+        virtual ~TableCell();
     protected:
         string text;
         string uri;

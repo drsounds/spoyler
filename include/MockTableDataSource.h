@@ -1,8 +1,8 @@
 #ifndef MOCKTABLEDATASOURCE_H
 #define MOCKTABLEDATASOURCE_H
-#include "TableViewDataSource.h"
+#include "TableDataSource.h"
 namespace spider {
-class MockTableViewDataSource : public R
+class MockTableDataSource : public TableDataSource
 {
     public:
         MockTableDataSource();
@@ -15,8 +15,8 @@ class MockTableViewDataSource : public R
         virtual string getRowUri(int index);
         virtual bool isRowActive(int index);
         virtual bool isCellActive (int index);
-        virtual void *getDataForCell(int index)
-        virtual bool compareTableCells(int column, TableViewCell *t1, TableViewCell *t2);
+        virtual void *getDataForCell(int index);
+        virtual bool compareTableCells(int column, TableCell *t1, TableCell *t2);
     protected:
     private:
 };

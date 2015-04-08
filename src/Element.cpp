@@ -369,8 +369,8 @@ void Element::draw(int x, int y, GraphicsContext *c) {
        // c->drawImage(this->backgroundImage,  x - scrollX, y - scrollY, width, height);
     }
 	//c->drawRectangle(x, y, this->getWidth(), this->getHeight(), (Color *)this->getAttributeObj("bgcolor"));
-	//Color color(255, 0, 0, 255);
-    //	c->drawRectangle(0, 0, this->getWidth(), this->getHeight() , &color);
+	Color color(255, 0, 0, 255);
+    //c->drawRectangle(0, 0, this->getWidth(), this->getHeight() , &color);
     char *text = this->getInnerText();
     // draw text
     if (text != NULL)

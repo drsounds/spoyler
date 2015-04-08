@@ -11013,12 +11013,12 @@
 1425743617 c:\users\alecca\documents\spoyler\include\artistview.h
 	"TabbarViewElement.h"
 
-1428483411 c:\users\alecca\documents\spoyler\include\tabbarviewelement.h
+1428525879 c:\users\alecca\documents\spoyler\include\tabbarviewelement.h
 	"Element.h"
 	"ViewElement.h"
 	"TabBarElement.h"
 	"ViewStackElement.h"
-	"TableViewDataSource.h"
+	"TableDataSource.h"
 
 1428398334 c:\users\alecca\documents\spoyler\include\tabbarelement.h
 	"Element.h"
@@ -11060,7 +11060,7 @@
 	"Element.h"
 	"expat.h"
 
-1428516602 source:c:\users\alecca\documents\spoyler\src\element.cpp
+1428524346 source:c:\users\alecca\documents\spoyler\src\element.cpp
 	"Element.h"
 	<iostream>
 	<cstdio>
@@ -11210,11 +11210,11 @@
 1422722254 source:c:\users\alecca\documents\spoyler\src\observer.cpp
 	"Observer.h"
 
-1428515439 source:c:\users\alecca\documents\spoyler\src\playqueueview.cpp
+1428525879 source:c:\users\alecca\documents\spoyler\src\playqueueview.cpp
 	"PlayQueueView.h"
 	"HeaderElement.h"
-	"TableViewElement.h"
-	"MockTableViewDataSource.h"
+	"TableElement.h"
+	"MockTableDataSource.h"
 	<regex>
 
 1428515366 c:\users\alecca\documents\spoyler\include\playqueueview.h
@@ -11284,7 +11284,7 @@
 1428483286 source:c:\users\alecca\documents\spoyler\src\vboxelement.cpp
 	"VBoxElement.h"
 
-1428516970 source:c:\users\alecca\documents\spoyler\src\viewelement.cpp
+1428524702 source:c:\users\alecca\documents\spoyler\src\viewelement.cpp
 	"ViewElement.h"
 	<string>
 
@@ -11297,15 +11297,15 @@
 	<vector>
 	<boost/algorithm/string/predicate.hpp>
 
-1428516271 source:c:\users\alecca\documents\spoyler\src\whatsnewview.cpp
+1428525879 source:c:\users\alecca\documents\spoyler\src\whatsnewview.cpp
 	"WhatsNewView.h"
 	"ButtonElement.h"
 	"HBoxElement.h"
-	"TableViewElement.h"
-	"MockTableViewDataSource.h"
+	"TableElement.h"
+	"MockTableDataSource.h"
 	<regex>
 
-1428512940 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
+1428524136 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
 1428478297 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
@@ -11335,10 +11335,10 @@
 	<TableViewCell.h>
 	<TableViewColumn.h>
 
-1428517688 source:c:\users\alecca\documents\spoyler\src\tableviewelement.cpp
+1428525247 source:c:\users\alecca\documents\spoyler\src\tableviewelement.cpp
 	"TableViewElement.h"
 
-1428483811 c:\users\alecca\documents\spoyler\include\tableviewelement.h
+1428524909 c:\users\alecca\documents\spoyler\include\tableviewelement.h
 	"Element.h"
 	"TableViewDataSource.h"
 
@@ -27413,11 +27413,12 @@
 	<boost/algorithm/string/finder.hpp>
 	<boost/algorithm/string/formatter.hpp>
 
-1425159549 source:c:\users\alecca\documents\spoyler\src\tableelement.cpp
+1428525879 source:c:\users\alecca\documents\spoyler\src\tableelement.cpp
 	"TableElement.h"
 
-1425159589 c:\users\alecca\documents\spoyler\include\tableelement.h
+1428525987 c:\users\alecca\documents\spoyler\include\tableelement.h
 	"Element.h"
+	"TableDataSource.h"
 
 1425227237 c:\users\alecca\documents\spoyler\include\userview.h
 	"TabbarViewElement.h"
@@ -27464,7 +27465,7 @@
 	<iostream>
 	<cstdlib>
 
-1428513854 source:c:\users\alecca\documents\spoyler\src\skin.cpp
+1428525420 source:c:\users\alecca\documents\spoyler\src\skin.cpp
 	"Skin.h"
 
 1244151612 c:\users\alecca\downloads\compressed\libpng-1.2.37-lib\include\png.h
@@ -27539,11 +27540,11 @@
 	"Element.h"
 	"ContainerViewElement.h"
 
-1428518739 source:c:\users\alecca\documents\spoyler\src\toplistview.cpp
+1428525879 source:c:\users\alecca\documents\spoyler\src\toplistview.cpp
 	"TopListView.h"
 	"HBoxElement.h"
-	"TableViewElement.h"
-	"MockTableViewDataSource.h"
+	"TableElement.h"
+	"MockTableDataSource.h"
 	"VBoxElement.h"
 	<regex>
 
@@ -27565,4 +27566,25 @@
 	"AppHeaderElement.h"
 
 1428500612 c:\users\alecca\documents\spoyler\include\appheaderelement.h
+
+1428525879 c:\users\alecca\documents\spoyler\include\tabledatasource.h
+	<TableCell.h>
+	<TableColumn.h>
+
+1428525664 c:\users\alecca\documents\spoyler\include\tablecell.h
+	<string>
+
+1428525655 c:\users\alecca\documents\spoyler\include\tablecolumn.h
+
+1428525898 c:\users\alecca\documents\spoyler\include\mocktabledatasource.h
+	"TableDataSource.h"
+
+1428525879 source:c:\users\alecca\documents\spoyler\src\tablecell.cpp
+	"TableCell.h"
+
+1428525879 source:c:\users\alecca\documents\spoyler\src\tablecolumn.cpp
+	"TableColumn.h"
+
+1428525878 source:c:\users\alecca\documents\spoyler\src\tabledatasource.cpp
+	"TableDataSource.h"
 

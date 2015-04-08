@@ -1,8 +1,8 @@
 #include "WhatsNewView.h"
 #include "ButtonElement.h"
 #include "HBoxElement.h"
-#include "TableViewElement.h"
-#include "MockTableViewDataSource.h"
+#include "TableElement.h"
+#include "MockTableDataSource.h"
 #include <regex>
 namespace spider {
     namespace views {

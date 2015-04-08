@@ -1,7 +1,7 @@
 #include "TopListView.h"
 #include "HBoxElement.h"
-#include "TableViewElement.h"
-#include "MockTableViewDataSource.h"
+#include "TableElement.h"
+#include "MockTableDataSource.h"
 #include "VBoxElement.h"
 #include <regex>
 namespace spider {
@@ -39,9 +39,8 @@ namespace spider {
             title->set("width", "120");
             title->set("size", "16");
             hbox->appendChild(title);
-            TableViewElement *tableView = new TableViewElement(this, new MockTableViewDataSource());
+            TableElement *tableView = new TableElement(this, new MockTableDataSource());
             this->appendChild(tableView);
-            tableView->setWidth(100000);
         }
         void TopListView::navigate(string uri) {
 

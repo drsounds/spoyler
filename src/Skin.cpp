@@ -39,7 +39,8 @@ Skin::Skin(const string& bitmap, GraphicsContext *g) {
     (*this->slices)["tab.background.image::active"] = new slice(image, 0, 11, 32, 23, 1, 1, 1, 1);
     (*this->slices)["tabbar.background.image"] = new slice(image, 97, 1, 1, 22, 0, 0, 0, 0);
     (*this->slices)["button.background.image"] = new slice(image, 128, 1, 71, 19, 3, 13, 13, 3);
-    (*this->slices)["tableview::columnheader.background.image"] = new slice(image, 200, 63, 18, 18, 0, 0, 0, 0);
+    (*this->slices)["table::columnheader.background.image"] = new slice(image, 200, 63, 18, 18, 0, 0, 0, 0);
+    (*this->colors)["table::nth-child(2n).background.color"] = this->image->getPixelPtr(22, 0);
   //  (*this->images)["button.background.image::active"] = this->image->sliceImage(128, 21, 71, 19, 3, 13, 13, 3);
 }
 bool Skin::hasColor(string selector) {

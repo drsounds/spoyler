@@ -1,7 +1,7 @@
 #include "PlayQueueView.h"
 #include "HeaderElement.h"
-#include "TableViewElement.h"
-#include "MockTableViewDataSource.h"
+#include "TableElement.h"
+#include "MockTableDataSource.h"
 #include <regex>
 namespace spider {
     namespace views {
@@ -23,7 +23,7 @@ namespace spider {
             /*HeatherElement *headerElement = new HeaderElement(this);
             headerElement->title->setTitle("Test");
             this->appendChild(headerElement);*/
-            TableViewElement *tableView = new TableViewElement(this, new MockTableViewDataSource());
+            TableElement *tableView = new TableElement(this, new MockTableDataSource());
             this->appendChild(tableView);
             tableView->setHeight(100);
         }

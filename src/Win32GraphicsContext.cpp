@@ -116,7 +116,8 @@ Image *Win32GraphicsContext::loadImage(const string& _bitmap) {
 }
 
 void Win32GraphicsContext::drawRectangle(int x1, int y1, int x2, int y2, Color *color) {
-	HPEN hpen = CreatePen(PS_SOLID, 3, (RGB(255, 0, 0)));
+	HPEN hpen = CreatePen(PS_SOLID, 3, 0x22ffffff);
+	SelectObject(this->hDC, GetStockObject(HOLLOW_BRUSH));
 	HGDIOBJ old = SelectObject(this->hDC, hpen);
 	Rectangle(this->hDC, x1, y1, x2, y2);
 	SelectObject(this->hDC, old);

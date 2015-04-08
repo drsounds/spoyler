@@ -1,14 +1,14 @@
 #ifndef TABLEVIEWDATASOURCE_H
 #define TABLEVIEWDATASOURCE_H
-#include <TableViewCell.h>
-#include <TableViewColumn.h>
+#include <TableCell.h>
+#include <TableColumn.h>
 namespace spider {
-class TableViewDataSource
+class TableDataSource
 {
     public:
 
-        TableViewDataSource();
-        virtual ~TableViewDataSource();
+        TableDataSource();
+        virtual ~TableDataSource();
         virtual int getColumnCount() { }
         virtual int getRowCount() { }
         virtual string getUriForCell (int column, int row) {  }
@@ -18,7 +18,7 @@ class TableViewDataSource
         virtual bool isRowActive(int index) {}
         virtual bool isCellActive (int index) {}
         virtual void *getDataForCell(int index) {}
-        virtual bool compareTableCells(int column, TableViewCell *t1, TableViewCell *t2) { }
+        virtual bool compareTableCells(int column, TableCell *t1, TableCell *t2) { }
     protected:
     private:
 };
