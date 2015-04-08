@@ -35,7 +35,9 @@ int tabbar_mousedown(SPType *sender, EventArgs *e) {
     }
     tabBar->invalidate();
 }
-
+string TabBarElement::getType() {
+     return "tabbar";
+}
 void TabBarElement::addTab(string *id, string *name, string *uri) {
     Tab *tab = new Tab(this, id, name, uri);
     this->tabs->push_back(tab);

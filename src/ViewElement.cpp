@@ -39,6 +39,8 @@ void ViewElement::pack() {
     for(std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
         Element *child = (Element *)*it;
         child->setWidth(this->getWidth());
+        //if (child->getType().compare(string("tabbar")) != 0)
+        //child->setHeight(this->getHeight());
     }
 }
 

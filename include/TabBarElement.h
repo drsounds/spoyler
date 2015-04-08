@@ -38,9 +38,7 @@ class TabBarElement : public Element
     public:
         Image *tabBackgroundImage;
         Image *activeTabBackgroundImage;
-        virtual string getType() {
-            return "tabbar";
-        }
+        virtual string getType();
         TabBarElement();
         TabBarElement(Element *parent);
         void addTab(string *id, string *name, string *uri);

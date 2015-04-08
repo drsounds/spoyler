@@ -11020,7 +11020,7 @@
 	"ViewStackElement.h"
 	"TableDataSource.h"
 
-1428398334 c:\users\alecca\documents\spoyler\include\tabbarelement.h
+1428526254 c:\users\alecca\documents\spoyler\include\tabbarelement.h
 	"Element.h"
 	<vector>
 
@@ -11254,7 +11254,7 @@
 1422722254 source:c:\users\alecca\documents\spoyler\src\stylesheet.cpp
 	"Stylesheet.h"
 
-1428513724 source:c:\users\alecca\documents\spoyler\src\tabbarelement.cpp
+1428526279 source:c:\users\alecca\documents\spoyler\src\tabbarelement.cpp
 	"TabBarElement.h"
 
 1428513830 source:c:\users\alecca\documents\spoyler\src\tabbarviewelement.cpp
@@ -27413,7 +27413,7 @@
 	<boost/algorithm/string/finder.hpp>
 	<boost/algorithm/string/formatter.hpp>
 
-1428525879 source:c:\users\alecca\documents\spoyler\src\tableelement.cpp
+1428526164 source:c:\users\alecca\documents\spoyler\src\tableelement.cpp
 	"TableElement.h"
 
 1428525987 c:\users\alecca\documents\spoyler\include\tableelement.h
@@ -27587,4 +27587,9 @@
 
 1428525878 source:c:\users\alecca\documents\spoyler\src\tabledatasource.cpp
 	"TableDataSource.h"
+
+1428525986 source:c:\users\alecca\documents\spoyler\src\mocktabledatasource.cpp
+	"MockTableDataSource.h"
+	<string>
+	<sstream>
 

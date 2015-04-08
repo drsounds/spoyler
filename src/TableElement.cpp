@@ -35,10 +35,11 @@ namespace spider {
         int top = columnY + 18;
         // Draw rows
         for (int i = 0; i < 1000; i++) {
-            if (i % 2 == 1) {
+            if (i % 2 != 1) {
                 g->fillRectangle(x, top, width, 18, g->skin->getColor("table::nth-child(2n).background.color", ""));
-                top += 18;
+
             }
+            top += 18;
         }
         // Draw column headers
         g->skin->drawImageSlice("table::columnheader.background.image", g, x, columnY, width, 18);
