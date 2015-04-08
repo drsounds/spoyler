@@ -7486,7 +7486,7 @@
 1425743593 c:\users\alecca\documents\spoyler\include\boxelement.h
 	"Element.h"
 
-1428481098 c:\users\alecca\documents\spoyler\include\element.h
+1428501148 c:\users\alecca\documents\spoyler\include\element.h
 	"Node.h"
 	"Observable.h"
 	"FontStyle.h"
@@ -10975,7 +10975,7 @@
 	"libspider.h"
 	"EventArgs.h"
 
-1428483889 c:\users\alecca\documents\spoyler\include\graphicscontext.h
+1428497821 c:\users\alecca\documents\spoyler\include\graphicscontext.h
 	"FontStyle.h"
 	"libspider.h"
 	"Color.h"
@@ -11060,7 +11060,7 @@
 	"Element.h"
 	"expat.h"
 
-1428486829 source:c:\users\alecca\documents\spoyler\src\element.cpp
+1428501379 source:c:\users\alecca\documents\spoyler\src\element.cpp
 	"Element.h"
 	<iostream>
 	<cstdio>
@@ -11135,7 +11135,7 @@
 1425743532 c:\users\alecca\documents\spoyler\include\linkelement.h
 	"TextElement.h"
 
-1428484552 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
+1428501044 source:c:\users\alecca\documents\spoyler\src\mainwindowelement.cpp
 	"MainWindowElement.h"
 	"StartView.h"
 	"InputElement.h"
@@ -11194,7 +11194,7 @@
 	"WindowElement.h"
 	"libspider.h"
 
-1428482539 c:\users\alecca\documents\spoyler\include\win32graphicscontext.h
+1428497853 c:\users\alecca\documents\spoyler\include\win32graphicscontext.h
 	<Windows.h>
 	<wingdi.h>
 	<map>
@@ -11210,7 +11210,7 @@
 1422722254 source:c:\users\alecca\documents\spoyler\src\observer.cpp
 	"Observer.h"
 
-1428486270 source:c:\users\alecca\documents\spoyler\src\playqueueview.cpp
+1428505586 source:c:\users\alecca\documents\spoyler\src\playqueueview.cpp
 	"PlayQueueView.h"
 	"HeaderElement.h"
 	"TableViewElement.h"
@@ -11254,7 +11254,7 @@
 1422722254 source:c:\users\alecca\documents\spoyler\src\stylesheet.cpp
 	"Stylesheet.h"
 
-1428478757 source:c:\users\alecca\documents\spoyler\src\tabbarelement.cpp
+1428506235 source:c:\users\alecca\documents\spoyler\src\tabbarelement.cpp
 	"TabBarElement.h"
 
 1428480069 source:c:\users\alecca\documents\spoyler\src\tabbarviewelement.cpp
@@ -11288,7 +11288,7 @@
 	"ViewElement.h"
 	<string>
 
-1428487284 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
+1428489122 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
 	"ViewStackElement.h"
 	"WhatsNewView.h"
 	<regex>
@@ -11296,7 +11296,7 @@
 	"MainWindowElement.h"
 	<vector>
 
-1428484305 source:c:\users\alecca\documents\spoyler\src\whatsnewview.cpp
+1428505623 source:c:\users\alecca\documents\spoyler\src\whatsnewview.cpp
 	"WhatsNewView.h"
 	"ButtonElement.h"
 	"HBoxElement.h"
@@ -11304,7 +11304,7 @@
 	"MockTableViewDataSource.h"
 	<regex>
 
-1428484086 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
+1428501522 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
 1428478297 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
@@ -11334,7 +11334,7 @@
 	<TableViewCell.h>
 	<TableViewColumn.h>
 
-1428484233 source:c:\users\alecca\documents\spoyler\src\tableviewelement.cpp
+1428506148 source:c:\users\alecca\documents\spoyler\src\tableviewelement.cpp
 	"TableViewElement.h"
 
 1428483811 c:\users\alecca\documents\spoyler\include\tableviewelement.h
@@ -27430,10 +27430,10 @@
 	<vector>
 	<regex>
 
-1425894360 source:c:\users\alecca\documents\spoyler\src\headerelement.cpp
+1428500420 source:c:\users\alecca\documents\spoyler\src\headerelement.cpp
 	"HeaderElement.h"
 
-1425743631 c:\users\alecca\documents\spoyler\include\headerelement.h
+1428499918 c:\users\alecca\documents\spoyler\include\headerelement.h
 	"HBoxElement.h"
 	"ImageElement.h"
 	"TitleElement.h"
@@ -27445,7 +27445,7 @@
 1428484708 source:c:\users\alecca\documents\spoyler\src\titleelement.cpp
 	"TitleElement.h"
 
-1425767201 c:\users\alecca\documents\spoyler\include\skin.h
+1428499246 c:\users\alecca\documents\spoyler\include\skin.h
 	<map>
 	"Image.h"
 	"Color.h"
@@ -27463,7 +27463,7 @@
 	<iostream>
 	<cstdlib>
 
-1428483173 source:c:\users\alecca\documents\spoyler\src\skin.cpp
+1428505969 source:c:\users\alecca\documents\spoyler\src\skin.cpp
 	"Skin.h"
 
 1244151612 c:\users\alecca\downloads\compressed\libpng-1.2.37-lib\include\png.h
@@ -27559,4 +27559,9 @@
 
 1428481848 c:\users\alecca\documents\spoyler\include\mocktableviewdatasource.h
 	"TableViewDataSource.h"
+
+1428500602 source:c:\users\alecca\documents\spoyler\src\appheaderelement.cpp
+	"AppHeaderElement.h"
+
+1428500612 c:\users\alecca\documents\spoyler\include\appheaderelement.h
 

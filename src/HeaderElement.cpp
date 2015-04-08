@@ -37,6 +37,11 @@ HeaderElement::HeaderElement()
 
 }
 
+string HeaderElement::getType() {
+
+    return "headerelement";
+}
+
 HeaderElement::~HeaderElement()
 {
     //dtor

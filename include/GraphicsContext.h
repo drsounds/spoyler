@@ -16,6 +16,7 @@ namespace spider {
 	public:
         GraphicsContext(WindowElement *window);
         Skin *skin;
+        virtual void drawImagePart(Image *image, int x, int y, int width, int height, int x1, int y1, int x2, int y2) {}
         virtual void drawSkinImage(string resourceId, int x, int y, int w, int h) {}
         virtual void restoreOrigo() {}
         virtual void setClip(rectangle rect) {}

@@ -15,9 +15,9 @@ namespace spider {
         {
             this->clipView = true;
             //ctor
-            HeaderElement *headerElement = new HeaderElement(this);
+            /*HeaderElement *headerElement = new HeaderElement(this);
             headerElement->title->setTitle("Test");
-            this->appendChild(headerElement);
+            this->appendChild(headerElement);*/
             TableViewElement *tableView = new TableViewElement(this, new MockTableViewDataSource());
             this->appendChild(tableView);
             tableView->setHeight(100);

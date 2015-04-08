@@ -23,6 +23,7 @@ namespace spider {
 
         Image *backgroundImage = NULL;
         vector<string> *classList;
+
         void applyColorAttributeFromSkin (string attr, string skin);
         void applyImageAttributeFromSkin (string attr, string skin);
         bool hasClass(string _class);
@@ -55,14 +56,12 @@ namespace spider {
         margin *padding;
         std::vector<Observer *> *observers;
         FontStyle *font;
-        char *id;
+        char *id = "";
         char *data;
         Element *windowElement;
         Element *mainWindowElement;
         virtual void draw(int x, int y, GraphicsContext *c);
-        virtual string getType() {
-            return "element";
-        }
+        virtual string getType();
         rectangle *getAbsoluteBounds() {
             return this->absoluteBounds;
         }

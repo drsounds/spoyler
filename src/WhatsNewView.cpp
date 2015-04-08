@@ -81,7 +81,8 @@ namespace spider {
             title2->set("size", "16");
             hbox2->appendChild(title2);
 
-
+            TableViewElement *tableView = new TableViewElement(this, new MockTableViewDataSource());
+            this->appendChild(tableView);
 
         }
         void WhatsNewView::navigate(string uri) {

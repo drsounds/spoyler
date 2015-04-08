@@ -53,6 +53,7 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
+		<Unit filename="include/AppHeaderElement.h" />
 		<Unit filename="include/ArtistOverviewView.h" />
 		<Unit filename="include/ArtistView.h" />
 		<Unit filename="include/BoxElement.h" />
@@ -116,6 +117,7 @@
 		<Unit filename="include/libspider.h" />
 		<Unit filename="include/luahtml.h" />
 		<Unit filename="include/main.h" />
+		<Unit filename="src/AppHeaderElement.cpp" />
 		<Unit filename="src/ArtistOverviewView.cpp" />
 		<Unit filename="src/ArtistView.cpp" />
 		<Unit filename="src/BoxElement.cpp" />

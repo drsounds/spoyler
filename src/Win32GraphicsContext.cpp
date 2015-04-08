@@ -138,6 +138,40 @@ void Win32GraphicsContext::fillRectangle(int x1, int y1, int x2, int y2, Color *
 	SelectObject(this->hDC, old);
 	DeleteObject(hpen);
 }
+
+void Win32GraphicsContext::drawImagePart(Image *image, int left, int top, int width, int height, int x, int y, int w, int h) {
+    // We use a handle so we only have to recreate the operating system specific bitmap once,
+    // and then reuse it.
+    BITMAP bm;
+    if (image->handle == NULL) {
+        cout << height;
+        HDC memDC = CreateCompatibleDC(this->hDC);
+        HBITMAP bitmap = CreateBitmap(image->width, image->height, 1, 32, image->pixels);
+
+        SelectObject(memDC, bitmap);
+
+        for (int x = 0; x < image->width; x++) {
+            for (int y = 0; y < image->height; y++) {
+                int _size = image->numPixels;
+                // cout << "Count of pixels :" << _size << " Num of pixels: " << (x + (y * x)) << "\r\n";
+                pixel pix = image->getPixel(x, y);
+                COLORREF color = RGB(pix.r, pix.g, pix.b);
+
+
+            }
+        }
+
+        DeleteObject(memDC);
+        image->handle = (void *)bitmap;
+    }
+    HDC memDC = CreateCompatibleDC(this->hDC);
+    HBITMAP bmp = (HBITMAP)SelectObject(memDC, (HBITMAP)image->handle);
+    GetObject(bmp, sizeof(bm), &bm);
+
+    StretchBlt(this->hDC, left, top, width, height, memDC, x, y, w, h, SRCCOPY);
+    DeleteObject(memDC);
+}
+
 void Win32GraphicsContext::drawImage(Image *image, int x, int y, int width, int height) {
 
     // We use a handle so we only have to recreate the operating system specific bitmap once,

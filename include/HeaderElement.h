@@ -12,9 +12,7 @@ namespace spider {
             virtual ~HeaderElement();
             TitleElement *title;
             ImageElement *image;
-            virtual string getType() {
-                return "header";
-            }
+            virtual string getType();
         protected:
         private:
     };

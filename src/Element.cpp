@@ -312,7 +312,9 @@ char *Element::getId() {
 }
 
 
-
+string Element::getType() {
+    return "element";
+}
 
 
 
@@ -352,12 +354,19 @@ void Element::draw(int x, int y, GraphicsContext *c) {
     if (fontFamily == NULL) {
         fontFamily = new string("MS Sans Serif");
     }
-    if (this->backgroundImage != NULL) {
+    c->fillRectangle(x, y, width, height, bgColor);
+    string sel = "";
+    sel.append(this->getType());
+    sel.append(".background.image");
+    c->skin->drawImageSlice(sel, c, x, y, width, height);
 
-
-        c->drawImage(this->backgroundImage,  x - scrollX, y - scrollY, width, height);
-    } else {
-        c->fillRectangle(x -scrollX, y - scrollY, width, height, bgColor);
+    // Draw background image
+    if (this->getId() != NULL && strlen(this->getId()) > 0) {
+        string sel2 = "#";
+        sel2.append(this->getId());
+        sel2.append(".background.image");
+        c->skin->drawImageSlice(sel2, c, x, y, width, height);
+       // c->drawImage(this->backgroundImage,  x - scrollX, y - scrollY, width, height);
     }
 	//c->drawRectangle(x, y, this->getWidth(), this->getHeight(), (Color *)this->getAttributeObj("bgcolor"));
 	//Color color(255, 0, 0, 255);
@@ -373,7 +382,7 @@ void Element::draw(int x, int y, GraphicsContext *c) {
 	for(std::vector<Node *>::iterator it = children->begin(); it != children->end(); ++it) {
 		Element *elm = static_cast<Element *>(*it);
 		if(elm != NULL) {
-			elm->draw(x + this->getPadding()->left, y  + this->getPadding()->top, c);
+			elm->draw(x + this->getPadding()->left - scrollX, y  + this->getPadding()->top - scrollY, c);
 		}
 	}
 	rectangle rect;

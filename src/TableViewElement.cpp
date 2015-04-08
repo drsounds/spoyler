@@ -22,12 +22,12 @@ namespace spider {
 
 
         int columnY = y;
-        if (columnY < 0) {
+        if (columnY < 30) {
             // If columnY is below zero, set it to the position at top
             columnY = ((Element *)this->parent)->absoluteBounds->y;
         }
         // Draw column headers
-        g->drawSkinImage("tableview::columnheader.background_image", x, columnY, absoluteBounds->width, 18);
+        g->skin->drawImageSlice("tableview::columnheader.background.image", g, x, columnY, this->absoluteBounds->width, 18);
 
         int columnWidth = absoluteBounds->width / dataSource->getColumnCount();
         int left = 0;
@@ -36,6 +36,7 @@ namespace spider {
             string text = dataSource->getTextForColumn(i);
             char *str = (char *)text.c_str();
             g->drawString(str, new FontStyle("MS Sans Serif", 8, 1, false, false), new Color(0, 0, 0, 255), x + left, columnY + 1, columnWidth, 18);
+            left += columnWidth;
         }
 
     }

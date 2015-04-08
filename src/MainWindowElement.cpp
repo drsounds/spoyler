@@ -70,7 +70,7 @@ namespace spider {
         header->getPadding()->right =  13;
         header->backgroundImage = (Image *)(*header->skin->images)["header.background.image"];
         this->appendChild(header);
-
+        header->setId("header");
         // add search element
         InputElement *searchElement = new InputElement(header);
         header->appendChild(searchElement);

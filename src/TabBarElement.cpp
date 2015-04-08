@@ -114,7 +114,11 @@ void TabBarElement::draw(int x, int y, GraphicsContext *g) {
     this->absoluteBounds->y = y;
     this->absoluteBounds->width = this->getWidth();
     this->absoluteBounds->height = this->getHeight();
-    g->fillRectangle(x, y, this->getWidth(), this->getHeight(), (Color *)this->getAttributeObj("bgcolor"));
+    //g->fillRectangle(x, y, this->getWidth(), this->getHeight(), (Color *)this->getAttributeObj("bgcolor"));
+    // Draw background image
+
+    g->skin->drawImageSlice("tabbar.background.image", g, x, y-1, this->getWidth(), this->getHeight());
+
     int left = 0;
     std::vector<Tab *>::iterator it = this->getTabs()->begin();
     do {
@@ -131,6 +135,9 @@ void TabBarElement::draw(int x, int y, GraphicsContext *g) {
             fgColor = (Color *)this->getAttributeObj("active_tab_fgcolor");
             Color *bgColor = (Color *)this->getAttributeObj("active_tab_bgcolor");
             g->fillRectangle(x + left, y, width, this->getHeight(), bgColor);
+
+
+
             #else
             Color *bgColor = (Color *)this->getAttributeObj("highlight");
             g->fillRectangle(x + left, y + this->getHeight() - 5, width, 5, bgColor);
