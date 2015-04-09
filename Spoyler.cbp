@@ -78,7 +78,7 @@
 		<Unit filename="include/InputEventArgs.h" />
 		<Unit filename="include/LinkElement.h" />
 		<Unit filename="include/MainWindowElement.h" />
-		<Unit filename="include/MockTableViewDataSource.h" />
+		<Unit filename="include/MockTableDataSource.h" />
 		<Unit filename="include/MouseEventArgs.h" />
 		<Unit filename="include/Node.h" />
 		<Unit filename="include/Observable.h" />
@@ -93,11 +93,8 @@
 		<Unit filename="include/Stylesheet.h" />
 		<Unit filename="include/TabBarElement.h" />
 		<Unit filename="include/TabbarViewElement.h" />
+		<Unit filename="include/TableDataSource.h" />
 		<Unit filename="include/TableElement.h" />
-		<Unit filename="include/TableViewCell.h" />
-		<Unit filename="include/TableViewColumn.h" />
-		<Unit filename="include/TableViewDataSource.h" />
-		<Unit filename="include/TableViewElement.h" />
 		<Unit filename="include/TextElement.h" />
 		<Unit filename="include/TitleElement.h" />
 		<Unit filename="include/TopListView.h" />
@@ -142,7 +139,7 @@
 		<Unit filename="src/InputEventArgs.cpp" />
 		<Unit filename="src/LinkElement.cpp" />
 		<Unit filename="src/MainWindowElement.cpp" />
-		<Unit filename="src/MockTableViewDataSource.cpp" />
+		<Unit filename="src/MockTableDataSource.cpp" />
 		<Unit filename="src/MouseEventArgs.cpp" />
 		<Unit filename="src/Node.cpp" />
 		<Unit filename="src/Observable.cpp" />
@@ -157,11 +154,8 @@
 		<Unit filename="src/Stylesheet.cpp" />
 		<Unit filename="src/TabBarElement.cpp" />
 		<Unit filename="src/TabbarViewElement.cpp" />
+		<Unit filename="src/TableDataSource.cpp" />
 		<Unit filename="src/TableElement.cpp" />
-		<Unit filename="src/TableViewCell.cpp" />
-		<Unit filename="src/TableViewColumn.cpp" />
-		<Unit filename="src/TableViewDataSource.cpp" />
-		<Unit filename="src/TableViewElement.cpp" />
 		<Unit filename="src/TextElement.cpp" />
 		<Unit filename="src/TitleElement.cpp" />
 		<Unit filename="src/TopListView.cpp" />

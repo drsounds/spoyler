@@ -1,114 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="include\InputEventArgs.h" open="1" top="0" tabpos="49" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\LinkElement.cpp" open="1" top="0" tabpos="54" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="249" topLine="0" />
+			<Cursor1 position="110" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\TableViewElement.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\AppHeaderElement.h" open="1" top="0" tabpos="98" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="924" topLine="13" />
+			<Cursor1 position="220" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\FlowElement.cpp" open="1" top="0" tabpos="48" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\InputElement.h" open="1" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="334" topLine="0" />
+			<Cursor1 position="407" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\TableElement.cpp" open="1" top="0" tabpos="65" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\HeaderElement.cpp" open="1" top="0" tabpos="68" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="967" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ResourceElement.cpp" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="907" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\HBoxElement.h" open="1" top="0" tabpos="58" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="252" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\MainWindowElement.h" open="1" top="0" tabpos="46" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="667" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\TreeViewElement.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="354" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\TableElement.cpp" open="1" top="0" tabpos="57" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="147" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\StartView.h" open="1" top="0" tabpos="73" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\HTML.h" open="1" top="0" tabpos="78" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="385" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Stylesheet.cpp" open="1" top="0" tabpos="97" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="244" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Uri.h" open="0" top="0" tabpos="32" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="112" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Image.h" open="1" top="0" tabpos="93" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="231" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\TitleElement.cpp" open="1" top="0" tabpos="78" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="316" topLine="1" />
-		</Cursor>
-	</File>
-	<File name="include\Resource.h" open="0" top="0" tabpos="90" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="79" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\FontStyle.cpp" open="1" top="0" tabpos="70" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="44" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Node.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1251" topLine="25" />
-		</Cursor>
-	</File>
-	<File name="src\TopListView.cpp" open="1" top="0" tabpos="99" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1482" topLine="30" />
-		</Cursor>
-	</File>
-	<File name="include\ResourceElement.h" open="1" top="0" tabpos="42" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="294" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ViewElement.h" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="595" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Observable.h" open="0" top="0" tabpos="79" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="400" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\TextElement.cpp" open="1" top="0" tabpos="38" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="89" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Stylesheet.h" open="1" top="0" tabpos="80" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="97" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ContainerViewElement.cpp" open="1" top="0" tabpos="104" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="258" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\MockTableViewDataSource.h" open="1" top="0" tabpos="105" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="813" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\TreeItem.cpp" open="1" top="0" tabpos="69" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="256" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\UserView.h" open="1" top="0" tabpos="71" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="117" topLine="0" />
+			<Cursor1 position="71" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\MouseEventArgs.h" open="0" top="0" tabpos="81" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -116,449 +56,9 @@
 			<Cursor1 position="194" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\TabBarElement.cpp" open="1" top="0" tabpos="29" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4448" topLine="106" />
-		</Cursor>
-	</File>
-	<File name="include\WhatsNewView.h" open="1" top="0" tabpos="57" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="491" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\GraphicsContext.cpp" open="1" top="0" tabpos="24" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="223" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\HBoxElement.cpp" open="1" top="0" tabpos="79" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3069" topLine="57" />
-		</Cursor>
-	</File>
-	<File name="include\PlayQueueView.h" open="1" top="0" tabpos="87" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="499" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ResourceElement.cpp" open="1" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="907" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\TopListView.h" open="1" top="0" tabpos="98" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="478" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ViewStackElement.h" open="1" top="0" tabpos="53" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\ViewStackElement.h" open="1" top="0" tabpos="45" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="353" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Observable.cpp" open="1" top="0" tabpos="52" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="510" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ImageElement.h" open="1" top="0" tabpos="43" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="332" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\SPType.cpp" open="1" top="0" tabpos="101" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="41" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Win32GraphicsContext.h" open="1" top="0" tabpos="26" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="965" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="src\BoxElement.cpp" open="1" top="0" tabpos="60" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="148" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\InputElement.cpp" open="1" top="0" tabpos="23" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="274" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\SplitterElement.h" open="0" top="0" tabpos="77" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="191" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\TreeViewElement.cpp" open="1" top="0" tabpos="36" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3623" topLine="84" />
-		</Cursor>
-	</File>
-	<File name="include\VBoxElement.h" open="1" top="0" tabpos="74" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="265" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\TreeItem.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="403" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Node.cpp" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="308" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="include\HeaderElement.h" open="1" top="0" tabpos="75" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="439" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\VBoxElement.cpp" open="1" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2833" topLine="67" />
-		</Cursor>
-	</File>
-	<File name="include\WindowElement.h" open="1" top="0" tabpos="44" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="600" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ButtonElement.h" open="1" top="0" tabpos="40" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="72" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\HTML.cpp" open="1" top="0" tabpos="102" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="437" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Observer.h" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="411" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ViewElement.cpp" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1241" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\libspider.h" open="1" top="0" tabpos="63" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="115" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ContainerViewElement.h" open="1" top="0" tabpos="103" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="274" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Resource.cpp" open="0" top="0" tabpos="91" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="89" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\SPType.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="97" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ViewStackElement.cpp" open="1" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1397" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="include\luahtml.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Element.h" open="1" top="0" tabpos="27" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1732" topLine="47" />
-		</Cursor>
-	</File>
-	<File name="src\MainWindowElement.cpp" open="1" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2118" topLine="111" />
-		</Cursor>
-	</File>
-	<File name="include\TableViewCell.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="89" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\SplitterElement.cpp" open="0" top="0" tabpos="78" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="202" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ArtistOverviewView.cpp" open="0" top="0" tabpos="85" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="57" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\AppHeaderElement.h" open="1" top="0" tabpos="108" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="220" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\MockTableViewDataSource.cpp" open="1" top="0" tabpos="106" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1530" topLine="23" />
-		</Cursor>
-	</File>
-	<File name="include\TableViewColumn.h" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="215" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\TableViewCell.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="152" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\TreeAdapter.h" open="1" top="0" tabpos="83" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="201" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\EventArgs.h" open="1" top="0" tabpos="96" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="61" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\InfoElement.cpp" open="1" top="0" tabpos="35" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="756" topLine="21" />
-		</Cursor>
-	</File>
-	<File name="include\TableViewElement.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="513" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Win32GraphicsContext.cpp" open="1" top="0" tabpos="95" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="11054" topLine="255" />
-		</Cursor>
-	</File>
-	<File name="include\elements.h" open="0" top="0" tabpos="54" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ArtistOverviewView.h" open="1" top="0" tabpos="37" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="137" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ImageElement.cpp" open="1" top="0" tabpos="34" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="197" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\TextElement.h" open="1" top="0" tabpos="41" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="328" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\TabbarViewElement.cpp" open="1" top="0" tabpos="59" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="850" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="src\ArtistView.cpp" open="1" top="0" tabpos="107" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="86" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Color.h" open="1" top="0" tabpos="89" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="72" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\InputEventArgs.cpp" open="1" top="0" tabpos="50" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="150" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\LinkElement.h" open="1" top="0" tabpos="82" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="284" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\WhatsNewView.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1363" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="include\TreeViewElement.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="354" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\FlowElement.h" open="1" top="0" tabpos="67" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="320" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Image.cpp" open="1" top="0" tabpos="92" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4920" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\TableViewDataSource.cpp" open="1" top="0" tabpos="51" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="116" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Win32WindowElement.h" open="1" top="0" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="390" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="include\Entity.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="291" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\MouseEventArgs.cpp" open="1" top="0" tabpos="91" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\TitleElement.h" open="1" top="0" tabpos="77" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="394" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Win32WindowElement.cpp" open="1" top="0" tabpos="39" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="469" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\FontStyle.h" open="0" top="0" tabpos="39" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="842" topLine="4" />
-		</Cursor>
-	</File>
-	<File name="src\Observer.cpp" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="43" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\InputElement.h" open="1" top="0" tabpos="30" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="407" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\WindowElement.cpp" open="1" top="0" tabpos="28" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="241" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ButtonElement.cpp" open="1" top="0" tabpos="31" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="145" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\DOMViewElement.h" open="1" top="0" tabpos="45" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="322" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\PlayQueueView.cpp" open="1" top="0" tabpos="68" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1053" topLine="4" />
-		</Cursor>
-	</File>
-	<File name="include\MainWindowElement.h" open="1" top="0" tabpos="54" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="667" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Skin.cpp" open="1" top="0" tabpos="81" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1256" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="src\DOMViewElement.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1086" topLine="17" />
-		</Cursor>
-	</File>
-	<File name="include\GraphicsContext.h" open="1" top="0" tabpos="94" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="426" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\HeaderElement.cpp" open="1" top="0" tabpos="76" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="967" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Skin.h" open="1" top="0" tabpos="90" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="774" topLine="8" />
-		</Cursor>
-	</File>
-	<File name="src\libspider.cpp" open="1" top="0" tabpos="61" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="46" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Entity.cpp" open="1" top="0" tabpos="46" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="211" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\DoctrineView.h" open="1" top="0" tabpos="55" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="67" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\LinkElement.cpp" open="1" top="0" tabpos="62" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="110" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\TabBarElement.h" open="1" top="0" tabpos="33" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="821" topLine="16" />
-		</Cursor>
-	</File>
-	<File name="src\main.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5417" topLine="138" />
-		</Cursor>
-	</File>
-	<File name="src\Element.cpp" open="1" top="1" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="11111" topLine="282" />
-		</Cursor>
-	</File>
-	<File name="include\ArtistView.h" open="1" top="0" tabpos="85" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="323" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\TabbarViewElement.h" open="1" top="0" tabpos="58" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="430" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\HBoxElement.h" open="1" top="0" tabpos="66" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="252" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\TableElement.h" open="1" top="0" tabpos="64" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="127" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\StartView.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -566,9 +66,34 @@
 			<Cursor1 position="441" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\DoctrineView.cpp" open="1" top="0" tabpos="56" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Color.h" open="1" top="0" tabpos="81" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="264" topLine="0" />
+			<Cursor1 position="72" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\TabbarViewElement.cpp" open="1" top="0" tabpos="51" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="850" topLine="10" />
+		</Cursor>
+	</File>
+	<File name="include\elements.h" open="0" top="0" tabpos="54" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Skin.cpp" open="1" top="0" tabpos="73" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1256" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="include\DOMViewElement.h" open="1" top="0" tabpos="38" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="322" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\HeaderElement.h" open="1" top="0" tabpos="67" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="439" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\TreeAdapter.cpp" open="0" top="0" tabpos="35" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -576,54 +101,484 @@
 			<Cursor1 position="44" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\HTML.h" open="1" top="0" tabpos="86" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Element.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="71" topLine="0" />
+			<Cursor1 position="11111" topLine="282" />
 		</Cursor>
 	</File>
-	<File name="include\TableViewDataSource.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\SplitterElement.cpp" open="0" top="0" tabpos="78" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="297" topLine="0" />
+			<Cursor1 position="202" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\boxmodel.cpp" open="1" top="0" tabpos="100" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\DoctrineView.h" open="1" top="0" tabpos="47" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="79" topLine="0" />
+			<Cursor1 position="67" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Color.cpp" open="1" top="0" tabpos="88" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Node.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1251" topLine="25" />
+		</Cursor>
+	</File>
+	<File name="src\TreeItem.cpp" open="1" top="0" tabpos="61" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="256" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\luahtml.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\TextElement.cpp" open="1" top="0" tabpos="31" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="89" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Element.h" open="1" top="0" tabpos="20" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1732" topLine="47" />
+		</Cursor>
+	</File>
+	<File name="include\Observer.h" open="0" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="411" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\MainWindowElement.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2118" topLine="111" />
+		</Cursor>
+	</File>
+	<File name="src\BoxElement.cpp" open="1" top="0" tabpos="52" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="148" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\MouseEventArgs.cpp" open="1" top="0" tabpos="83" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\SPType.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="97" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\TitleElement.cpp" open="1" top="0" tabpos="70" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="316" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="src\Color.cpp" open="1" top="0" tabpos="80" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="547" topLine="31" />
 		</Cursor>
 	</File>
-	<File name="src\Uri.cpp" open="1" top="0" tabpos="109" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Observable.cpp" open="1" top="0" tabpos="44" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="510" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Entity.cpp" open="1" top="0" tabpos="39" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="211" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\TopListView.h" open="1" top="0" tabpos="90" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="478" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\libspider.cpp" open="1" top="0" tabpos="53" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="46" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ImageElement.h" open="1" top="0" tabpos="36" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="332" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\PlayQueueView.cpp" open="1" top="0" tabpos="60" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="730" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ViewElement.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="595" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\InputEventArgs.h" open="1" top="0" tabpos="42" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="249" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ViewStackElement.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1397" topLine="28" />
+		</Cursor>
+	</File>
+	<File name="include\SplitterElement.h" open="0" top="0" tabpos="77" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="191" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Resource.cpp" open="0" top="0" tabpos="91" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="89" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\WhatsNewView.h" open="1" top="0" tabpos="49" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="491" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\PlayQueueView.h" open="1" top="0" tabpos="79" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="499" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Win32GraphicsContext.cpp" open="1" top="0" tabpos="87" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11054" topLine="255" />
+		</Cursor>
+	</File>
+	<File name="include\TabBarElement.h" open="1" top="0" tabpos="26" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="821" topLine="16" />
+		</Cursor>
+	</File>
+	<File name="src\Stylesheet.cpp" open="1" top="0" tabpos="89" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="244" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\libspider.h" open="1" top="0" tabpos="55" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="115" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\LinkElement.h" open="1" top="0" tabpos="74" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="284" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\VBoxElement.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2833" topLine="67" />
+		</Cursor>
+	</File>
+	<File name="include\TitleElement.h" open="1" top="0" tabpos="69" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="394" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\InputElement.cpp" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="274" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Observable.h" open="0" top="0" tabpos="79" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="400" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\WhatsNewView.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1363" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="src\ArtistView.cpp" open="1" top="0" tabpos="97" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="86" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\TabBarElement.cpp" open="1" top="0" tabpos="22" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4448" topLine="106" />
+		</Cursor>
+	</File>
+	<File name="src\Win32WindowElement.cpp" open="1" top="0" tabpos="32" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="469" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\DOMViewElement.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1086" topLine="17" />
+		</Cursor>
+	</File>
+	<File name="src\ButtonElement.cpp" open="1" top="0" tabpos="24" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="145" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ResourceElement.h" open="1" top="0" tabpos="35" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="294" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\WindowElement.cpp" open="1" top="0" tabpos="21" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="241" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Win32GraphicsContext.h" open="1" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="965" topLine="10" />
+		</Cursor>
+	</File>
+	<File name="src\InfoElement.cpp" open="1" top="0" tabpos="28" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="756" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="src\FontStyle.cpp" open="1" top="0" tabpos="62" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="44" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\TableElement.h" open="1" top="0" tabpos="56" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="127" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\boxmodel.cpp" open="1" top="0" tabpos="92" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="79" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Uri.h" open="0" top="0" tabpos="32" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="112" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Uri.cpp" open="1" top="0" tabpos="99" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="90" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\BoxElement.h" open="1" top="0" tabpos="84" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\VBoxElement.h" open="1" top="0" tabpos="66" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="277" topLine="0" />
+			<Cursor1 position="265" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\InfoElement.h" open="1" top="0" tabpos="32" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\InfoElement.h" open="1" top="0" tabpos="25" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="471" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\TableViewColumn.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\main.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="162" topLine="0" />
+			<Cursor1 position="5417" topLine="138" />
 		</Cursor>
 	</File>
-	<File name="src\EventArgs.cpp" open="1" top="0" tabpos="47" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\WindowElement.h" open="1" top="0" tabpos="37" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="600" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\MockTableDataSource.cpp" open="1" top="1" tabpos="100" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="252" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ButtonElement.h" open="1" top="0" tabpos="33" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="72" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ArtistOverviewView.cpp" open="0" top="0" tabpos="85" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="57" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\UserView.cpp" open="1" top="0" tabpos="64" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="378" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Entity.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="291" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\TextElement.h" open="1" top="0" tabpos="34" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="328" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ViewElement.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1241" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\EventArgs.cpp" open="1" top="0" tabpos="40" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="134" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\UserView.cpp" open="1" top="0" tabpos="72" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Node.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="378" topLine="0" />
+			<Cursor1 position="308" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="include\ArtistOverviewView.h" open="1" top="0" tabpos="30" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="137" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Resource.h" open="0" top="0" tabpos="90" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="79" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\UserView.h" open="1" top="0" tabpos="63" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="117" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\SPType.cpp" open="1" top="0" tabpos="93" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="41" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\FlowElement.h" open="1" top="0" tabpos="59" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="320" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Skin.h" open="1" top="0" tabpos="82" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="774" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="src\ContainerViewElement.cpp" open="1" top="0" tabpos="96" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="258" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\ImageElement.cpp" open="1" top="0" tabpos="27" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="197" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ArtistView.h" open="1" top="0" tabpos="77" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="323" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\StartView.h" open="1" top="0" tabpos="65" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="385" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\FlowElement.cpp" open="1" top="0" tabpos="41" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="334" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Observer.cpp" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="43" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\BoxElement.h" open="1" top="0" tabpos="76" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="277" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\TabbarViewElement.h" open="1" top="0" tabpos="50" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="430" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\GraphicsContext.cpp" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="223" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Image.cpp" open="1" top="0" tabpos="84" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4920" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\ContainerViewElement.h" open="1" top="0" tabpos="95" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="274" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\TreeAdapter.h" open="1" top="0" tabpos="75" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="201" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\DoctrineView.cpp" open="1" top="0" tabpos="48" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="264" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\TopListView.cpp" open="1" top="0" tabpos="91" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1482" topLine="30" />
+		</Cursor>
+	</File>
+	<File name="include\FontStyle.h" open="0" top="0" tabpos="39" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="842" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="include\Image.h" open="1" top="0" tabpos="85" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="231" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Win32WindowElement.h" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="390" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="src\TreeViewElement.cpp" open="1" top="0" tabpos="29" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3623" topLine="84" />
+		</Cursor>
+	</File>
+	<File name="include\EventArgs.h" open="1" top="0" tabpos="88" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="61" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Stylesheet.h" open="1" top="0" tabpos="72" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="97" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\HBoxElement.cpp" open="1" top="0" tabpos="71" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3069" topLine="57" />
+		</Cursor>
+	</File>
+	<File name="src\InputEventArgs.cpp" open="1" top="0" tabpos="43" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="150" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\GraphicsContext.h" open="1" top="0" tabpos="86" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="426" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\TreeItem.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="403" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\HTML.cpp" open="1" top="0" tabpos="94" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="437" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
