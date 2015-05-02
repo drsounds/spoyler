@@ -9,6 +9,26 @@ template < typename T > std::string to_string( const T& n )
     return stm.str() ;
 }
 namespace spider {
+
+
+vector<int> MockTableDataSource::getSelectedIndexes() {
+    vector<int> indexes;
+    for (vector<int>::iterator it = this->selectedIndexes->begin(); i != this->selectedIndexes->end(); ++it) {
+        int index = **it;
+        indexes.push_back(index);
+    }
+    return indexes;
+}
+bool MockTableDataSource::isIndexSelected (int index) {
+    return (std::find(this->selectedIndexes->begin(), this->selectedIndexes->end(), index) != this->selectedIndexes->end());
+
+}
+void MockTableDataSource::addIndexToSelection(int index) {
+    this->selectedIndexes->push_back(indexes);
+}
+void MockTableDataSource::removeIndexFromSelection (int index) {
+}
+
 MockTableDataSource::MockTableDataSource()
 {
     //ctor

@@ -41,6 +41,11 @@ Skin::Skin(const string& bitmap, GraphicsContext *g) {
     (*this->slices)["button.background.image"] = new slice(image, 128, 1, 71, 19, 3, 13, 13, 3);
     (*this->slices)["table::columnheader.background.image"] = new slice(image, 200, 63, 18, 18, 0, 0, 0, 0);
     (*this->colors)["table::nth-child(2n).background.color"] = this->image->getPixelPtr(22, 0);
+    (*this->colors)["treeitem::selected.background.color"] = this->image->getPixelPtr(6, 0);
+    (*this->colors)["treeitem::selected.foreground.color"] = this->image->getPixelPtr(7, 0);
+    (*this->colors)["treeview.foreground.color"] = this->image->getPixelPtr(1, 0);
+    (*this->colors)["treeitem::focus.foreground.color"] = this->image->getPixelPtr(2, 0);
+    (*this->colors)["treeview.background.color"] = this->image->getPixelPtr(3, 0);
   //  (*this->images)["button.background.image::active"] = this->image->sliceImage(128, 21, 71, 19, 3, 13, 13, 3);
 }
 bool Skin::hasColor(string selector) {

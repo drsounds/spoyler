@@ -1,18 +1,19 @@
-#ifndef TABLEVIEWCELL_H
-#define TABLEVIEWCELL_H
-#include <string>
-using namespace std;
+#ifndef TABLECELL_H
+#define TABLECELL_H
+#include "TableRow.h"
 namespace spider {
 class TableCell
 {
     public:
-        TableCell();
+        TableCell(TableRow *tableRow);
         virtual ~TableCell();
-    protected:
-        string text;
         string uri;
-
+        string title;
+        TableRow *tableRow;
+        TableElement *tableElement;
+    protected:
     private:
 };
 }
-#endif // TABLEVIEWCELL_H
+
+#endif // TABLECELL_H

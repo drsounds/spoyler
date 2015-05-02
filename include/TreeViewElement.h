@@ -11,9 +11,7 @@ namespace spider {
 
         TreeItem *item;
     public:
-        virtual string getType() {
-            return "treeview";
-        }
+
         TreeItem *getItem() {
             return this->item;
         }
@@ -26,9 +24,10 @@ namespace spider {
 		vector<TreeItem *> *mItems;
 		int itemHeight;
 	public:
-		TreeViewElement(Element *parent)
-            ;
-
+		TreeViewElement(Element *parent);
+        virtual string getType() {
+            return "tree";
+        }
 		void draw(int x, int y, GraphicsContext *g);
         vector<TreeItem *> *items() {
             return this->mItems;

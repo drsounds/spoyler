@@ -118,12 +118,7 @@ Element::Element() :
 
 }
 FontStyle *Element::getFont() {
-    int fontSize = (int)this->getAttributeObj("size");
-    string *fontFamily = (string *)this->getAttributeObj("font");
-    if (fontFamily == NULL) {
-        fontFamily = new string("MS Sans Serif");
-    }
-    return new FontStyle((char *)fontFamily->c_str(), fontSize, false, false, false);
+    return this->font;
 }
 void Element::applyStylesheet(Stylesheet *style) {
 

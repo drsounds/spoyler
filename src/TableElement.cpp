@@ -11,6 +11,8 @@ namespace spider {
     {
         //ctor
         this->dataSource = dataSource;
+        this->colums = new vector<TableColumnHeader *>;
+        this->rows = new vector<TableRow *>;
     }
     TableElement::~TableElement()
     {
@@ -62,7 +64,7 @@ namespace spider {
         int columnWidth = width / dataSource->getColumnCount();
         int top = columnY + 18;
         // Draw rows
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             if (i % 2 != 1) {
                 g->fillRectangle(x, top, width, 18, g->skin->getColor("table::nth-child(2n).background.color", ""));
 

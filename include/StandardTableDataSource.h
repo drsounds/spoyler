@@ -1,14 +1,16 @@
-#ifndef MOCKTABLEDATASOURCE_H
-#define MOCKTABLEDATASOURCE_H
-#include "TableDataSource.h"
+#ifndef STANDARDTABLEDATASOURCE_H
+#define STANDARDTABLEDATASOURCE_H
 #include <vector>
+#include "TableCell.h"
+#include "TableRow.h"
+using namespace std;
 namespace spider {
-class MockTableDataSource : public TableDataSource
+class StandardTableDataSource : public TableDataSource
 {
     public:
-        vector<int> *selectedIndexes;
-        MockTableDataSource();
-        virtual ~MockTableDataSource();
+        StandardTableDataSource();
+        virtual ~StandardTableDataSource();
+        virtual ~TableDataSource();
         virtual int getColumnCount();
         virtual int getRowCount();
         virtual string getUriForCell (int column, int row);
@@ -19,13 +21,11 @@ class MockTableDataSource : public TableDataSource
         virtual bool isCellActive (int index);
         virtual void *getDataForCell(int index);
         virtual bool compareTableCells(int column, TableCell *t1, TableCell *t2);
-
-        virtual vector<int> getSelectedIndexes();
-        virtual bool isIndexSelected (int index);
-        virtual void addIndexesToSelection(int index);
-        virtual void removeIndexesFromSelection (int index);
+        vector<TableRow *> *rows;
+        vector<TableColumnHeader *> *columnHeaders;
     protected:
     private:
 };
 }
-#endif // MOCKTABLEDATASOURCE_H
+
+#endif // STANDARDTABLEDATASOURCE_H

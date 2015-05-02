@@ -2,6 +2,7 @@
 #define TABLEVIEWDATASOURCE_H
 #include <TableCell.h>
 #include <TableColumn.h>
+#include <vector>
 namespace spider {
 class TableDataSource
 {
@@ -19,6 +20,12 @@ class TableDataSource
         virtual bool isCellActive (int index) {}
         virtual void *getDataForCell(int index) {}
         virtual bool compareTableCells(int column, TableCell *t1, TableCell *t2) { }
+
+        virtual vector<int> getSelectedIndexes() {}
+        virtual bool isIndexSelected (int index) { return false; }
+        virtual void addIndexesToSelection(int index) {}
+        virtual void removeIndexesFromSelection (int index) {}
+
     protected:
     private:
 };

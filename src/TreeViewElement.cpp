@@ -90,6 +90,8 @@ int TreeViewElement::getItemHeight() {
 
 void TreeViewElement::draw(int x, int y, GraphicsContext *g) {
     spider::Element::draw(x, y, g);
+    g->fillRectangle(x, y, this->getWidth(), this->getHeight(), this->getMainWindowElement()->skin->getColor("treeview.background.color", ""));
+
 	int itemHeight = this->getItemHeight();
 
 	int top = 0;
@@ -97,20 +99,20 @@ void TreeViewElement::draw(int x, int y, GraphicsContext *g) {
 		TreeItem *item = static_cast<TreeItem *>(*it);
 		if (item->isSelected()) {
             #if SPOTIFY2009
-            g->fillRectangle(x, y + top , this->getWidth(), itemHeight, (Color *)this->getAttributeObj("highlight"));
+            g->fillRectangle(x, y + top , this->getWidth(), itemHeight, this->getMainWindowElement()->skin->getColor("treeitem::selected.background.color", ""));
             #else
             g->fillRectangle(x, y + top, 5, itemHeight, (Color *)this->getAttributeObj("highlight"));
             #endif
 		}
 		if (item->isHighlighted()) {
-            g->fillRectangle(x, y + top , this->getWidth(), itemHeight, new Color(127, 127, 127, 255));
+            g->fillRectangle(x, y + top , this->getWidth(), itemHeight, this->getMainWindowElement()->skin->getColor("treeitem::focus.background.color", ""));
 		}
-		Color *color = (Color *)this->getAttributeObj("fgcolor");
+		Color *color = (Color *)this->getMainWindowElement()->skin->getColor("treeview.foreground.color", "");
 		if(item->isSelected()) {
             if (FALSE)
                 color = (Color *)this->getAttributeObj("highlight");
             else
-                color = (Color *)this->getAttributeObj("highlight");
+                color = this->getMainWindowElement()->skin->getColor("treeitem::selected.foreground.color", "");
 		}
 
 		rectangle strB = g->measureString(item->text(), font);
