@@ -8,6 +8,7 @@
 #include "Stylesheet.h"
 #include "Skin.h"
 #include <vector>
+#include <stack>
 namespace spider {
     class Skin;
     class GraphicsContext;
@@ -147,4 +148,5 @@ namespace spider {
 
     };
 }
+
 #endif // ELEMENT_H

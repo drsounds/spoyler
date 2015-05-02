@@ -21,18 +21,19 @@ namespace spider {
             cout << "valid view: " << type << endl;
 
             ((Element *)child)->setVisible(false);
+            view->set("flex", "1");
         } else {
             exit(0);
         }
     }
     ViewStackElement::ViewStackElement()
-    : BoxElement::BoxElement() {
+    : VBoxElement::VBoxElement() {
          this->history = new std::stack<string *>;
          this->future = new std::stack<string *>;
     }
 
     ViewStackElement::ViewStackElement(Element *parent)
-     : BoxElement::BoxElement(parent) {
+     : VBoxElement::VBoxElement(parent) {
          this->setParent(this);
          this->history = new std::stack<string *>;
          this->future = new std::stack<string *>;
@@ -40,11 +41,12 @@ namespace spider {
         vector<Node *> *children = this->getChildNodes();
     }
     void ViewStackElement::pack() {
-        BoxElement::pack();
+        VBoxElement::pack();
          for (std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
             Node *node = static_cast<Node *>(*it);
             Element *view = (Element *)node;
             string type = view->getType();
+            view->set("flex", "1");
             view->setWidth(this->getWidth() - (view->getMargins()->bottom * 2 + this->getPadding()->bottom * 2));
             cout << "View of type: " << type << endl;
             if (view->absoluteBounds != NULL && this->absoluteBounds != NULL) {
@@ -61,7 +63,6 @@ namespace spider {
 
         std::stack<string *> *history = this->history;
         ViewStackElement *th = this;
-
 
 
         // Hide all views

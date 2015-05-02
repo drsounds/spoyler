@@ -36,12 +36,12 @@ std::string ViewElement::loadView(std::string view) {
 
 void ViewElement::pack() {
     VBoxElement::pack();
-    for(std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
+    /*for(std::vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
         Element *child = (Element *)*it;
         child->setWidth(this->getWidth());
-        //if (child->getType().compare(string("tabbar")) != 0)
-        //child->setHeight(this->getHeight());
-    }
+
+        child->setHeight(this->getHeight());
+    }*/
 }
 
 ViewElement::ViewElement(Element *parent)

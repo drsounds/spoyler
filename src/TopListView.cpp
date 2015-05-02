@@ -36,11 +36,14 @@ namespace spider {
             title->set("fgcolor", "#aaffaa");
             title->setInnerText("What's New\0");
             title->set("height", "60");
-            title->set("width", "120");
+            title->set("flex", "1");
             title->set("size", "16");
             hbox->appendChild(title);
             TableElement *tableView = new TableElement(this, new MockTableDataSource());
             this->appendChild(tableView);
+        }
+        void TopListView::scroll(int scrollX, int scrollY, int x, int y) {
+            Element::scroll(scrollX, scrollY, x, y);
         }
         void TopListView::navigate(string uri) {
 

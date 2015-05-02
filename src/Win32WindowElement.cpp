@@ -30,6 +30,7 @@ namespace spider {
         return new Win32GraphicsContext(this->hWnd, NULL, this);
     }
     void Win32WindowElement::scroll(int x, int y) {
+        deepestView = (Element *)this->mainWindow;
         this->mainWindow->scroll(x, y);
     }
     void Win32WindowElement::scrollTo(int x, int y) {
@@ -51,7 +52,13 @@ namespace spider {
         }
     }
     void Win32WindowElement::scroll(int scrollX, int scrollY, int mouseX, int mouseY) {
+        this->deepestView = this->mainWindow;
         this->mainWindow->scroll(scrollX, scrollY, mouseX, mouseY);
+        if (this->deepestView != NULL) {
+            cout << "Scrolling on" << endl;
+            this->deepestView->scroll(scrollX, scrollY);
+            this->deepestView = NULL;
+        }
     }
     void sample_click(spider::Element *elm, void *data) {
         MessageBox(((Win32WindowElement *)elm->getWindowNode())->getHandle(), (LPCSTR)"Test",(LPCSTR)L"A", 0);

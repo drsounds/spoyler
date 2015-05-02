@@ -405,9 +405,18 @@ void Element::scroll(int scrollX, int scrollY, int x, int y) {
 
     int xx = this->getAbsoluteBounds() != NULL ? x - this->getAbsoluteBounds()->y : x;
     int yy = this->getAbsoluteBounds() != NULL ? y - this->getAbsoluteBounds()->y : y;
-
+    cout << "Current scrolling element is " << this->getType() << endl;
     bool foundElement = false;
+    if (this->clipView) {
+        ((WindowElement *)this->getWindowElement())->deepestView = this;
+    }
+    if (string(this->getType()) == string("toplistview")) {
+        cout << "Test" << endl;
+    }
 	for(vector<Node *>::iterator it = this->getChildNodes()->begin(); it != this->getChildNodes()->end(); ++it) {
+        if (((WindowElement *)this->getWindowElement())->deepestView == NULL) {
+            break;
+        }
 		Element *elm = static_cast<Element *>(*it);
 		string ttype = elm->getType();
 		char *type = (char *)ttype.c_str();
@@ -416,13 +425,10 @@ void Element::scroll(int scrollX, int scrollY, int x, int y) {
             if (elm->getAbsoluteBounds() != NULL) {
 
                 if(x > elm->getAbsoluteBounds()->x && x < elm->getAbsoluteBounds()->x + elm->getAbsoluteBounds()->width &&
-                    y > elm->getAbsoluteBounds()->y && y < elm->getAbsoluteBounds()->y + elm->getAbsoluteBounds()->height ) {
+                    y > elm->getAbsoluteBounds()->y && y < elm->getAbsoluteBounds()->y + elm->getAbsoluteBounds()->height) {
                     foundElement = true;
-                    if (elm->clipView) {
-                        elm->scroll(scrollX, scrollY);
-                    } else {
-                        elm->scroll(scrollX, scrollY, x, y);
-                    }
+                    cout << elm->getType() << endl;
+                    elm->scroll(scrollX, scrollY, x, y);
 
                 }
                 else {
@@ -433,11 +439,7 @@ void Element::scroll(int scrollX, int scrollY, int x, int y) {
         }
 
 	}
-	if (!foundElement) {
-        if (this->clipView) {
-            this->scroll(scrollX, scrollY);
-        }
-	}
+
 
 }
 

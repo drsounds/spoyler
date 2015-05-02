@@ -24,7 +24,7 @@ namespace spider {
         this->tabBar->setHeight(20);
         this->tabBar->set("height", "20");
         this->tabBar->addEventListener(string("tabselected"), &tabbar_tabselected);
-        this->viewStack->set("flex", "1");
+        this->viewStack->set("flex", "2");
         this->appendChild(this->viewStack);
     }
     bool TabbarViewElement::acceptsUri(string uri) {

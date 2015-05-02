@@ -12,6 +12,7 @@ class TableElement : public Element
         virtual ~TableElement();
         virtual string getType();
         virtual void draw(int x, int y, GraphicsContext *g);
+        virtual void scroll(int scrollX, int scrollY, int x, int y);
     protected:
     private:
 };

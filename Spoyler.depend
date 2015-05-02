@@ -7486,7 +7486,7 @@
 1425743593 c:\users\alecca\documents\spoyler\include\boxelement.h
 	"Element.h"
 
-1428501148 c:\users\alecca\documents\spoyler\include\element.h
+1430573327 c:\users\alecca\documents\spoyler\include\element.h
 	"Node.h"
 	"Observable.h"
 	"FontStyle.h"
@@ -7495,6 +7495,7 @@
 	"Stylesheet.h"
 	"Skin.h"
 	<vector>
+	<stack>
 
 1422722253 c:\users\alecca\documents\spoyler\include\node.h
 	"SPType.h"
@@ -11024,7 +11025,7 @@
 	"Element.h"
 	<vector>
 
-1428487064 c:\users\alecca\documents\spoyler\include\viewstackelement.h
+1430570147 c:\users\alecca\documents\spoyler\include\viewstackelement.h
 	"BoxElement.h"
 	"ViewElement.h"
 	<stack>
@@ -11060,14 +11061,14 @@
 	"Element.h"
 	"expat.h"
 
-1428524346 source:c:\users\alecca\documents\spoyler\src\element.cpp
+1430575635 source:c:\users\alecca\documents\spoyler\src\element.cpp
 	"Element.h"
 	<iostream>
 	<cstdio>
 	"WindowElement.h"
 	"Observable.h"
 
-1428414443 c:\users\alecca\documents\spoyler\include\windowelement.h
+1430575641 c:\users\alecca\documents\spoyler\include\windowelement.h
 	"VBoxElement.h"
 	"ImageLibrary.h"
 
@@ -11257,7 +11258,7 @@
 1428526279 source:c:\users\alecca\documents\spoyler\src\tabbarelement.cpp
 	"TabBarElement.h"
 
-1428513830 source:c:\users\alecca\documents\spoyler\src\tabbarviewelement.cpp
+1430570015 source:c:\users\alecca\documents\spoyler\src\tabbarviewelement.cpp
 	"TabbarViewElement.h"
 
 1422722254 source:c:\users\alecca\documents\spoyler\src\textelement.cpp
@@ -11284,11 +11285,11 @@
 1428483286 source:c:\users\alecca\documents\spoyler\src\vboxelement.cpp
 	"VBoxElement.h"
 
-1428526529 source:c:\users\alecca\documents\spoyler\src\viewelement.cpp
+1429360157 source:c:\users\alecca\documents\spoyler\src\viewelement.cpp
 	"ViewElement.h"
 	<string>
 
-1428518701 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
+1430576070 source:c:\users\alecca\documents\spoyler\src\viewstackelement.cpp
 	"ViewStackElement.h"
 	"WhatsNewView.h"
 	<regex>
@@ -11305,10 +11306,10 @@
 	"MockTableDataSource.h"
 	<regex>
 
-1428524136 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
+1430573881 source:c:\users\alecca\documents\spoyler\src\win32graphicscontext.cpp
 	"Win32GraphicsContext.h"
 
-1428478297 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
+1430575709 source:c:\users\alecca\documents\spoyler\src\win32windowelement.cpp
 	<Windows.h>
 	"Win32WindowElement.h"
 	"Win32GraphicsContext.h"
@@ -27413,10 +27414,10 @@
 	<boost/algorithm/string/finder.hpp>
 	<boost/algorithm/string/formatter.hpp>
 
-1428528049 source:c:\users\alecca\documents\spoyler\src\tableelement.cpp
+1430576012 source:c:\users\alecca\documents\spoyler\src\tableelement.cpp
 	"TableElement.h"
 
-1428525987 c:\users\alecca\documents\spoyler\include\tableelement.h
+1430574589 c:\users\alecca\documents\spoyler\include\tableelement.h
 	"Element.h"
 	"TableDataSource.h"
 
@@ -27536,11 +27537,11 @@
 	<setjmp.h>
 	<time.h>
 
-1428515095 c:\users\alecca\documents\spoyler\include\toplistview.h
+1430574713 c:\users\alecca\documents\spoyler\include\toplistview.h
 	"Element.h"
 	"ContainerViewElement.h"
 
-1428525879 source:c:\users\alecca\documents\spoyler\src\toplistview.cpp
+1430574699 source:c:\users\alecca\documents\spoyler\src\toplistview.cpp
 	"TopListView.h"
 	"HBoxElement.h"
 	"TableElement.h"
@@ -27548,10 +27549,10 @@
 	"VBoxElement.h"
 	<regex>
 
-1428480880 c:\users\alecca\documents\spoyler\include\containerviewelement.h
+1428700688 c:\users\alecca\documents\spoyler\include\containerviewelement.h
 	"ViewElement.h"
 
-1428480987 source:c:\users\alecca\documents\spoyler\src\containerviewelement.cpp
+1428700698 source:c:\users\alecca\documents\spoyler\src\containerviewelement.cpp
 	"ContainerViewElement.h"
 
 1428483700 source:c:\users\alecca\documents\spoyler\src\mocktableviewdatasource.cpp

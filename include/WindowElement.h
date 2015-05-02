@@ -20,6 +20,8 @@ public:
         }
         virtual void scrollTo(int x, int y) {}
         virtual void scroll(int x, int y) {}
+        spider::Element *deepestView;
+
 	};
 
 };

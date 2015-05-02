@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DC50E1A0-8D04-4CBB-B09C-9DAC2C17BF9E}</ProjectGuid>
+    <RootNamespace>Spoyler</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\AppHeaderElement.h" />
+    <ClInclude Include="..\include\ArtistOverviewView.h" />
+    <ClInclude Include="..\include\ArtistView.h" />
+    <ClInclude Include="..\include\BoxElement.h" />
+    <ClInclude Include="..\include\boxmodel.h" />
+    <ClInclude Include="..\include\ButtonElement.h" />
+    <ClInclude Include="..\include\Color.h" />
+    <ClInclude Include="..\include\ContainerViewElement.h" />
+    <ClInclude Include="..\include\DoctrineView.h" />
+    <ClInclude Include="..\include\DOMViewElement.h" />
+    <ClInclude Include="..\include\Element.h" />
+    <ClInclude Include="..\include\elements.h" />
+    <ClInclude Include="..\include\Entity.h" />
+    <ClInclude Include="..\include\EventArgs.h" />
+    <ClInclude Include="..\include\FlowElement.h" />
+    <ClInclude Include="..\include\FontStyle.h" />
+    <ClInclude Include="..\include\GraphicsContext.h" />
+    <ClInclude Include="..\include\HBoxElement.h" />
+    <ClInclude Include="..\include\HeaderElement.h" />
+    <ClInclude Include="..\include\HTML.h" />
+    <ClInclude Include="..\include\Image.h" />
+    <ClInclude Include="..\include\ImageElement.h" />
+    <ClInclude Include="..\include\ImageLibrary.h" />
+    <ClInclude Include="..\include\InfoElement.h" />
+    <ClInclude Include="..\include\InputElement.h" />
+    <ClInclude Include="..\include\InputEventArgs.h" />
+    <ClInclude Include="..\include\libspider.h" />
+    <ClInclude Include="..\include\LinkElement.h" />
+    <ClInclude Include="..\include\luahtml.h" />
+    <ClInclude Include="..\include\main.h" />
+    <ClInclude Include="..\include\MainWindowElement.h" />
+    <ClInclude Include="..\include\MockTableDataSource.h" />
+    <ClInclude Include="..\include\MouseEventArgs.h" />
+    <ClInclude Include="..\include\Node.h" />
+    <ClInclude Include="..\include\Observable.h" />
+    <ClInclude Include="..\include\Observer.h" />
+    <ClInclude Include="..\include\PlayQueueView.h" />
+    <ClInclude Include="..\include\Resource.h" />
+    <ClInclude Include="..\include\ResourceElement.h" />
+    <ClInclude Include="..\include\Server.h" />
+    <ClInclude Include="..\include\Skin.h" />
+    <ClInclude Include="..\include\SpiderServer.h" />
+    <ClInclude Include="..\include\SplitterElement.h" />
+    <ClInclude Include="..\include\Spoyler.h" />
+    <ClInclude Include="..\include\SPType.h" />
+    <ClInclude Include="..\include\StartView.h" />
+    <ClInclude Include="..\include\Stylesheet.h" />
+    <ClInclude Include="..\include\TabBarElement.h" />
+    <ClInclude Include="..\include\TabbarView.h" />
+    <ClInclude Include="..\include\TabbarViewElement.h" />
+    <ClInclude Include="..\include\TableCell.h" />
+    <ClInclude Include="..\include\TableColumn.h" />
+    <ClInclude Include="..\include\TableDataSource.h" />
+    <ClInclude Include="..\include\TableElement.h" />
+    <ClInclude Include="..\include\TableViewElement.h" />
+    <ClInclude Include="..\include\TextElement.h" />
+    <ClInclude Include="..\include\TitleElement.h" />
+    <ClInclude Include="..\include\TopListView.h" />
+    <ClInclude Include="..\include\TreeAdapter.h" />
+    <ClInclude Include="..\include\TreeItem.h" />
+    <ClInclude Include="..\include\TreeViewElement.h" />
+    <ClInclude Include="..\include\Uri.h" />
+    <ClInclude Include="..\include\UserView.h" />
+    <ClInclude Include="..\include\VBox.h" />
+    <ClInclude Include="..\include\VBoxElement.h" />
+    <ClInclude Include="..\include\ViewElement.h" />
+    <ClInclude Include="..\include\ViewStackElement.h" />
+    <ClInclude Include="..\include\w.h" />
+    <ClInclude Include="..\include\WhatsNewView.h" />
+    <ClInclude Include="..\include\Win32GraphicsContext.h" />
+    <ClInclude Include="..\include\Win32WindowElement.h" />
+    <ClInclude Include="..\include\WindowElement.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\AppHeaderElement.cpp" />
+    <ClCompile Include="..\src\ArtistOverviewView.cpp" />
+    <ClCompile Include="..\src\ArtistView.cpp" />
+    <ClCompile Include="..\src\BoxElement.cpp" />
+    <ClCompile Include="..\src\ButtonElement.cpp" />
+    <ClCompile Include="..\src\Color.cpp" />
+    <ClCompile Include="..\src\ContainerViewElement.cpp" />
+    <ClCompile Include="..\src\DoctrineView.cpp" />
+    <ClCompile Include="..\src\DOMViewElement.cpp" />
+    <ClCompile Include="..\src\Element.cpp" />
+    <ClCompile Include="..\src\Entity.cpp" />
+    <ClCompile Include="..\src\EventArgs.cpp" />
+    <ClCompile Include="..\src\FlowElement.cpp" />
+    <ClCompile Include="..\src\FontStyle.cpp" />
+    <ClCompile Include="..\src\GraphicsContext.cpp" />
+    <ClCompile Include="..\src\HBoxElement.cpp" />
+    <ClCompile Include="..\src\HeaderElement.cpp" />
+    <ClCompile Include="..\src\HTML.cpp" />
+    <ClCompile Include="..\src\Image.cpp" />
+    <ClCompile Include="..\src\ImageElement.cpp" />
+    <ClCompile Include="..\src\ImageLibrary.cpp" />
+    <ClCompile Include="..\src\InfoElement.cpp" />
+    <ClCompile Include="..\src\InputElement.cpp" />
+    <ClCompile Include="..\src\InputEventArgs.cpp" />
+    <ClCompile Include="..\src\libspider.cpp" />
+    <ClCompile Include="..\src\LinkElement.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\MainWindowElement.cpp" />
+    <ClCompile Include="..\src\MockTableDataSource.cpp" />
+    <ClCompile Include="..\src\MouseEventArgs.cpp" />
+    <ClCompile Include="..\src\Node.cpp" />
+    <ClCompile Include="..\src\Observable.cpp" />
+    <ClCompile Include="..\src\Observer.cpp" />
+    <ClCompile Include="..\src\PlayQueueView.cpp" />
+    <ClCompile Include="..\src\Resource.cpp" />
+    <ClCompile Include="..\src\ResourceElement.cpp" />
+    <ClCompile Include="..\src\Server.cpp" />
+    <ClCompile Include="..\src\Skin.cpp" />
+    <ClCompile Include="..\src\SpiderServer.cpp" />
+    <ClCompile Include="..\src\SplitterElement.cpp" />
+    <ClCompile Include="..\src\Spoyler.cpp" />
+    <ClCompile Include="..\src\SPType.cpp" />
+    <ClCompile Include="..\src\StartView.cpp" />
+    <ClCompile Include="..\src\Stylesheet.cpp" />
+    <ClCompile Include="..\src\TabBarElement.cpp" />
+    <ClCompile Include="..\src\TabbarView.cpp" />
+    <ClCompile Include="..\src\TabbarViewElement.cpp" />
+    <ClCompile Include="..\src\TableCell.cpp" />
+    <ClCompile Include="..\src\TableColumn.cpp" />
+    <ClCompile Include="..\src\TableDataSource.cpp" />
+    <ClCompile Include="..\src\TableElement.cpp" />
+    <ClCompile Include="..\src\TextElement.cpp" />
+    <ClCompile Include="..\src\TitleElement.cpp" />
+    <ClCompile Include="..\src\TopListView.cpp" />
+    <ClCompile Include="..\src\TreeAdapter.cpp" />
+    <ClCompile Include="..\src\TreeItem.cpp" />
+    <ClCompile Include="..\src\TreeViewElement.cpp" />
+    <ClCompile Include="..\src\Uri.cpp" />
+    <ClCompile Include="..\src\UserView.cpp" />
+    <ClCompile Include="..\src\VBox.cpp" />
+    <ClCompile Include="..\src\VBoxElement.cpp" />
+    <ClCompile Include="..\src\ViewElement.cpp" />
+    <ClCompile Include="..\src\ViewStackElement.cpp" />
+    <ClCompile Include="..\src\WhatsNewView.cpp" />
+    <ClCompile Include="..\src\Win32GraphicsContext.cpp" />
+    <ClCompile Include="..\src\Win32WindowElement.cpp" />
+    <ClCompile Include="..\src\WindowElement.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\Spoyler.depend" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

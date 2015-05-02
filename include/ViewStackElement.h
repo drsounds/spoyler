@@ -4,7 +4,7 @@
 #include "ViewElement.h"
 #include <stack>
 namespace spider {
-    class ViewStackElement : public BoxElement {
+    class ViewStackElement : public VBoxElement {
     private:
         std::stack<string *> *history;
         std::stack<string *> *future;

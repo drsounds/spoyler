@@ -13,6 +13,7 @@ namespace spider {
                 bool acceptsUri(string uri);
                 void navigate(string uri);
                 string getType();
+                virtual void scroll(int scrollX, int scrollY, int x, int y);
             protected:
             private:
         };
