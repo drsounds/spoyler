@@ -1,6 +1,10 @@
-#include "MockTableDataSource.h"
 #include <string>
 #include <sstream>
+#include <algorithm>>
+#include <vector>
+
+#include "MockTableDataSource.h"
+
 using namespace std;
 template < typename T > std::string to_string( const T& n )
 {
@@ -13,8 +17,8 @@ namespace spider {
 
 vector<int> MockTableDataSource::getSelectedIndexes() {
     vector<int> indexes;
-    for (vector<int>::iterator it = this->selectedIndexes->begin(); i != this->selectedIndexes->end(); ++it) {
-        int index = **it;
+    for (vector<int>::iterator it = this->selectedIndexes->begin(); it != this->selectedIndexes->end(); ++it) {
+        int index = static_cast<int>(*it);
         indexes.push_back(index);
     }
     return indexes;
@@ -24,7 +28,7 @@ bool MockTableDataSource::isIndexSelected (int index) {
 
 }
 void MockTableDataSource::addIndexToSelection(int index) {
-    this->selectedIndexes->push_back(indexes);
+    this->selectedIndexes->push_back(index);
 }
 void MockTableDataSource::removeIndexFromSelection (int index) {
 }

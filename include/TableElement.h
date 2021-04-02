@@ -1,11 +1,13 @@
-#ifndef TABLEVIEWELEMENT_H
-#define TABLEVIEWELEMENT_H
 #include "Element.h"
-#include <vector>
 #include "TableRow.h"
 #include "TableColumnHeader.h"
 #include "TableDataSource.h"
+#ifndef TABLEVIEWELEMENT_H
+#define TABLEVIEWELEMENT_H
+#include <vector>
 namespace spider {
+class TableDataSource;
+class Element;
 class TableElement : public Element
 {
     public:

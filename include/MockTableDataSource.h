@@ -22,8 +22,8 @@ class MockTableDataSource : public TableDataSource
 
         virtual vector<int> getSelectedIndexes();
         virtual bool isIndexSelected (int index);
-        virtual void addIndexesToSelection(int index);
-        virtual void removeIndexesFromSelection (int index);
+        virtual void addIndexToSelection(int index);
+        virtual void removeIndexFromSelection (int index);
     protected:
     private:
 };

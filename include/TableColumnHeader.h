@@ -1,6 +1,6 @@
+#include "TableCell.h"
 #ifndef TABLECOLUMNHEADER_H
 #define TABLECOLUMNHEADER_H
-#include "TableCell.h"
 
 namespace spider {
 class TableCell;

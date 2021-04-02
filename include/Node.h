@@ -2,7 +2,7 @@
 #define NODE_H
 #include "SPType.h"
 #include "Color.h"
-#include <boost/lexical_cast.hpp>
+
 #include <map>
 #include <string>
 #include <vector>

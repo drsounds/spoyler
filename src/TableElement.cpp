@@ -11,7 +11,7 @@ namespace spider {
     {
         //ctor
         this->dataSource = dataSource;
-        this->colums = new vector<TableColumnHeader *>;
+        this->columns = new vector<TableColumnHeader *>;
         this->rows = new vector<TableRow *>;
     }
     TableElement::~TableElement()

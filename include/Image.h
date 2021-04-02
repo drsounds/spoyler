@@ -3,7 +3,6 @@
 #include <string>
 #include "Color.h"
 #include <vector>
-#include <png.h>
 using namespace std;
 struct pixel {
     unsigned char r;
@@ -49,14 +48,15 @@ namespace spider {
             void *handle; // OS Specific handle, created opon first load
 
             // PNG specific stuff
-
+/*
             png_byte color_type;
             png_byte bit_depth;
 
             png_structp png_ptr;
             png_infop info_ptr;
             int number_of_passes;
-            png_bytep *row_pointers;
+            png_bytep *row_pointers;*/
+
         protected:
         private:
     };

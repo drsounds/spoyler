@@ -1,5 +1,4 @@
 #include "UserView.h"
-#include <boost/algorithm/string.hpp>
 #include <string>
 #include <vector>
 #include <regex>
@@ -32,13 +31,7 @@ namespace spider {
             //dtor
         }
         void UserView::navigate(string uri) {
-            std::vector<std::string> strs;
-            boost::split(strs, uri, boost::is_any_of(":"));
-            string id = strs.at(2);
-            char *buffer = new char[50];
-            int length = id.copy(buffer, id.size(), 0);
-            buffer[length] = '\0';
-            this->header->title->setTitle(string(buffer));
+            this->header->title->setTitle(uri);
         }
         bool UserView::acceptsUri(string uri) {
             char *uri2 = (char *)uri.c_str();

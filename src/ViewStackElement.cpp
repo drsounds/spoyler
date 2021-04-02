@@ -4,18 +4,20 @@
 #include "PlayQueueView.h"
 #include "MainWindowElement.h"
 #include <vector>
-#include <boost/algorithm/string/predicate.hpp>
 inline bool ends_with(std::string const & value, std::string const & ending)
 {
-    if (ending.size() > value.size()) return false;
-    return std::equal(ending.rbegin(), ending.rend(), value.rbegin());
+    if (value.length() >= ending.length()) {
+        return (0 == value.compare (value.length() - ending.length(), ending.length(), ending));
+    } else {
+        return false;
+    }
 }
 namespace spider {
     void ViewStackElement::appendChild(Node *child) {
 
         ViewElement *view = (ViewElement *)child;
         string type = view->getType();
-        if (boost::algorithm::ends_with(type, "view")) {
+        if (ends_with(type, "view")) {
 
             Node::appendChild(child);
             cout << "valid view: " << type << endl;

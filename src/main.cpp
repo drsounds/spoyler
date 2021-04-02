@@ -18,7 +18,7 @@ LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 using namespace spider;
 Win32WindowElement *window  = new Win32WindowElement();
 /*  Make the class name into a global variable  */
-TCHAR szClassName[ ] = _T("CodeBlocksWindowsApp");
+TCHAR szClassName[ ] = _T("Spoyler");
 /*!
  * \source http://stackoverflow.com/questions/12689142/win32-api-command-line-arguments-parsing
  */

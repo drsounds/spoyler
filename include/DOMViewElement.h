@@ -1,5 +1,5 @@
 #include "Element.h"
-#include "expat.h"
+
 namespace spider {
     class DOMViewElement : public Element {
     private:

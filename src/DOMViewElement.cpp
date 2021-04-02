@@ -1,3 +1,4 @@
+#include <string.h>
 #include "DOMViewElement.h"
 #include "VBoxElement.h"
 #include "HBoxElement.h"

@@ -28418,3 +28418,567 @@
 1430582120 c:\users\alecca\documents\spoyler\include\tablecolumnheader.h
 	"TableCell.h"
 
+1617372962 source:c:\users\drsou\documents\spoyler\src\appheaderelement.cpp
+	"AppHeaderElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\appheaderelement.h
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\boxmodel.cpp
+	"boxmodel.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\boxmodel.h
+	"libspider.h"
+
+1617373470 c:\users\drsou\documents\spoyler\include\libspider.h
+	<map>
+	<string>
+	<vector>
+	<vector>
+	<string>
+	<sstream>
+	<vector>
+	<iomanip>
+	"SPType.h"
+	"EventArgs.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\sptype.h
+	<string>
+
+1617372962 c:\users\drsou\documents\spoyler\include\eventargs.h
+	"SPType.h"
+
+1617374768 source:c:\users\drsou\documents\spoyler\src\color.cpp
+	"libspider.h"
+	"Color.h"
+	<string>
+	<stdio.h>
+
+1617372962 c:\users\drsou\documents\spoyler\include\color.h
+	"SPType.h"
+	<string>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\artistoverviewview.cpp
+	"ArtistOverviewView.h"
+	"HBoxElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\artistoverviewview.h
+	"ViewElement.h"
+	"ImageElement.h"
+	"TextElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\viewelement.h
+	"VBoxElement.h"
+	"Uri.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\vboxelement.h
+	"BoxElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\boxelement.h
+	"Element.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\element.h
+	"Node.h"
+	"Observable.h"
+	"FontStyle.h"
+	"MouseEventArgs.h"
+	"GraphicsContext.h"
+	"Stylesheet.h"
+	"Skin.h"
+	<vector>
+	<stack>
+
+1617373365 c:\users\drsou\documents\spoyler\include\node.h
+	"SPType.h"
+	"Color.h"
+	<map>
+	<string>
+	<vector>
+	"libspider.h"
+	"EventArgs.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\observable.h
+	"libspider.h"
+	"SPType.h"
+	"Observer.h"
+	<list>
+	"EventArgs.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\observer.h
+	"libspider.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\fontstyle.h
+	"libspider.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\mouseeventargs.h
+	"libspider.h"
+	"EventArgs.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\graphicscontext.h
+	"FontStyle.h"
+	"libspider.h"
+	"Color.h"
+	"Element.h"
+	"Image.h"
+	"Skin.h"
+
+1617373537 c:\users\drsou\documents\spoyler\include\image.h
+	<string>
+	"Color.h"
+	<vector>
+
+1617372962 c:\users\drsou\documents\spoyler\include\skin.h
+	<map>
+	"Image.h"
+	"Color.h"
+	"GraphicsContext.h"
+
+1617373571 c:\users\drsou\documents\spoyler\include\stylesheet.h
+	"Node.h"
+	<cassert>
+	<exception>
+	<iostream>
+	<sstream>
+	<string>
+
+1617372962 c:\users\drsou\documents\spoyler\include\uri.h
+	"libspider.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\imageelement.h
+	"Element.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\textelement.h
+	"Element.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\hboxelement.h
+	"Element.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\boxelement.cpp
+	"BoxElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\containerviewelement.cpp
+	"ContainerViewElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\containerviewelement.h
+	"ViewElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\entity.cpp
+	"Entity.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\entity.h
+	<vector>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\eventargs.cpp
+	"EventArgs.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\flowelement.cpp
+	"FlowElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\flowelement.h
+	"Element.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\fontstyle.cpp
+	"FontStyle.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\graphicscontext.cpp
+	"GraphicsContext.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\hboxelement.cpp
+	"HBoxElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\headerelement.cpp
+	"HeaderElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\headerelement.h
+	"HBoxElement.h"
+	"ImageElement.h"
+	"TitleElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\titleelement.h
+	"VBoxElement.h"
+	"TextElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\html.cpp
+	"HTML.h"
+	<regex>
+
+1617372962 c:\users\drsou\documents\spoyler\include\html.h
+	<string>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\buttonelement.cpp
+	"ButtonElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\buttonelement.h
+	"Element.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\imageelement.cpp
+	"ImageElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\infoelement.cpp
+	"InfoElement.h"
+	"ButtonElement.h"
+	"TextElement.h"
+	<list>
+
+1617372962 c:\users\drsou\documents\spoyler\include\infoelement.h
+	"TextElement.h"
+	"HBoxElement.h"
+	"ButtonElement.h"
+
+1617374771 source:c:\users\drsou\documents\spoyler\src\image.cpp
+	"Image.h"
+	<stdio.h>
+	<iostream>
+	<cstdlib>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\inputelement.cpp
+	"InputElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\inputelement.h
+	"Element.h"
+	"GraphicsContext.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\inputeventargs.cpp
+	"InputEventArgs.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\inputeventargs.h
+	"EventArgs.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\irequesthandler.cpp
+	"IRequestHandler.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\irequesthandler.h
+	<map>
+	<string>
+	"Response.h"
+	<map>
+
+1617372962 c:\users\drsou\documents\spoyler\include\response.h
+	<string>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\libspider.cpp
+	"libspider.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\linkelement.cpp
+	"LinkElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\linkelement.h
+	"TextElement.h"
+
+1617373190 source:c:\users\drsou\documents\spoyler\src\main.cpp
+	<tchar.h>
+	<windows.h>
+	"libspider.h"
+	"Win32WindowElement.h"
+	"Win32GraphicsContext.h"
+	"main.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\win32windowelement.h
+	<Windows.h>
+	"MainWindowElement.h"
+	<string>
+	"WindowElement.h"
+	"libspider.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\mainwindowelement.h
+	"VBoxElement.h"
+	"HBoxElement.h"
+	"ViewStackElement.h"
+	"ButtonElement.h"
+	"InfoElement.h"
+	"TreeViewElement.h"
+	"Skin.h"
+	"libspider.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\viewstackelement.h
+	"BoxElement.h"
+	"ViewElement.h"
+	<stack>
+
+1617372962 c:\users\drsou\documents\spoyler\include\treeviewelement.h
+	"Uri.h"
+	"Element.h"
+	"SPType.h"
+	"EventArgs.h"
+	"TreeItem.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\treeitem.h
+	"Uri.h"
+	"SPType.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\windowelement.h
+	"VBoxElement.h"
+	"ImageLibrary.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\imagelibrary.h
+	"libspider.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\win32graphicscontext.h
+	<Windows.h>
+	<wingdi.h>
+	<map>
+	"Color.h"
+	"Element.h"
+	"GraphicsContext.h"
+	"InputEventArgs.h"
+	<map>
+
+1617372962 c:\users\drsou\documents\spoyler\include\main.h
+	<windows.h>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\mouseeventargs.cpp
+	"MouseEventArgs.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\node.cpp
+	"Node.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\observable.cpp
+	"Observable.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\observer.cpp
+	"Observer.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\request.cpp
+	"Request.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\request.h
+	<map>
+	<vector>
+	"IRequestHandler.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\artistview.cpp
+	"ArtistView.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\artistview.h
+	"TabbarViewElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\tabbarviewelement.h
+	"Element.h"
+	"ViewElement.h"
+	"TabBarElement.h"
+	"ViewStackElement.h"
+	"TableDataSource.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\tabbarelement.h
+	"Element.h"
+	<vector>
+
+1617374511 c:\users\drsou\documents\spoyler\include\tabledatasource.h
+	<TableCell.h>
+	<TableColumn.h>
+	<vector>
+
+1617373845 c:\users\drsou\documents\spoyler\include\tablecell.h
+	"TableRow.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\tablerow.h
+	"TableElement.h"
+	<vector>
+
+1617373867 c:\users\drsou\documents\spoyler\include\tableelement.h
+	"Element.h"
+	"TableRow.h"
+	"TableColumnHeader.h"
+	"TableDataSource.h"
+	<vector>
+
+1617373633 c:\users\drsou\documents\spoyler\include\tablecolumnheader.h
+	"TableCell.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\tablecolumn.h
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\mainwindowelement.cpp
+	"MainWindowElement.h"
+	"StartView.h"
+	"InputElement.h"
+	"InputEventArgs.h"
+	"SplitterElement.h"
+	"DoctrineView.h"
+	"Win32GraphicsContext.h"
+	"PlayQueueView.h"
+	"UserView.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\startview.h
+	"TabbarViewElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\splitterelement.h
+	"Element.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\doctrineview.h
+	"ContainerViewElement.h"
+	"TextElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\playqueueview.h
+	"Element.h"
+	"ViewElement.h"
+	"ContainerViewElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\userview.h
+	"TabbarViewElement.h"
+	"DOMViewElement.h"
+	"HeaderElement.h"
+
+1617373560 c:\users\drsou\documents\spoyler\include\domviewelement.h
+	"Element.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\playqueueview.cpp
+	"PlayQueueView.h"
+	"HeaderElement.h"
+	"TableElement.h"
+	"MockTableDataSource.h"
+	<regex>
+
+1617374411 c:\users\drsou\documents\spoyler\include\mocktabledatasource.h
+	"TableDataSource.h"
+	<vector>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\resource.cpp
+	"Resource.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\resource.h
+	<string>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\resourceelement.cpp
+	"ResourceElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\resourceelement.h
+	"Element.h"
+	"Resource.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\response.cpp
+	"Response.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\skin.cpp
+	"Skin.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\splitterelement.cpp
+	"SplitterElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\sptype.cpp
+	"SPType.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\startview.cpp
+	"StartView.h"
+	<regex>
+	"WhatsNewView.h"
+	"TopListView.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\whatsnewview.h
+	"ContainerViewElement.h"
+	"DOMViewElement.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\toplistview.h
+	"Element.h"
+	"ContainerViewElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\tabbarelement.cpp
+	"TabBarElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\tabbarviewelement.cpp
+	"TabbarViewElement.h"
+
+1617373901 source:c:\users\drsou\documents\spoyler\src\stylesheet.cpp
+	"Stylesheet.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\tabledatasource.cpp
+	"TableDataSource.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\textelement.cpp
+	"TextElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\titleelement.cpp
+	"TitleElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\toplistview.cpp
+	"TopListView.h"
+	"HBoxElement.h"
+	"TableElement.h"
+	"MockTableDataSource.h"
+	"VBoxElement.h"
+	<regex>
+
+1617373911 source:c:\users\drsou\documents\spoyler\src\doctrineview.cpp
+	"DoctrineView.h"
+	"TextElement.h"
+	<regex>
+	<string>
+	<vector>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\treeadapter.cpp
+	"TreeAdapter.h"
+
+1617372962 c:\users\drsou\documents\spoyler\include\treeadapter.h
+	"libspider.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\treeitem.cpp
+	"TreeItem.h"
+	<regex>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\treeviewelement.cpp
+	"TreeViewElement.h"
+	"WindowElement.h"
+	"Win32WindowElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\uri.cpp
+	"Uri.h"
+
+1617373955 source:c:\users\drsou\documents\spoyler\src\tableelement.cpp
+	"TableElement.h"
+
+1617373114 source:c:\users\drsou\documents\spoyler\src\userview.cpp
+	"UserView.h"
+	<string>
+	<vector>
+	<regex>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\vboxelement.cpp
+	"VBoxElement.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\viewelement.cpp
+	"ViewElement.h"
+	<string>
+
+1617373318 source:c:\users\drsou\documents\spoyler\src\viewstackelement.cpp
+	"ViewStackElement.h"
+	"WhatsNewView.h"
+	<regex>
+	"PlayQueueView.h"
+	"MainWindowElement.h"
+	<vector>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\whatsnewview.cpp
+	"WhatsNewView.h"
+	"ButtonElement.h"
+	"HBoxElement.h"
+	"TableElement.h"
+	"MockTableDataSource.h"
+	<regex>
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\win32graphicscontext.cpp
+	"Win32GraphicsContext.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\win32windowelement.cpp
+	<Windows.h>
+	"Win32WindowElement.h"
+	"Win32GraphicsContext.h"
+
+1617372962 source:c:\users\drsou\documents\spoyler\src\windowelement.cpp
+	"WindowElement.h"
+	"Win32GraphicsContext.h"
+
+1617374086 source:c:\users\drsou\documents\spoyler\src\element.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<vector>
+	<string.h>
+	"Element.h"
+	"WindowElement.h"
+	"Observable.h"
+
+1617374400 source:c:\users\drsou\documents\spoyler\src\mocktabledatasource.cpp
+	<string>
+	<sstream>
+	<algorithm>
+	<vector>
+	"MockTableDataSource.h"
+

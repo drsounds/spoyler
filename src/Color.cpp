@@ -1,6 +1,8 @@
 #include "libspider.h"
 #include "Color.h"
+#include <string>
 #include <stdio.h>
+using namespace std;
 /*!
  * From http://www.dreamincode.net/forums/topic/58058-converting-rgb-to-hex/
  **/
@@ -8,15 +10,15 @@ string RGBToHex(int rNum, int gNum, int bNum) {
 	string result;
     result.append("#");
 	char r[255];
-	snprintf(r, 255, "%.2X", rNum);
+//	snprintf(r, 255, "%.2X", rNum);
 	result.append(r );
 
 	char g[255];
-	snprintf(g, 255, "%.2X", gNum);
+	//snprintf(g, 255, "%.2X", gNum);
 	result.append(g );
 
 	char b[255];
-	snprintf(b, 255, "%.2X", bNum);
+	//snprintf(b, 255, "%.2X", bNum);
 	result.append(b );
 
 	return result;

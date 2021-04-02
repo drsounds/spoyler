@@ -1,7 +1,9 @@
+#include "TableRow.h"
 #ifndef TABLECELL_H
 #define TABLECELL_H
-#include "TableRow.h"
 namespace spider {
+class TableRow;
+class TableElement;
 class TableCell
 {
     public:

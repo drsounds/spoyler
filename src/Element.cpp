@@ -1,6 +1,10 @@
-#include "Element.h"
 #include <iostream>
 #include <cstdio>
+#include <algorithm>
+#include <vector>
+#include <string.h>
+#include "Element.h"
+
 #include "WindowElement.h"
 #include "Observable.h"
 namespace spider {
@@ -286,7 +290,7 @@ void Element::set(const std::string& title, std::string *val) {
             this->setY(n);
 
         (*this->getProperties())[title] = (void *)n;
-    } catch (const boost::bad_lexical_cast e) {
+    } catch(exception e) {
         (*this->getProperties())[title] = (void *)val;
     }
 
